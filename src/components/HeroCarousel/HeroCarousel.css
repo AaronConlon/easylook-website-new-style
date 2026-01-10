@@ -288,7 +288,8 @@
 
   .hero-slide-button {
     padding: 12px 24px;
-    font-size: 14px;
+    font-size: 1rem;
+      /* Base 16px */
   }
 
   .hero-nav-button {
@@ -328,7 +329,8 @@
   }
 
   .hero-slide-subtitle {
-    font-size: 14px;
+    font-size: 1rem;
+      /* Base 16px */
   }
 
   .hero-nav-button {

@@ -26,7 +26,7 @@
 }
 
 .footer-logo {
-  height: 36px;
+  height: 48px;
   width: auto;
   margin-bottom: 20px;
   opacity: 0.9;
@@ -234,59 +234,163 @@
 
 @media (max-width: 768px) {
   .footer {
-    padding: 60px 0 0;
+    padding: 48px 0 0;
   }
 
   .footer-container {
-    padding: 0 20px;
+    padding: 0 24px;
   }
 
   .footer-top {
-    grid-template-columns: 1fr;
-    gap: 40px;
+    display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas:
+        "brand brand"
+        "links follow"
+        "contact contact";
+      gap: 40px 20px;
     margin-bottom: 40px;
   }
 
+                                /* Mobile Section Titles */
+                                .footer-section-title {
+                                  text-align: center;
+                                  font-weight: 600;
+                                  font-size: 1.4rem;
+                                  /* Adjusted to 1.4rem */
+                                  margin-bottom: 24px;
+                                }
+                
+                                /* Center Brand/Logo on Mobile */
   .footer-brand {
-    grid-column: 1;
-  }
-
+    grid-area: brand;
+      text-align: center;
+      /* Center logo and desc */
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+        .footer-links-section {
+          grid-area: links;
+        }
+    
+        .footer-follow {
+          grid-area: follow;
+        }
+    
+        /* Optimize layout for follow us on mobile */
+        .footer-follow .footer-qr-codes {
+          flex-direction: column;
+          gap: 16px;
+        }
+    
+        .footer-follow .footer-qr-item {
+          flex-direction: row;
+          justify-content: flex-start;
+          gap: 12px;
+        }
+    
+        .footer-follow .footer-qr-image {
+          width: 60px;
+          max-width: 60px;
+        }
+    
+        .footer-contact {
+          grid-area: contact;
+        }
+    
+        /* Make contact list grid on tablet */
+        .footer-contact-list {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 20px;
+        }
+    
+        /* Horizontal Quick Links for Mobile - Left Aligned (Thin Style) */
+        .footer-links-list {
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: flex-start;
+          /* Revert to start */
+          align-items: center;
+          column-gap: 24px;
+          row-gap: 12px;
+        }
   .footer-bottom {
     flex-direction: column;
     gap: 16px;
     padding: 24px 0;
     text-align: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.03);
+    }
+    
+    /* Hide the main divider line since we use border-top on footer-bottom */
+    .footer-divider {
+      display: none;
   }
 }
 
 @media (max-width: 480px) {
-  .footer {
-    padding: 48px 0 0;
-  }
-
-  .footer-container {
-    padding: 0 16px;
-  }
-
   .footer-top {
-    gap: 32px;
-    margin-bottom: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+  
+    .footer-links-section,
+    .footer-follow {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      /* Removed align-items: center to keep thin style */
+    }
+  
+    /* Revert QR code layout for very small screens if needed, or keep compact */
+    .footer-follow .footer-qr-codes {
+      flex-direction: row;
+      /* Removed justify-content: center */
+  }
+  
+                                                                .footer-follow .footer-qr-item {
+                                                                  flex-direction: column;
   }
 
-  .footer-logo {
-    height: 30px;
+                                                                .footer-follow .footer-qr-image {
+                                                                  width: 100%;
+                                                                  max-width: 100px;
   }
 
-  .footer-section-title {
-    font-size: 13px;
-    margin-bottom: 16px;
-  }
-
+                                                                .footer-contact-list {
+                                                                  display: flex;
+                                                                  flex-direction: column;
+                                                                  /* Removed align-items: center */
+                                                                }
+                                                                .footer-contact-item {
+                                                                  /* Reverted justify-content */
+                                                                  justify-content: flex-start;
+                                                                }
+                                                                /* Ensure links wrap properly on small screens */
   .footer-links-list {
-    gap: 10px;
-  }
-
-  .footer-contact-list {
-    gap: 14px;
+    gap: 12px 20px;
+      /* Removed justify-content: center */
+    }
+        /* Typography Overrides for Mobile (Base 16px) */
+        .footer-description,
+        .footer-links-list li a,
+        .footer-contact-label,
+        .footer-contact-value,
+        .footer-qr-item span {
+          font-size: 1rem !important;
+          /* Force 16px min */
+          line-height: 1.6;
+        }
+    
+        /* Copyright can be slightly smaller but readable */
+        .footer-copyright,
+        .footer-legal a,
+        .footer-legal-separator {
+          font-size: 0.875rem !important;
+          /* 14px */
   }
 }
