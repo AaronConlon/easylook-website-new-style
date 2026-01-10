@@ -48,6 +48,16 @@
   - 功能反馈：`duration-200` (如按钮按下、列表切换)。
   - 内容入场：`duration-500` (渐显并略微上移，模拟精密仪器的精密感)。
   - 侧边栏/弹出：`duration-300` (顺滑切换)。
+- **统一入场动画**：
+  - 所有新模块进入视图时，必须应用“向上渐显”动画。
+  - **实现方式**：
+    1. 引入 Hooks: `import useScrollAnimation from '../../hooks/useScrollAnimation';`
+    2. 使用 Hooks: `const [ref, isVisible] = useScrollAnimation();`
+    3. 绑定 Class: `className={\`scroll-animate \${isVisible ? 'in-view' : ''}\`}` 并绑定 `ref={ref}`
+  - **CSS 规范**：
+    - 初始状态：`opacity: 0`, `transform: translateY(50px)`
+    - 激活状态：`opacity: 1`, `transform: translateY(0)`
+    - 曲线：`cubic-bezier(0.22, 1, 0.36, 1)` (平滑减速)
 - **科技感元素**：
   适度使用细至 0.5px 的线条装饰，或者在数据卡片背景使用极淡的几何规律底纹。
 

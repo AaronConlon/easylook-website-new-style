@@ -1,0 +1,211 @@
+/* Encyclopedia.css */
+
+.encyclopedia-container {
+    width: 100%;
+    padding: 80px 20px;
+    background-color: #ffffff;
+}
+
+.encyclopedia-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+.encyclopedia-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 40px;
+    text-align: left;
+    border-bottom: 0.5px solid #eaeaea;
+    padding-bottom: 20px;
+}
+
+.header-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.encyclopedia-header h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    color: #0F172A;
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+}
+
+.encyclopedia-header p {
+    font-size: 1rem;
+    color: #64748B;
+    margin: 0;
+}
+
+.encyclopedia-header .char {
+    animation: fadeInUp 0.5s forwards;
+    display: inline-block;
+}
+
+/* Grid */
+.encyclopedia-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns on desktop */
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+/* Card */
+.encyclopedia-card {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    border: 0.5px solid #eaeaea; /* Thin border */
+    overflow: hidden;
+    transition: all 0.3s ease;
+    background-color: #fff;
+    height: 100%;
+}
+
+.encyclopedia-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03); /* Very subtle shadow */
+    border-color: #e0e0e0;
+}
+
+/* Image */
+.card-image-wrapper {
+    width: 100%;
+    aspect-ratio: 16/10;
+    overflow: hidden;
+    background-color: #f7f7f7;
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.encyclopedia-card:hover .card-image {
+    transform: scale(1.05);
+}
+
+/* Content */
+.card-content {
+    padding: 16px; /* Reduced from 20px */
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.card-date {
+    display: flex;
+    align-items: center;
+    font-size: 0.85rem;
+    color: #94A3B8;
+    margin-bottom: 12px;
+    gap: 6px;
+}
+
+.date-icon {
+    font-size: 1rem;
+}
+
+.encyclopedia-card .card-title {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #0F172A; /* Darker, clearer title */
+    margin-bottom: 12px;
+    line-height: 1.4;
+    transition: color 0.3s ease;
+    text-shadow: none; /* Ensure no shadow */
+    min-height: 3.5rem; /* Ensure 2 lines height 1.25*1.4*2 = 3.5 */
+}
+
+.encyclopedia-card:hover .card-title {
+    /* color: #0052d9; */ /* Removed color change */
+    text-decoration: underline;
+    text-decoration-color: #0052d9;
+    text-underline-offset: 4px;
+}
+
+.encyclopedia-card .card-desc {
+    font-size: 0.95rem;
+    color: #475569; /* Balanced gray for readability */
+    line-height: 1.6;
+    margin-bottom: 20px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limit to 2 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.read-more-btn {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #475569;
+    gap: 4px;
+    transition: color 0.2s ease;
+    margin-top: auto; /* Push to bottom */
+}
+
+.encyclopedia-card:hover .read-more-btn {
+    color: #0052d9;
+}
+
+/* View More Button in Header/Footer */
+.encyclopedia-footer {
+    display: flex;
+    justify-content: center; /* Center align */
+    margin-top: 40px;
+}
+
+.view-more-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 32px; /* Larger padding for filled button */
+    background-color: #0052d9; /* Theme color background */
+    border: none;
+    border-radius: 100px;
+    color: #ffffff; /* White text */
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    gap: 8px;
+    white-space: nowrap;
+    box-shadow: 0 4px 12px rgba(0, 82, 217, 0.2); /* Subtle shadow */
+}
+
+.view-more-btn:hover {
+    background-color: #003bb3;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 82, 217, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .encyclopedia-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .encyclopedia-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .encyclopedia-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+    
+    .view-more-btn.header-btn {
+        align-self: flex-start;
+    }
+}

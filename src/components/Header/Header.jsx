@@ -105,7 +105,7 @@ const Header = () => {
               <div key={index} className="nav-menu-item-wrapper">
                 <a
                   data-href={item.path}
-                  className={`nav-menu-item ${activeMenu === item.href || activeMenu.startsWith(item.path) ? 'active' : ''}`}
+                  className={`nav-menu-item ${activeMenu === item.href || (item.path !== '/' && activeMenu.startsWith(item.path)) ? 'active' : ''}`}
                   href={`/#${item.href}`}
                   onClick={(e) => {
                     e.preventDefault();

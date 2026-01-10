@@ -11,6 +11,7 @@ body {
   background: #fff;
 }
 
+@import './animations.css';
 .app {
   min-height: 100vh;
   display: flex;
