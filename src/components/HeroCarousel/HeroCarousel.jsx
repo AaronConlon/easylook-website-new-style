@@ -1,41 +1,32 @@
-import { useRef } from 'react';
+import { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Autoplay, EffectFade } from 'swiper/modules';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import { PiArrowLeftThin, PiArrowRightThin } from 'react-icons/pi';
 import slidesData from '../../data/heroSlides.json';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import 'swiper/css/effect-fade';
 import './HeroCarousel.css';
 
 const HeroCarousel = () => {
-  const prevRef = useRef(null);
-  const nextRef = useRef(null);
+  const [swiperInstance, setSwiperInstance] = useState(null);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   return (
     <div className="hero-carousel">
       <Swiper
-        modules={[Navigation, Pagination, Autoplay, EffectFade]}
+        modules={[Navigation, Autoplay]}
         spaceBetween={0}
         slidesPerView={1}
-        effect="fade"
-        fadeEffect={{ crossFade: true }}
         speed={800}
         autoplay={{
           delay: 5000,
           disableOnInteraction: false,
+          pauseOnMouseEnter: true,
         }}
         loop={true}
-        onBeforeInit={(swiper) => {
-          swiper.params.navigation.prevEl = prevRef.current;
-          swiper.params.navigation.nextEl = nextRef.current;
-        }}
-        pagination={{
-          clickable: true,
-          bulletClass: 'hero-pagination-bullet',
-          bulletActiveClass: 'hero-pagination-bullet-active',
-        }}
+        onSwiper={setSwiperInstance}
+        onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
         className="hero-swiper"
       >
         {slidesData.map((slide) => (
@@ -73,19 +64,36 @@ const HeroCarousel = () => {
 
       {/* Custom Navigation Buttons */}
       <button
-        ref={prevRef}
+        onClick={() => swiperInstance?.slidePrev()}
         className="hero-nav-button hero-nav-prev"
         aria-label="Previous slide"
+        type="button"
       >
         <PiArrowLeftThin size={24} />
       </button>
       <button
-        ref={nextRef}
+        onClick={() => swiperInstance?.slideNext()}
         className="hero-nav-button hero-nav-next"
         aria-label="Next slide"
+        type="button"
       >
         <PiArrowRightThin size={24} />
       </button>
+
+      {/* Fully Custom Pagination */}
+      <div className="custom-hero-pagination">
+        {slidesData.map((_, index) => (
+          <button
+            key={index}
+            className={`custom-pagination-dot ${
+              index === activeIndex ? 'active' : ''
+            }`}
+            onClick={() => swiperInstance?.slideToLoop(index)}
+            aria-label={`Go to slide ${index + 1}`}
+            type="button"
+          />
+        ))}
+      </div>
     </div>
   );
 };

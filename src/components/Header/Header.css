@@ -72,7 +72,7 @@
 .nav-menu-list {
   display: flex;
   align-items: center;
-  gap: 44px;
+  gap: 32px;
   list-style: none;
   margin: 0;
   padding: 0;
