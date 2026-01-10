@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay, EffectFade } from 'swiper/modules';
 import { PiArrowLeftThin, PiArrowRightThin } from 'react-icons/pi';
@@ -27,10 +27,6 @@ const HeroCarousel = () => {
           disableOnInteraction: false,
         }}
         loop={true}
-        navigation={{
-          prevEl: prevRef.current,
-          nextEl: nextRef.current,
-        }}
         onBeforeInit={(swiper) => {
           swiper.params.navigation.prevEl = prevRef.current;
           swiper.params.navigation.nextEl = nextRef.current;
@@ -59,10 +55,15 @@ const HeroCarousel = () => {
                 >
                   <h1 className="hero-slide-title">{slide.title}</h1>
                   <p className="hero-slide-subtitle">{slide.subtitle}</p>
-                  <a href={`/#${slide.buttonLink}`} className="hero-slide-button">
-                    {slide.buttonText}
-                    <span className="hero-button-arrow">→</span>
-                  </a>
+                  {slide.buttonText && (
+                    <a
+                      href={`/#${slide.buttonLink}`}
+                      className="hero-slide-button"
+                    >
+                      {slide.buttonText}
+                      <span className="hero-button-arrow">→</span>
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
@@ -71,10 +72,18 @@ const HeroCarousel = () => {
       </Swiper>
 
       {/* Custom Navigation Buttons */}
-      <button ref={prevRef} className="hero-nav-button hero-nav-prev" aria-label="Previous slide">
+      <button
+        ref={prevRef}
+        className="hero-nav-button hero-nav-prev"
+        aria-label="Previous slide"
+      >
         <PiArrowLeftThin size={24} />
       </button>
-      <button ref={nextRef} className="hero-nav-button hero-nav-next" aria-label="Next slide">
+      <button
+        ref={nextRef}
+        className="hero-nav-button hero-nav-next"
+        aria-label="Next slide"
+      >
         <PiArrowRightThin size={24} />
       </button>
     </div>
