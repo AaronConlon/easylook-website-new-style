@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "image": "/images/hero-1.jpg",
+    "title": "Bye Bye, Dry Eye",
+    "subtitle": "Feel Your Contacts Like New",
+    "buttonText": "Shop Collection",
+    "buttonLink": "/product-1",
+    "textPosition": "left"
+  },
+  {
+    "id": 2,
+    "image": "/images/hero-2.jpg",
+    "title": "专业视力保护",
+    "subtitle": "守护您的视界健康",
+    "buttonText": "了解更多",
+    "buttonLink": "/about/company",
+    "textPosition": "right"
+  },
+  {
+    "id": 3,
+    "image": "/images/hero-3.jpg",
+    "title": "视觉训练套盒",
+    "subtitle": "科学训练，改善视力",
+    "buttonText": "立即购买",
+    "buttonLink": "/product-1",
+    "textPosition": "left"
+  }
+]
