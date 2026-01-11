@@ -1,7 +1,7 @@
 /* BackToTop.css */
 .back-to-top {
     position: fixed;
-    bottom: 32px;
+    bottom: 64px;
     right: 32px;
     width: 48px;
     height: 48px;
