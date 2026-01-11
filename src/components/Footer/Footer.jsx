@@ -5,7 +5,7 @@ import gongzhonghaoImg from '../../assets/gongzhonghao.png';
 import qrCodeImg from '../../assets/qr-code.png';
 import './Footer.css';
 
-const FooterLaifen = () => {
+const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const quickLinks = [
@@ -34,7 +34,7 @@ const FooterLaifen = () => {
   ];
 
   return (
-    <footer className="footer footer-laifen">
+    <footer className="footer">
       <div className="footer-container">
         {/* Top Section */}
         <div className="footer-top">
@@ -118,4 +118,4 @@ const FooterLaifen = () => {
   );
 };
 
-export default FooterLaifen;
+export default Footer;

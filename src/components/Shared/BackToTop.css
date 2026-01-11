@@ -7,19 +7,19 @@
     height: 48px;
     border-radius: 50%;
     background-color: #ffffff;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    color: #333;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); /* Laifen shadow */
     opacity: 0;
     transform: translateY(20px);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 9999;
     font-size: 24px;
     pointer-events: none; /* Prevent clicks when hidden */
+    color: #0F172A; /* Initial dark color (Laifen) */
+    border: none;
 }
 
 /* Show state */
@@ -31,24 +31,10 @@
 
 /* Hover effect */
 .back-to-top:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-    color: #0052d9; /* Default theme hover */
-    border-color: #0052d9;
-}
-
-/* Laifen Theme Styling */
-.back-to-top.theme-laifen {
-    color: #0F172A; /* Initial dark color */
-    border: none;
-    background-color: #ffffff;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-}
-
-.back-to-top.theme-laifen:hover {
     color: #2286FE; /* Laifen Brand Blue on Hover */
     transform: translateY(-4px);
     box-shadow: 0 8px 24px rgba(34, 134, 254, 0.25);
+    border: none;
 }
 
 /* Mobile adjustments */

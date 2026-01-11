@@ -5,24 +5,16 @@ import {
   PiTrendUpThin,
   PiUsersThin,
   PiBankThin,
-  PiCheckCircleThin,
   PiPhoneThin,
   PiMegaphoneThin,
 } from 'react-icons/pi';
 import './Partnership.css';
-import useThemeStore from '../../store/themeStore';
 
-const Partnership = ({ theme: propTheme }) => {
+const Partnership = () => {
   const [ref, isVisible] = useScrollAnimation(0.1);
-  const storeTheme = useThemeStore((state) => state.currentTheme);
-  const theme = propTheme || storeTheme;
-  const isLaifen = theme === 'laifen';
 
   return (
-    <section
-      className={`partnership-container ${isLaifen ? 'theme-laifen' : ''}`}
-      ref={ref}
-    >
+    <section className="partnership-container" ref={ref}>
       <div
         className={`partnership-inner scroll-animate ${isVisible ? 'in-view' : ''}`}
       >

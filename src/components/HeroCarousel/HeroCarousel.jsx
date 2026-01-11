@@ -1,28 +1,27 @@
 import { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Autoplay } from 'swiper/modules';
-import { PiArrowLeftThin, PiArrowRightThin } from 'react-icons/pi';
+import { Autoplay, EffectFade, Navigation } from 'swiper/modules';
+import { PiCaretLeftThin, PiCaretRightThin } from 'react-icons/pi';
 import slidesData from '../../data/heroSlides';
 import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+import 'swiper/css/effect-fade';
 import './HeroCarousel.css';
 
-const HeroCarouselDefault = () => {
+const HeroCarousel = () => {
   const [swiperInstance, setSwiperInstance] = useState(null);
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
     <div className="hero-carousel">
       <Swiper
-        modules={[Navigation, Autoplay]}
+        modules={[Autoplay, EffectFade, Navigation]}
+        effect="fade"
         spaceBetween={0}
         slidesPerView={1}
-        speed={800}
+        speed={1000}
         autoplay={{
           delay: 5000,
           disableOnInteraction: false,
-          pauseOnMouseEnter: true,
         }}
         loop={true}
         onSwiper={setSwiperInstance}
@@ -44,15 +43,6 @@ const HeroCarouselDefault = () => {
                 >
                   <h1 className="hero-slide-title">{slide.title}</h1>
                   <p className="hero-slide-subtitle">{slide.subtitle}</p>
-                  {slide.buttonText && (
-                    <a
-                      href={`/#${slide.buttonLink}`}
-                      className="hero-slide-button"
-                    >
-                      {slide.buttonText}
-                      <span className="hero-button-arrow">→</span>
-                    </a>
-                  )}
                 </div>
               </div>
             </div>
@@ -60,14 +50,14 @@ const HeroCarouselDefault = () => {
         ))}
       </Swiper>
 
-      {/* Custom Navigation Buttons */}
+      {/* Navigation Buttons */}
       <button
         onClick={() => swiperInstance?.slidePrev()}
         className="hero-nav-button hero-nav-prev"
         aria-label="Previous slide"
         type="button"
       >
-        <PiArrowLeftThin size={24} />
+        <PiCaretLeftThin size={24} />
       </button>
       <button
         onClick={() => swiperInstance?.slideNext()}
@@ -75,18 +65,17 @@ const HeroCarouselDefault = () => {
         aria-label="Next slide"
         type="button"
       >
-        <PiArrowRightThin size={24} />
+        <PiCaretRightThin size={24} />
       </button>
 
-      {/* Fully Custom Pagination */}
       <div className="custom-hero-pagination">
         {slidesData.map((_, index) => (
           <button
             key={index}
+            onClick={() => swiperInstance?.slideToLoop(index)}
             className={`custom-pagination-dot ${
               index === activeIndex ? 'active' : ''
             }`}
-            onClick={() => swiperInstance?.slideToLoop(index)}
             aria-label={`Go to slide ${index + 1}`}
             type="button"
           />
@@ -96,4 +85,4 @@ const HeroCarouselDefault = () => {
   );
 };
 
-export default HeroCarouselDefault;
+export default HeroCarousel;

@@ -1,118 +1,63 @@
-import React from 'react';
-import useScrollAnimation from '../../hooks/useScrollAnimation';
 import {
   PiBuildingsThin,
   PiTrendUpThin,
   PiHandshakeThin,
   PiMedalThin,
-  PiArrowRightThin,
 } from 'react-icons/pi';
 import './AboutUs.css';
-import useThemeStore from '../../store/themeStore';
 
-import companyImg from '../../assets/about-company.jpg';
-import historyImg from '../../assets/about-history.jpg';
-import partnersImg from '../../assets/about-partners.jpg';
-import honorsImg from '../../assets/about-honors.jpg';
-
-const AboutUs = ({ theme: propTheme }) => {
-  const [ref, isVisible] = useScrollAnimation(0.1);
-  const storeTheme = useThemeStore((state) => state.currentTheme);
-  const theme = propTheme || storeTheme;
-  const isLaifen = theme === 'laifen';
-
+const AboutUs = () => {
   const cards = [
     {
-      id: 'company',
-      title: '企业介绍',
+      id: 1,
+      title: '公司介绍',
       engTitle: 'Company Introduction',
-      desc: '视立优成立于 2018 年，专注于视力保护领域的研发与创新',
       icon: <PiBuildingsThin />,
-      image: companyImg,
+      link: '/about/company',
       className: 'card-company',
     },
     {
-      id: 'development',
+      id: 2,
       title: '发展历程',
       engTitle: 'Development History',
-      desc: '从创立至今，不断突破创新，引领行业发展方向',
       icon: <PiTrendUpThin />,
-      image: historyImg,
-      className: 'card-development',
+      link: '/about/story',
+      className: 'card-history',
     },
     {
-      id: 'partners',
+      id: 3,
       title: '合作伙伴',
-      engTitle: 'Partners',
-      desc: '与多家知名医疗机构建立长期合作，服务网络遍及全国',
+      engTitle: 'Strategic Partners',
       icon: <PiHandshakeThin />,
-      image: partnersImg,
+      link: '/about/partners',
       className: 'card-partners',
     },
     {
-      id: 'honors',
-      title: '荣誉资质',
-      engTitle: 'Honors & Qualifications',
-      desc: '国家医疗器械认证、ISO 质量体系认证等多项荣誉',
+      id: 4,
+      title: '公司荣誉',
+      engTitle: 'Company Honors',
       icon: <PiMedalThin />,
-      image: honorsImg,
+      link: '/about/honor',
       className: 'card-honors',
     },
   ];
 
   return (
-    <section
-      className={`about-us-container ${isLaifen ? 'theme-laifen' : ''}`}
-      ref={ref}
-    >
-      <div
-        className={`about-us-inner scroll-animate ${isVisible ? 'in-view' : ''}`}
-      >
-        {/* Header */}
-        <div className="about-us-header">
-          <div className="title-wrapper">
-            <h2>
-              {['关', '于', '我', '们'].map((char, index) => (
-                <span
-                  key={index}
-                  className="char"
-                  style={{ animationDelay: `${index * 0.05}s` }}
-                >
-                  {char}
-                </span>
-              ))}
-            </h2>
-          </div>
-          <p className="subtitle">专业、创新、值得信赖的视力保护专家</p>
-        </div>
-
-        {/* Bento Grid */}
+    <div className="about-us-container">
+      <div className="about-us-inner">
         <div className="about-grid">
           {cards.map((card) => (
-            <div key={card.id} className={`grid-item ${card.className}`}>
-              <div className="card-bg">
-                <img src={card.image} alt={card.title} />
-                <div className="card-overlay"></div>
-              </div>
+            <a href={card.link} key={card.id} className="grid-item">
               <div className="about-card-content">
-                <div className="card-header">
-                  <span className="card-subtitle-text">{card.engTitle}</span>
-                  <div className="card-title-row">
-                    <span className="card-icon">{card.icon}</span>
-                    <h3 className="card-title">{card.title}</h3>
-                  </div>
-                </div>
-                <p className="card-description">{card.desc}</p>
-
-                <div className="card-arrow">
-                  <PiArrowRightThin />
-                </div>
+                <div className="card-icon-wrapper">{card.icon}</div>
+                <h3 className="card-title">{card.title}</h3>
+                <div className="card-subtitle-text">{card.engTitle}</div>
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

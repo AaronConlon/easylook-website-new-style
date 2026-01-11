@@ -3,15 +3,14 @@
 ================================ */
 .footer {
   background: #ffffff;
-  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  /* border-top: 1px solid rgba(0, 0, 0, 0.06); */
   padding: 80px 0 0;
   margin-top: auto;
 }
 
 .footer-container {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 40px;
 }
 
 /* ================================
@@ -187,12 +186,14 @@
   justify-content: space-between;
   align-items: center;
   padding: 32px 0;
+  font-size: 13px;
+  color: var(--text-primary);
 }
 
 .footer-copyright {
-  font-size: 13px;
+  font-size: inherit;
   font-weight: 300;
-  color: #94A3B8;
+  color: inherit;
 }
 
 .footer-legal {
@@ -202,9 +203,9 @@
 }
 
 .footer-legal a {
-  font-size: 0.95rem;
+  font-size: inherit;
   font-weight: var(--font-weight-thin);
-  color: var(--text-secondary);
+  color: inherit;
   text-decoration: none;
   transition: color 0.2s ease;
 }
@@ -289,7 +290,7 @@
   }
 
   .footer-follow .footer-qr-image {
-    width: 60px;
+    width: 90px;
   }
 
   .footer-contact {

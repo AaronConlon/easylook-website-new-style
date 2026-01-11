@@ -31,7 +31,7 @@
 .encyclopedia-header h2 {
     font-size: 2rem;
     font-weight: var(--font-weight-regular);
-        color: var(--text-primary);
+    color: var(--text-primary);
     margin-bottom: 8px;
     letter-spacing: -0.5px;
 }
@@ -60,17 +60,26 @@
     display: flex;
     flex-direction: column;
     text-decoration: none;
-    border: 0.5px solid #eaeaea; /* Thin border */
     overflow: hidden;
-    transition: all 0.3s ease;
-    background-color: #fff;
     height: 100%;
+    border-radius: 20px;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s ease;
 }
 
 .encyclopedia-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.03); /* Very subtle shadow */
-    border-color: #e0e0e0;
+    box-shadow: none;
+    background-color: #fff;
+}
+
+.encyclopedia-grid:hover .encyclopedia-card {
+    transform: scale(0.95);
+}
+
+.encyclopedia-grid:hover .encyclopedia-card:hover {
+    transform: scale(1.05);
+    box-shadow: none;
 }
 
 /* Image */
@@ -78,18 +87,19 @@
     width: 100%;
     aspect-ratio: 16/10;
     overflow: hidden;
-    background-color: #f7f7f7;
+    border-radius: 20px 20px 0 0;
+    background-color: transparent;
 }
 
 .card-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.5s ease;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .encyclopedia-card:hover .card-image {
-    transform: scale(1.05);
+    transform: scale(1.08);
 }
 
 /* Content */
@@ -98,6 +108,8 @@
     display: flex;
     flex-direction: column;
     flex: 1;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
 }
 
 .card-date {
@@ -113,97 +125,37 @@
     font-size: 1rem;
 }
 
-.encyclopedia-card .card-title {
+.card-title {
     font-size: 1.25rem;
     font-weight: var(--font-weight-thin);
-        color: var(--text-secondary);
-        /* Darker, clearer title */
+    color: var(--text-secondary);
     margin-bottom: 12px;
     line-height: 1.4;
-    transition: color 0.3s ease;
-    text-shadow: none; /* Ensure no shadow */
-    min-height: 3.5rem; /* Ensure 2 lines height 1.25*1.4*2 = 3.5 */
+    transition: text-decoration-thickness 0.3s ease;
+    text-shadow: none;
+    min-height: 3.5rem;
 }
 
 .encyclopedia-card:hover .card-title {
-    /* color: #0052d9; */ /* Removed color change */
-    text-decoration: underline;
-    text-decoration-color: #0052d9;
-    text-underline-offset: 4px;
-}
-
-.theme-laifen .encyclopedia-card {
-    border-radius: 20px;
-    background-color: #fff;
-        /* White background */
-        border: 1px solid rgba(0, 0, 0, 0.1);
-        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s ease;
-}
-
-.theme-laifen .encyclopedia-grid:hover .encyclopedia-card {
-    transform: scale(0.95);
-}
-
-.theme-laifen .encyclopedia-grid:hover .encyclopedia-card:hover {
-    transform: scale(1.05);
-    box-shadow: none;
-    /* No shadow */
-    background-color: #fff;
-        /* border-color: rgba(34, 134, 254, 0.3); */
-        /* Removed as requested */
-}
-
-.theme-laifen .encyclopedia-card .card-title {
-    transition: text-decoration-thickness 0.3s ease;
-}
-
-.theme-laifen .encyclopedia-card:hover .card-title {
     text-decoration: underline;
     text-decoration-color: rgba(0, 0, 0, 0.1);
-    /* 40% opacity black */
     text-decoration-thickness: 4px;
-    /* Thicker underline */
     text-underline-offset: 4px;
 }
 
-/* Ensure image scaling works without card movement */
-.theme-laifen .encyclopedia-card .card-image {
-    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.theme-laifen .encyclopedia-card:hover .card-image {
-    transform: scale(1.08);
-    /* Sophisticated scale */
-}
-
-.theme-laifen .card-image-wrapper {
-    border-radius: 20px 20px 0 0;
-    /* Match card radius */
-    background-color: transparent;
-    /* No need for separate gray */
-}
-
-.theme-laifen .card-content {
-    background-color: transparent;
-    transition: background-color 0.3s ease;
-}
-
-.theme-laifen .encyclopedia-card:hover .card-content {
-    background-color: transparent;
-}
-.encyclopedia-card .card-desc {
+.card-desc {
     font-size: 0.95rem;
     color: var(--text-secondary);
-        /* Balanced gray for readability */
     line-height: 1.6;
     margin-bottom: 20px;
     display: -webkit-box;
-    -webkit-line-clamp: 2; /* Limit to 2 lines */
+    -webkit-line-clamp: 2;
     line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
 .read-more-btn {
     display: inline-flex;
     align-items: center;
@@ -211,47 +163,25 @@
     color: #475569;
     gap: 4px;
     transition: color 0.2s ease;
-    margin-top: auto; /* Push to bottom */
+    margin-top: auto;
 }
 
 .encyclopedia-card:hover .read-more-btn {
-    color: #0052d9;
-}
-
-.theme-laifen .encyclopedia-card:hover .read-more-btn {
     color: #000;
 }
+
 /* View More Button in Header/Footer */
 .encyclopedia-footer {
     display: flex;
-    justify-content: center; /* Center align */
+    justify-content: center;
     margin-top: 40px;
 }
 
 .view-more-btn {
-    display: inline-flex;
-    align-items: center;
-    padding: 12px 32px; /* Larger padding for filled button */
-    background-color: #0052d9; /* Theme color background */
-    border: none;
-    border-radius: 100px;
-    color: #ffffff; /* White text */
-    color: var(--text-primary);
-    font-size: 1rem;
-    font-weight: var(--font-weight-thin);
-    text-decoration: none;
-    transition: all 0.2s ease;
-    gap: 8px;
-    white-space: nowrap;
-    box-shadow: 0 4px 12px rgba(0, 82, 217, 0.2); /* Subtle shadow */
-}
-
-.theme-laifen .view-more-btn {
     background-color: #000;
     color: #fff;
     box-shadow: none;
     padding: 8px 24px;
-    /* Sync size with Product Showcase */
     font-size: 0.95rem;
     position: relative;
     overflow: hidden;
@@ -265,18 +195,19 @@
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.theme-laifen .view-more-btn:hover {
+.view-more-btn:hover {
     transform: none;
     box-shadow: none;
 }
 
-.theme-laifen .view-more-btn:hover .action-icon {
+.view-more-btn:hover .action-icon {
     transform: translateX(4px);
 }
 
-.theme-laifen .view-more-btn .action-icon {
+.view-more-btn .action-icon {
     transition: transform 0.4s ease;
 }
+
 /* Responsive */
 @media (max-width: 1024px) {
     .encyclopedia-grid {
@@ -291,8 +222,13 @@
     
     .encyclopedia-header {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center; /* Center align header */
         gap: 16px;
+        text-align: center; /* Center text */
+    }
+
+    .header-left {
+        align-items: center; /* Center align inner flex */
     }
     
     .view-more-btn.header-btn {

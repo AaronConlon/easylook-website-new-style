@@ -78,7 +78,7 @@ const DidYouKnow = ({ theme }) => {
 
         <div className="did-you-know-footer">
           <p className="footnote">
-            *
+            <span style={{ color: 'red', marginRight: '4px' }}>*</span>
             数据来源于《中国儿童斜弱视数字化治疗现状蓝皮书》、《"十四五"全国眼健康规划（2021-2025
             年）》及截至全国家卫健委 2024 年公布数据统计
           </p>

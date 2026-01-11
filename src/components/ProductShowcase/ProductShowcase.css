@@ -2,175 +2,69 @@
 
 .product-showcase-container {
     width: 100%;
-    padding: 80px 20px;
-    background-color: #ffffff;
-}
-
-.theme-laifen.product-showcase-container {
+    /* Reduced top/bottom padding as header is removed, let cards handle internal padding (was 80 20) */
     padding: 20px 0;
-    /* Reduced top/bottom padding as header is removed, let cards handle internal padding */
     background-color: #fff;
 }
+
 .product-showcase-inner {
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.theme-laifen .product-showcase-inner {
-    max-width: 1366px;
-}
-/* Header */
-.product-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 40px;
-    text-align: left;
-    border-bottom: 0.5px solid #eaeaea; /* Thin divider */
-    padding-bottom: 20px;
-}
-
-.product-header .title-wrapper {
-    flex: 1;
-}
-
-.product-header h2 {
-    font-size: 2rem;
-    color: var(--text-primary);
-        font-weight: var(--font-weight-thin);
-    margin-bottom: 4px;
-    letter-spacing: -0.5px;
-}
-
-.product-header .char {
-    animation: fadeInUp 0.5s forwards;
-}
-
 /* Grid */
 .products-grid {
     display: grid;
-    /* Use auto-fill to keep items left-aligned and not stretched excessively */
-    /* Min width must be larger than the fixed image width (248px) */
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); 
-    gap: 24px; /* Adjusted gap */
-}
-
-.theme-laifen .products-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
 }
+
 /* Card (Item Wrapper) */
 .product-card {
-    background: transparent;
-    border: none;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-    transition: all 0.3s ease;
-    padding: 10px;
-}
-
-.product-card:hover {
-    background-color: #fcfcfc; /* Very subtle hover bg */
-}
-
-/* Image Wrapper */
-.product-image-wrapper {
-    /* width: 248px; Increased by 48px from 200px */
-    height: 248px; /* Increased by 48px from 200px */
-    background-color: #F8F9FA; /* Light gray background to define entity */
-    border: 0.5px solid #f0f0f0; /* Ultra thin border */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    position: relative;
-    flex-shrink: 0;
-    transition: border-color 0.3s ease;
-}
-
-.product-card:hover .product-image-wrapper {
-    border-color: #e0e0e0;
-}
-
-.product-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Changed to cover */
-    transition: transform 0.5s ease;
-    padding: 0; /* Remove padding to maximize size */
-}
-
-.product-card:hover .product-image {
-    transform: scale(1.05); /* Subtle breathe */
-}
-
-/* Content */
-.product-content {
-    padding: 0; 
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.product-title {
-    font-size: 1rem;
-    color: var(--text-secondary);
-        font-weight: var(--font-weight-thin);
-    margin-bottom: 8px;
-    letter-spacing: 0.2px;
-}
-
-/* Action */
-.product-action {
-    display: flex;
-    justify-content: flex-start;
-    width: 100%;
-}
-
-.view-details-btn {
-    display: inline-flex;
-    align-items: center;
-    padding: 0;
-    background-color: transparent;
-    color: #64748B; /* Neutral color */
-    font-size: 0.85rem;
-    font-weight: 300; /* Thin font */
-    text-decoration: none;
-    transition: all 0.2s ease;
-    gap: 4px;
-}
-
-.view-details-btn:hover {
-    color: #0052d9;
-        /* Default Brand color on hover */
-    gap: 8px; /* Arrow moves slightly */
-}
-
-.theme-laifen .product-card {
     border-radius: 20px;
-    /* Match DidYouKnow */
     background-color: #f5f5f5;
-    /* Match DidYouKnow */
-    padding: 60px 0 0 0;
-    /* Top padding for content, side padding in product-info-top */
+    padding: 60px 0 0 0; /* Top padding for content, side padding in product-info-top */
     text-align: center;
     align-items: center;
     border: none;
     transition: transform 0.3s ease;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
-    /* Ensure image respects border radius at bottom */
+    overflow: hidden; /* Ensure image respects border radius at bottom */
+    position: relative; /* Ensure absolute background works */
+    aspect-ratio: 9 / 11;
 }
 
-.theme-laifen .product-card:hover {
-    background-color: #ededed;
+/* Background Animation Layer */
+.product-card-bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    transition: all 0.3s;
+    z-index: 0;
 }
 
-.theme-laifen .product-info-top {
+.product-card-bg picture {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    opacity: 1; /* Force visibility */
+    transition: opacity 0.3s linear;
+}
+
+.product-card-bg img {
+    height: 100%;
+    width: 100%;
+    object-position: center;
+    object-fit: cover;
+}
+
+/* Info Top Section */
+.product-info-top {
     margin-bottom: 40px;
     display: flex;
     flex-direction: column;
@@ -178,9 +72,11 @@
     width: 100%;
     padding: 0 40px;
     /* Internal content padding */
+    position: relative;
+    z-index: 1;
 }
 
-.theme-laifen .title-row {
+.title-row {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -188,15 +84,15 @@
     margin-bottom: 12px;
 }
 
-.theme-laifen .product-title {
+.product-title {
     font-size: 3.5rem;
     font-weight: var(--font-weight-regular);
-        color: var(--text-secondary);
+    color: var(--text-primary);
     margin: 0;
     letter-spacing: -2px;
 }
 
-.theme-laifen .product-badge {
+.product-badge {
     font-size: 0.85rem;
     padding: 4px 12px;
     border: 1px solid #000;
@@ -205,26 +101,24 @@
     color: #000;
 }
 
-.theme-laifen .product-subtitle {
+.product-subtitle {
     font-size: 1.25rem;
     color: #333;
     margin-bottom: 30px;
     font-weight: 400;
 }
 
-.theme-laifen .product-btns {
+.product-btns {
     display: flex;
     gap: 16px;
     justify-content: center;
 }
 
-.theme-laifen .btn-learn,
-.theme-laifen .btn-buy {
+.btn-learn,
+.btn-buy {
     padding: 8px 24px;
-    /* Reduced by 4px vertical, ~8px horizontal total -> roughly 6px visual size reduction */
     border-radius: 100px;
     font-size: 0.95rem;
-    /* Slightly smaller font */
     font-weight: var(--font-weight-medium);
     text-decoration: none;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -236,71 +130,58 @@
     z-index: 1;
 }
 
-.theme-laifen .btn-learn {
+.btn-learn {
     background: #000;
     color: #fff;
     border: 1px solid #000;
 }
 
-.theme-laifen .btn-learn:hover .btn-icon {
+.btn-learn:hover .btn-icon {
     transform: translateX(4px);
 }
 
-.theme-laifen .btn-buy {
+.btn-buy {
     background-color: transparent;
     color: #000;
     border: 1px solid #000;
 }
 
-.theme-laifen .btn-buy:hover .btn-icon {
+.btn-buy:hover {
+    background-color: #000;
+    color: #fff;
+    border-color: #000;
+}
+
+.btn-buy:hover .btn-icon {
     transform: translateX(4px);
 }
 
-.theme-laifen .btn-icon {
+.btn-icon {
     font-size: 1.1rem;
     transition: transform 0.4s ease;
 }
 
-.theme-laifen .product-image-wrapper {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 16 / 9;
-    /* User defined aspect ratio */
-    background: transparent;
-    border: none;
-    margin-top: auto;
-    /* Push to bottom */
-    padding: 0;
-    overflow: hidden;
-}
-
-.theme-laifen .product-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    /* Fill the 16:9 container */
-    display: block;
-    transition: transform 0.5s ease;
-}
-
-.theme-laifen .product-card:hover .product-image {
-    transform: scale(1.02);
-}
-.action-icon {
-    font-size: 1rem;
-    transition: transform 0.2s ease;
-}
 
 /* Responsive */
 @media (max-width: 768px) {
-    .product-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
+    .product-showcase-container {
+        padding: 20px 12px;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
     
-    .products-grid {
-        gap: 20px;
-        justify-items: start; /* Align to start on mobile */
+    .product-title {
+        font-size: 2rem;
+    }
+    
+    .product-info-top {
+        padding: 0 20px;
+    }
+
+    .product-card {
+        aspect-ratio: 9 / 16; /* Mobile aspect ratio updated to 9:16 */
     }
 }

@@ -27,7 +27,7 @@
 .partnership-header h2 {
     font-size: 2.2rem;
     font-weight: var(--font-weight-regular);
-        color: var(--text-primary);
+    color: var(--text-primary);
     margin-bottom: 16px;
     letter-spacing: 2px;
 }
@@ -40,62 +40,80 @@
 .partnership-header .subtitle {
     font-size: 1.1rem;
     color: var(--text-secondary);
-        font-weight: var(--font-weight-thin);
+    font-weight: var(--font-weight-thin);
 }
 
 /* Hero Section */
 .partnership-hero {
-    background: linear-gradient(135deg, #f0f6ff 0%, #ffffff 100%);
-    border: 0.5px solid #dbeafe;
-    padding: 30px;
-    text-align: center;
+    background-image: url('/public/company.jpg');
+    background-size: cover;
+    background-position: center;
+    border: none;
+    border-radius: 24px;
+    padding: 100px 40px;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
     margin-bottom: 60px;
+    text-align: center;
 }
 
 .hero-badge {
     display: inline-block;
     padding: 6px 16px;
-    background-color: #e0f2fe;
-    color: #0284c7;
     font-size: 0.9rem;
     margin-bottom: 20px;
+    border-radius: 100px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-weight: 500;
+    backdrop-filter: blur(10px);
 }
 
 .hero-title {
     font-size: 3rem;
     font-weight: var(--font-weight-medium);
-        margin-bottom: 20px;
+    margin-bottom: 20px;
     letter-spacing: -1px;
+    color: #fff;
 }
 
 .hero-cta-text {
     font-size: 1.25rem;
-    color: #475569;
     margin-bottom: 32px;
+    color: rgba(255, 255, 255, 0.9);
 }
 
 .phone-btn {
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    background-color: #0052d9;
-    color: white;
     padding: 14px 36px;
     border-radius: 100px;
     font-size: 1.1rem;
     text-decoration: none;
     transition: all 0.2s ease;
-    box-shadow: 0 4px 12px rgba(0, 82, 217, 0.25);
+    background-color: transparent;
+    color: #fff;
+    box-shadow: none;
+    font-weight: 500;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(5px);
 }
 
 .phone-btn:hover {
-    background-color: #003bb3;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(0, 82, 217, 0.35);
+    transform: translateY(-4px);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: #fff;
+}
+
+.phone-btn:hover .btn-icon {
+    transform: translateX(4px);
 }
 
 .btn-icon {
     font-size: 1.3rem;
+    transition: transform 0.2s ease;
 }
 
 /* Stats Grid */
@@ -108,8 +126,6 @@
 
 /* Stat Card */
 .stat-card {
-    background-color: #fff;
-    border: 0.5px solid #eaeaea;
     padding: 32px;
     text-align: left;
     transition: all 0.3s ease;
@@ -117,13 +133,16 @@
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
+    border-radius: 24px;
+    background-color: #fcfcfc;
+    border: 1px solid #f0f0f0;
 }
 
 .stat-card:hover {
-    transform: translateY(-5px);
-    border-color: #0052d9;
-    background-color: #0052d9;
-        box-shadow: 0 10px 30px rgba(0, 82, 217, 0.15);
+    background-color: #2286FE;
+    border-color: #2286FE;
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(34, 134, 254, 0.2);
 }
 
 .stat-header-row {
@@ -168,25 +187,26 @@
 .stat-icon-wrapper {
     width: 48px;
     height: 48px;
-    background-color: #f0f9ff;
-    color: #0052d9;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
     flex-shrink: 0;
     transition: all 0.3s ease;
+    border-radius: 16px;
+    background-color: rgba(34, 134, 254, 0.08); /* Light blue */
+    color: #2286FE;
 }
 
 .stat-card:hover .stat-icon-wrapper {
     background-color: #ffffff;
-        color: #0052d9;
+    color: #2286FE;
 }
 
 .stat-label {
     font-size: 1.1rem;
     font-weight: var(--font-weight-regular);
-        color: var(--text-secondary);
+    color: var(--text-secondary);
     transition: color 0.3s ease;
 }
 
@@ -216,7 +236,7 @@
 .benefits-title {
     font-size: 2rem;
     font-weight: var(--font-weight-regular);
-        color: var(--text-primary);
+    color: var(--text-primary);
     margin-bottom: 12px;
 }
 
@@ -239,35 +259,37 @@
 }
 
 .benefit-icon-wrapper {
-    width: 32px;
-    height: 32px;
-    background-color: #eff6ff;
-    color: #0052d9;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: 600;
-    font-size: 0.9rem;
     flex-shrink: 0;
     margin-top: 4px;
+    border-radius: 50%;
+    background-color: #2286FE;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
 }
 
 .benefit-item h4 {
-    font-size: 1.1rem;
-    font-weight: var(--font-weight-thin);
-        color: var(--text-secondary);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-secondary);
     margin-bottom: 6px;
 }
 
 .benefit-item p {
     font-size: 1rem;
     color: var(--text-secondary);
-        font-weight: var(--font-weight-thin);
+    font-weight: var(--font-weight-thin);
 }
 
 .benefits-image-wrapper {
     overflow: hidden;
-    border: 0.5px solid #eaeaea;
+    border-radius: 24px;
+    border: none;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
 }
 
 .benefits-image {
@@ -279,15 +301,16 @@
 /* Policy Banner */
 .policy-banner {
     position: relative;
-    max-width: 800px;
     margin: 0 auto;
-    background: linear-gradient(90deg, #f0f9ff 0%, #e6f2ff 50%, #f0f9ff 100%);
-    border: 1px solid #bae6fd;
-    padding: 16px 32px;
     text-align: center;
     overflow: hidden;
     transition: all 0.3s ease;
     cursor: default;
+    border-radius: 100px;
+    background: #2286FE;
+    border: none;
+    padding: 20px 40px;
+    max-width: 600px;
 }
 
 .policy-banner::before {
@@ -316,7 +339,6 @@
 .policy-banner:hover {
     transform: translateY(-2px);
     box-shadow: 0 10px 25px -5px rgba(2, 132, 199, 0.15);
-    border-color: #7dd3fc;
 }
 
 .policy-content {
@@ -329,124 +351,18 @@
 }
 
 .policy-icon {
-    font-size: 1.5rem;
-    color: #0284c7;
+    font-size: 1.8rem;
+    color: #fff;
 }
 
-/* Laifen Theme Overrides */
-.theme-laifen .partnership-hero {
-    background-image: url('/public/company.jpg');
-    background-size: cover;
-    background-position: center;
-    border: none;
-    border-radius: 24px;
-    padding: 100px 40px;
-    /* Increased padding for better image scale visibility */
-    color: #fff;
-    position: relative;
-    overflow: hidden;
-}
-
-.theme-laifen .hero-badge {
-    border-radius: 100px;
-    background-color: rgba(255, 255, 255, 0.2);
-    color: #fff;
-    font-weight: 500;
-    backdrop-filter: blur(10px);
-    }
-    
-    .theme-laifen .hero-title {
-        color: #fff;
-    }
-    
-    .theme-laifen .hero-cta-text {
-        color: rgba(255, 255, 255, 0.9);
-    }
-    
-    .theme-laifen .phone-btn {
-        background-color: transparent;
-        color: #fff;
-        box-shadow: none;
-        font-weight: 500;
-        border: 1px solid rgba(255, 255, 255, 0.6);
-        backdrop-filter: blur(5px);
-    }
-    
-    .theme-laifen .phone-btn:hover {
-        transform: translateY(-4px);
-        background-color: rgba(255, 255, 255, 0.1);
-        border-color: #fff;
-    }
-    
-    .theme-laifen .phone-btn:hover .btn-icon {
-        transform: translateX(4px);
-    }
-    
-    .theme-laifen .stat-card {
-        border-radius: 24px;
-        background-color: #fcfcfc;
-        border: 1px solid #f0f0f0;
-    }
-    
-    .theme-laifen .stat-card:hover {
-        background-color: #2286FE;
-        border-color: #2286FE;
-        transform: translateY(-8px);
-        box-shadow: 0 20px 40px rgba(34, 134, 254, 0.2);
-    }
-    
-    .theme-laifen .stat-icon-wrapper {
-        border-radius: 16px;
-        background-color: rgba(34, 134, 254, 0.08);
-        color: #2286FE;
-    }
-    
-    .theme-laifen .stat-card:hover .stat-icon-wrapper {
-        background-color: #ffffff;
-        color: #2286FE;
-    }
-    
-    .theme-laifen .benefit-icon-wrapper {
-        border-radius: 50%;
-        background-color: #2286FE;
-        color: #fff;
-        width: 40px;
-        height: 40px;
-        font-size: 1.1rem;
-    }
-    
-    .theme-laifen .benefit-item h4 {
-        font-size: 1.25rem;
-        font-weight: 600;
-    }
-    
-    .theme-laifen .benefits-image-wrapper {
-        border-radius: 24px;
-        border: none;
-        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
-    }
-    
-    .theme-laifen .policy-banner {
-        border-radius: 100px;
-        background: #2286FE;
-        border: none;
-        padding: 20px 40px;
-        max-width: 600px;
-    }
-    
-    .theme-laifen .policy-icon {
-        color: #fff;
-        font-size: 1.8rem;
-    }
-    
-    .theme-laifen .policy-text {
-        background: #fff;
-        -webkit-background-clip: text;
+.policy-text {
+    background: #fff;
+    -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 600;
-        font-size: 1.1rem;
-        letter-spacing: 1px;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
 }
 
 /* Responsive */
@@ -478,5 +394,11 @@
         justify-content: center;
         padding: 12px 20px;
         font-size: 1rem;
+    }
+
+    .policy-content {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 }

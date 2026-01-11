@@ -15,7 +15,7 @@ const heroSlides = [
     subtitle: "视立优不等像镜片是通过增加高度近视片的基弯、增加厚度等手段，使得由于用眼不规范等造成的青少年屈光参差者所看到的图像相同。通过佩戴视立优不等像镜片，提升佩戴舒适度及双眼视力，减缓视疲劳症状，巩固屈光参差性弱视的效果，提升双眼协同及双眼视功能。",
     buttonText: "",
     buttonLink: "",
-    textPosition: "bottom-right"
+    textPosition: "top-left"
   },
   {
     id: 3,
@@ -24,7 +24,7 @@ const heroSlides = [
     subtitle: "视立优平台即视立优小程序，通过视立优小程序可以对视觉训练器进行预设档位调节，每个档位里的近眼距、高度和移动速度都支持个性化调节并搭载 AI 小助手辅助训练，同时还可以设置个性化的眼健康管理档案，通过视立优视功能 AI 训练算法对训练方案进行适时优化，使训练更加智能、便捷。不仅如此，小程序还搭载了产品使用基础教程、训练打卡积分和优选好物商城等功能模块。",
     buttonText: "",
     buttonLink: "",
-    textPosition: "center"
+    textPosition: "bottom-right"
   },
   {
     id: 4,
