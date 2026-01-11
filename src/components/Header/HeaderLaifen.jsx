@@ -56,7 +56,7 @@ const HeaderLaifen = () => {
       label: '联系我们',
       href: '/contact',
       path: '/contact',
-      icon: <PiPhoneThin />,
+      // icon: <PiPhoneThin />,
     },
   ];
 
