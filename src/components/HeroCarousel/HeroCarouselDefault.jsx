@@ -2,13 +2,13 @@ import { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import { PiArrowLeftThin, PiArrowRightThin } from 'react-icons/pi';
-import slidesData from '../../data/heroSlides.json';
+import slidesData from '../../data/heroSlides';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import './HeroCarousel.css';
 
-const HeroCarousel = () => {
+const HeroCarouselDefault = () => {
   const [swiperInstance, setSwiperInstance] = useState(null);
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -38,10 +38,8 @@ const HeroCarousel = () => {
               <div className="hero-slide-overlay"></div>
               <div className="hero-slide-content-wrapper">
                 <div
-                  className={`hero-slide-content ${
-                    slide.textPosition === 'right'
-                      ? 'hero-slide-content-right'
-                      : 'hero-slide-content-left'
+                  className={`hero-slide-content hero-slide-content-${
+                    slide.textPosition || 'bottom-left'
                   }`}
                 >
                   <h1 className="hero-slide-title">{slide.title}</h1>
@@ -98,4 +96,4 @@ const HeroCarousel = () => {
   );
 };
 
-export default HeroCarousel;
+export default HeroCarouselDefault;

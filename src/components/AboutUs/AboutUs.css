@@ -45,7 +45,8 @@
 
 .grid-item {
     position: relative;
-    /* border-radius: 20px; */
+    border-radius: 4px;
+        /* Standard for default theme */
     overflow: hidden;
     /* border: 0.5px solid rgba(0,0,0,0.1); */ /* Optional border */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -53,6 +54,9 @@
     background-color: #0F172A; /* Dark fallback for white text */
 }
 
+.theme-laifen .grid-item {
+    border-radius: 20px;
+}
 .grid-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
@@ -96,7 +100,7 @@
 }
 
 /* Card Content */
-.card-content {
+.about-card-content {
     position: relative;
     z-index: 3;
     height: 100%;
@@ -194,7 +198,7 @@
         font-size: 1.5rem;
     }
     
-    .card-content {
+        .about-card-content {
         justify-content: flex-end;
     }
     

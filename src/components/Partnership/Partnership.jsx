@@ -10,12 +10,19 @@ import {
   PiMegaphoneThin,
 } from 'react-icons/pi';
 import './Partnership.css';
+import useThemeStore from '../../store/themeStore';
 
-const Partnership = () => {
+const Partnership = ({ theme: propTheme }) => {
   const [ref, isVisible] = useScrollAnimation(0.1);
+  const storeTheme = useThemeStore((state) => state.currentTheme);
+  const theme = propTheme || storeTheme;
+  const isLaifen = theme === 'laifen';
 
   return (
-    <section className="partnership-container" ref={ref}>
+    <section
+      className={`partnership-container ${isLaifen ? 'theme-laifen' : ''}`}
+      ref={ref}
+    >
       <div
         className={`partnership-inner scroll-animate ${isVisible ? 'in-view' : ''}`}
       >

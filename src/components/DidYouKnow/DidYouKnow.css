@@ -21,6 +21,27 @@
     color: #0F172A;
     margin: 0;
     font-weight: 400;
+    display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+    
+    .dk-header-text {
+        display: flex;
+        gap: 2px;
+        /* Smaller gap between Chinese characters */
+    }
+    
+    .dk-header-icon {
+        font-size: 2.2rem;
+        color: #0052d9;
+        /* Default theme color */
+        flex-shrink: 0;
+    }
+    
+    .theme-laifen .dk-header-icon {
+        color: #2286FE;
+        /* Laifen theme color */
 }
 
 /* Grid */
@@ -36,6 +57,8 @@
     background-color: #ffffff;
     padding: 30px;
     border: 0.5px solid #e0e0e0;
+    border-radius: 4px;
+        /* Standard radius for default theme */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
@@ -43,11 +66,33 @@
     position: relative; /* For pseudo-element absolute positioning */
 }
 
-.dk-card:hover {
+.theme-laifen .dk-card {
+    background-color: #f5f5f5;
+    border-color: transparent;
+    border-radius: 20px;
+    /* Pronounced roundness for Laifen */
+    box-shadow: none;
+    /* No shadow by default for Laifen */
+}
+
+/* Default Hover Effect */
+.did-you-know-container:not(.theme-laifen) .dk-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
 }
 
+/* Laifen Hover Effect: Sibling Scaling */
+.theme-laifen .did-you-know-grid:hover .dk-card {
+    transform: scale(0.95);
+    box-shadow: none;
+}
+
+.theme-laifen .did-you-know-grid .dk-card:hover {
+    transform: scale(1.05);
+    box-shadow: none;
+    z-index: 2;
+    /* Keep hovered card on top */
+}
 /* Numbering (01, 02, 03) */
 .dk-card::before {
     content: attr(data-number);

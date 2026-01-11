@@ -2,6 +2,7 @@ import React from 'react';
 import useScrollAnimation from '../../hooks/useScrollAnimation';
 import './Encyclopedia.css';
 import { PiArrowRightThin, PiCalendarBlankThin } from 'react-icons/pi';
+import useThemeStore from '../../store/themeStore';
 
 // Article Data
 const articles = [
@@ -39,11 +40,17 @@ const articles = [
   },
 ];
 
-const Encyclopedia = () => {
+const Encyclopedia = ({ theme: propTheme }) => {
   const [ref, isVisible] = useScrollAnimation(0.1);
+  const storeTheme = useThemeStore((state) => state.currentTheme);
+  const theme = propTheme || storeTheme;
+  const isLaifen = theme === 'laifen';
 
   return (
-    <section className="encyclopedia-container" ref={ref}>
+    <section
+      className={`encyclopedia-container ${isLaifen ? 'theme-laifen' : ''}`}
+      ref={ref}
+    >
       <div
         className={`encyclopedia-inner scroll-animate ${isVisible ? 'in-view' : ''}`}
       >

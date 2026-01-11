@@ -8,19 +8,18 @@ import {
   PiArrowRightThin,
 } from 'react-icons/pi';
 import './AboutUs.css';
+import useThemeStore from '../../store/themeStore';
 
-// Unsplash Image URLs
-const companyImg =
-  'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200';
-const historyImg =
-  'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200';
-const partnersImg =
-  'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=1200'; // Medical handshake context
-const honorsImg =
-  'https://images.unsplash.com/photo-1567427018141-0584cfcbf1b8?auto=format&fit=crop&q=80&w=1200';
+import companyImg from '../../assets/about-company.jpg';
+import historyImg from '../../assets/about-history.jpg';
+import partnersImg from '../../assets/about-partners.jpg';
+import honorsImg from '../../assets/about-honors.jpg';
 
-const AboutUs = () => {
+const AboutUs = ({ theme: propTheme }) => {
   const [ref, isVisible] = useScrollAnimation(0.1);
+  const storeTheme = useThemeStore((state) => state.currentTheme);
+  const theme = propTheme || storeTheme;
+  const isLaifen = theme === 'laifen';
 
   const cards = [
     {
@@ -62,7 +61,10 @@ const AboutUs = () => {
   ];
 
   return (
-    <section className="about-us-container" ref={ref}>
+    <section
+      className={`about-us-container ${isLaifen ? 'theme-laifen' : ''}`}
+      ref={ref}
+    >
       <div
         className={`about-us-inner scroll-animate ${isVisible ? 'in-view' : ''}`}
       >
@@ -92,7 +94,7 @@ const AboutUs = () => {
                 <img src={card.image} alt={card.title} />
                 <div className="card-overlay"></div>
               </div>
-              <div className="card-content">
+              <div className="about-card-content">
                 <div className="card-header">
                   <span className="card-subtitle-text">{card.engTitle}</span>
                   <div className="card-title-row">

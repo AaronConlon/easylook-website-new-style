@@ -1,32 +1,36 @@
 import React from 'react';
 import useScrollAnimation from '../../hooks/useScrollAnimation';
+import { PiLightbulbThin } from 'react-icons/pi';
 import './DidYouKnow.css';
 
-const DidYouKnow = () => {
+const DidYouKnow = ({ theme }) => {
   const [ref, isVisible] = useScrollAnimation(0.1);
 
   return (
     <div
-      className={`did-you-know-container scroll-animate ${isVisible ? 'in-view' : ''}`}
+      className={`did-you-know-container theme-${theme} scroll-animate ${isVisible ? 'in-view' : ''}`}
       ref={ref}
     >
       <div className="did-you-know-inner">
         <div className="did-you-know-header">
           <h2>
-            {['你', '知', '道', '吗', '？'].map((char, index) => (
-              <span
-                key={index}
-                className="char"
-                style={{
-                  display: 'inline-block',
-                  animationDelay: `${0.1 * (index + 1)}s`,
-                  opacity: isVisible ? 1 : 0,
-                  animationName: isVisible ? 'fadeInUp' : 'none',
-                }}
-              >
-                {char}
-              </span>
-            ))}
+            <PiLightbulbThin className="dk-header-icon" />
+            <span className="dk-header-text">
+              {['你', '知', '道', '吗', '？'].map((char, index) => (
+                <span
+                  key={index}
+                  className="char"
+                  style={{
+                    display: 'inline-block',
+                    animationDelay: `${0.1 * (index + 1)}s`,
+                    opacity: isVisible ? 1 : 0,
+                    animationName: isVisible ? 'fadeInUp' : 'none',
+                  }}
+                >
+                  {char}
+                </span>
+              ))}
+            </span>
           </h2>
         </div>
 

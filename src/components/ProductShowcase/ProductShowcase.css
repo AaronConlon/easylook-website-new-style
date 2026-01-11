@@ -6,11 +6,19 @@
     background-color: #ffffff;
 }
 
+.theme-laifen.product-showcase-container {
+    padding: 20px 0;
+    /* Reduced top/bottom padding as header is removed, let cards handle internal padding */
+    background-color: #fff;
+}
 .product-showcase-inner {
     max-width: 1200px;
     margin: 0 auto;
 }
 
+.theme-laifen .product-showcase-inner {
+    max-width: 1366px;
+}
 /* Header */
 .product-header {
     display: flex;
@@ -47,6 +55,10 @@
     gap: 24px; /* Adjusted gap */
 }
 
+.theme-laifen .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
 /* Card (Item Wrapper) */
 .product-card {
     background: transparent;
@@ -73,7 +85,6 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    margin-bottom: 16px; 
     position: relative;
     flex-shrink: 0;
     transition: border-color 0.3s ease;
@@ -133,10 +144,148 @@
 }
 
 .view-details-btn:hover {
-    color: #0052d9; /* Brand color on hover */
+    color: #0052d9;
+        /* Default Brand color on hover */
     gap: 8px; /* Arrow moves slightly */
 }
 
+.theme-laifen .product-card {
+    border-radius: 20px;
+    /* Match DidYouKnow */
+    background-color: #f5f5f5;
+    /* Match DidYouKnow */
+    padding: 60px 0 0 0;
+    /* Top padding for content, side padding in product-info-top */
+    text-align: center;
+    align-items: center;
+    border: none;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    /* Ensure image respects border radius at bottom */
+}
+
+.theme-laifen .product-card:hover {
+    background-color: #ededed;
+}
+
+.theme-laifen .product-info-top {
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0 40px;
+    /* Internal content padding */
+}
+
+.theme-laifen .title-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.theme-laifen .product-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #000;
+    margin: 0;
+    letter-spacing: -2px;
+}
+
+.theme-laifen .product-badge {
+    font-size: 0.85rem;
+    padding: 4px 12px;
+    border: 1px solid #000;
+    border-radius: 100px;
+    font-weight: 500;
+    color: #000;
+}
+
+.theme-laifen .product-subtitle {
+    font-size: 1.25rem;
+    color: #333;
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+.theme-laifen .product-btns {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+}
+
+.theme-laifen .btn-learn,
+.theme-laifen .btn-buy {
+    padding: 8px 24px;
+    /* Reduced by 4px vertical, ~8px horizontal total -> roughly 6px visual size reduction */
+    border-radius: 100px;
+    font-size: 0.95rem;
+    /* Slightly smaller font */
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.theme-laifen .btn-learn {
+    background: #000;
+    color: #fff;
+    border: 1px solid #000;
+}
+
+.theme-laifen .btn-learn:hover .btn-icon {
+    transform: translateX(4px);
+}
+
+.theme-laifen .btn-buy {
+    background-color: transparent;
+    color: #000;
+    border: 1px solid #000;
+}
+
+.theme-laifen .btn-buy:hover .btn-icon {
+    transform: translateX(4px);
+}
+
+.theme-laifen .btn-icon {
+    font-size: 1.1rem;
+    transition: transform 0.4s ease;
+}
+
+.theme-laifen .product-image-wrapper {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    /* User defined aspect ratio */
+    background: transparent;
+    border: none;
+    margin-top: auto;
+    /* Push to bottom */
+    padding: 0;
+    overflow: hidden;
+}
+
+.theme-laifen .product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Fill the 16:9 container */
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.theme-laifen .product-card:hover .product-image {
+    transform: scale(1.02);
+}
 .action-icon {
     font-size: 1rem;
     transition: transform 0.2s ease;
