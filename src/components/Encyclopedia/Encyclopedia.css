@@ -30,8 +30,8 @@
 
 .encyclopedia-header h2 {
     font-size: 2rem;
-    font-weight: 400;
-    color: #0F172A;
+    font-weight: var(--font-weight-regular);
+        color: var(--text-primary);
     margin-bottom: 8px;
     letter-spacing: -0.5px;
 }
@@ -115,8 +115,9 @@
 
 .encyclopedia-card .card-title {
     font-size: 1.25rem;
-    font-weight: 500;
-    color: #0F172A; /* Darker, clearer title */
+    font-weight: var(--font-weight-thin);
+        color: var(--text-secondary);
+        /* Darker, clearer title */
     margin-bottom: 12px;
     line-height: 1.4;
     transition: color 0.3s ease;
@@ -192,7 +193,8 @@
 }
 .encyclopedia-card .card-desc {
     font-size: 0.95rem;
-    color: #475569; /* Balanced gray for readability */
+    color: var(--text-secondary);
+        /* Balanced gray for readability */
     line-height: 1.6;
     margin-bottom: 20px;
     display: -webkit-box;
@@ -234,8 +236,9 @@
     border: none;
     border-radius: 100px;
     color: #ffffff; /* White text */
+    color: var(--text-primary);
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: var(--font-weight-thin);
     text-decoration: none;
     transition: all 0.2s ease;
     gap: 8px;

@@ -1,5 +1,31 @@
 @import 'tailwindcss';
 
+:root {
+  /* Default Theme Variables */
+  --font-weight-thin: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 600;
+
+  --text-primary: #333;
+  --text-secondary: #64748B;
+  /* Slate-500 */
+}
+
+/* Laifen Theme Overrides */
+.app-laifen {
+  /* No thin style: mapping thin to regular/medium */
+  --font-weight-thin: 400;
+  --font-weight-regular: 500;
+  --font-weight-medium: 600;
+  --font-weight-bold: 700;
+
+  /* Darker text colors */
+  --text-primary: #0F172A;
+  /* Slate-900 (Black-ish) */
+  --text-secondary: #334155;
+  /* Slate-700 (One level below black) */
+}
 * {
   box-sizing: border-box;
 }

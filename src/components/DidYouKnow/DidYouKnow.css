@@ -5,7 +5,7 @@
 }
 
 .did-you-know-inner {
-    max-width: 1200px;
+    max-width: 1366px;
     margin: 0 auto;
     font-family: 'Inter', sans-serif; /* Example font */
 }
@@ -18,9 +18,9 @@
 
 .did-you-know-header h2 {
     font-size: 2rem;
-    color: #0F172A;
+    color: var(--text-primary);
     margin: 0;
-    font-weight: 400;
+    font-weight: var(--font-weight-regular);
     display: flex;
         align-items: center;
         gap: 12px;
@@ -100,7 +100,7 @@
     top: 20px;
     right: 20px;
     font-size: 4rem;
-    font-weight: 700;
+    font-weight: var(--font-weight-bold);
     color: #f1f5f9;
     opacity: 0; /* Hidden by default */
     transition: all 0.4s ease;
@@ -126,7 +126,9 @@
 
 .dk-number {
     font-size: 3.5rem;
-    font-weight: 400; /* Thin style */
+    font-weight: var(--font-weight-thin);
+        /* Thin style */
+        color: var(--text-primary);
     font-family: 'Outfit', sans-serif;
     line-height: 1;
     letter-spacing: -2px;
@@ -134,15 +136,15 @@
 
 .dk-unit {
     font-size: 1rem;
-    color: #64748B;
+    color: var(--text-secondary);
     margin-left: 8px;
-    font-weight: 300;
+    font-weight: var(--font-weight-thin);
 }
 
 .dk-title {
     font-size: 1.25rem;
-    font-weight: 500;
-    color: #334155;
+    font-weight: var(--font-weight-medium);
+        color: var(--text-secondary);
     margin-bottom: 4px;
     z-index: 1;
     position: relative;
@@ -160,9 +162,9 @@
 
 .dk-desc {
     font-size: 1rem;
-    color: #64748B;
+    color: var(--text-secondary);
     line-height: 1.6;
-    font-weight: 300;
+    font-weight: var(--font-weight-thin);
     z-index: 1;
     position: relative;
 }

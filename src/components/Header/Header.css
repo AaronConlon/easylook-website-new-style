@@ -206,10 +206,10 @@
   align-items: center;
   gap: 4px;
   padding: 8px 0;
-  color: #64748B;
+  color: var(--text-secondary);
   text-decoration: none;
   font-size: 15px;
-  font-weight: 300;
+  font-weight: var(--font-weight-thin);
   letter-spacing: 0.3px;
   transition: all 0.2s ease;
   cursor: pointer;
@@ -223,9 +223,9 @@
 }
 
 .nav-menu-item.active {
-  color: #0F172A;
-  font-weight: 400;
-  border-bottom-color: #0F172A;
+  color: var(--text-primary);
+    font-weight: var(--font-weight-regular);
+    border-bottom-color: var(--text-primary);
 }
 
 /* Down Icon */
@@ -271,10 +271,10 @@
 .nav-menu-children-wrapper a {
   display: block;
   padding: 10px 20px;
-  color: #64748B;
+  color: var(--text-secondary);
   text-decoration: none;
   font-size: 13px;
-  font-weight: 300;
+  font-weight: var(--font-weight-thin);
   letter-spacing: 0.3px;
   transition: all 0.2s ease;
   white-space: nowrap;
@@ -289,8 +289,8 @@
   transform: translateY(-50%) translateX(-8px);
   opacity: 0;
   font-size: 14px;
-  font-weight: 300;
-  color: #0F172A;
+  font-weight: var(--font-weight-thin);
+    color: var(--text-primary);
   transition: all 0.25s ease;
 }
 
@@ -321,7 +321,7 @@
   border: none;
   border-radius: 50%;
   cursor: pointer;
-  color: #64748B;
+  color: var(--text-secondary);
   transition: all 0.2s ease;
 }
 
@@ -394,8 +394,8 @@
 
 .qr-item span {
   font-size: 12px;
-  font-weight: 300;
-  color: #64748B;
+  font-weight: var(--font-weight-thin);
+    color: var(--text-secondary);
   letter-spacing: 0.2px;
   text-align: center;
 }

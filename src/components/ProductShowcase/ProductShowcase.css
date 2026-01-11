@@ -36,8 +36,8 @@
 
 .product-header h2 {
     font-size: 2rem;
-    font-weight: 400; /* Thinner weight */
-    color: #0F172A;
+    color: var(--text-primary);
+        font-weight: var(--font-weight-thin);
     margin-bottom: 4px;
     letter-spacing: -0.5px;
 }
@@ -117,8 +117,8 @@
 
 .product-title {
     font-size: 1rem;
-    font-weight: 400; /* Regular weight */
-    color: #111;
+    color: var(--text-secondary);
+        font-weight: var(--font-weight-thin);
     margin-bottom: 8px;
     letter-spacing: 0.2px;
 }
@@ -190,8 +190,8 @@
 
 .theme-laifen .product-title {
     font-size: 3.5rem;
-    font-weight: 700;
-    color: #000;
+    font-weight: var(--font-weight-regular);
+        color: var(--text-secondary);
     margin: 0;
     letter-spacing: -2px;
 }
@@ -201,7 +201,7 @@
     padding: 4px 12px;
     border: 1px solid #000;
     border-radius: 100px;
-    font-weight: 500;
+    font-weight: var(--font-weight-medium);
     color: #000;
 }
 
@@ -225,7 +225,7 @@
     border-radius: 100px;
     font-size: 0.95rem;
     /* Slightly smaller font */
-    font-weight: 500;
+    font-weight: var(--font-weight-medium);
     text-decoration: none;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     display: inline-flex;

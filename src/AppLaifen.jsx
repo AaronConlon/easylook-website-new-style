@@ -9,6 +9,7 @@ import UserStories from './components/UserStories/UserStories';
 import Partnership from './components/Partnership/Partnership';
 import AboutUs from './components/AboutUs/AboutUs';
 import ThemeSwitcher from './components/Shared/ThemeSwitcher';
+import BackToTop from './components/Shared/BackToTop';
 
 const AppLaifen = () => {
   return (
@@ -25,6 +26,7 @@ const AppLaifen = () => {
       </main>
       <FooterLaifen />
       <ThemeSwitcher />
+      <BackToTop theme="laifen" />
     </div>
   );
 };
