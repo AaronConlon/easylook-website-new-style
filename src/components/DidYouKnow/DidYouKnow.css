@@ -33,8 +33,13 @@
 
 .dk-header-icon {
     font-size: 2.2rem;
-    color: #2286FE; /* Laifen theme color */
+    color: #94A3B8; /* Default grey */
     flex-shrink: 0;
+    transition: color 0.3s ease;
+}
+
+.did-you-know-inner:hover .dk-header-icon {
+    color: #2286FE; /* Theme color on hover */
 }
 
 /* Grid */

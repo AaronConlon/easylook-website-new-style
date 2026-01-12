@@ -1,3 +1,4 @@
+import { Link, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import {
   PiPhoneThin,
@@ -6,15 +7,14 @@ import {
   PiXThin,
   PiWhatsappLogoThin,
 } from 'react-icons/pi';
-import tinyLogo from '../../assets/tiny-logo.png';
+import tinyLogo from '../../assets/tiny-logo.svg';
 import qrCodeImg from '../../assets/qr-code.png';
 import gongzhonghaoImg from '../../assets/gongzhonghao.png';
 import './Header.css';
 
 const Header = () => {
-  const [activeMenu, setActiveMenu] = useState(() => {
-    return window.location.hash.replace('#', '') || '/';
-  });
+  const { pathname } = useLocation();
+  const [activeMenu, setActiveMenu] = useState(pathname || '/');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const menuItems = [
@@ -43,16 +43,8 @@ const Header = () => {
   ];
 
   useEffect(() => {
-    if (activeMenu) {
-      const targetHash = activeMenu.startsWith('/')
-        ? '#' + activeMenu
-        : '#' + activeMenu;
-      // Simple check to avoid loops if needed, though hash setter is usually safe
-      if (window.location.hash !== targetHash) {
-        window.location.hash = activeMenu;
-      }
-    }
-  }, [activeMenu]);
+    setActiveMenu(pathname);
+  }, [pathname]);
 
   // Lock body scroll when mobile menu is open
   useEffect(() => {
@@ -66,8 +58,7 @@ const Header = () => {
     };
   }, [isMobileMenuOpen]);
 
-  const handleMenuClick = (href) => {
-    setActiveMenu(href);
+  const handleMenuClick = () => {
     setIsMobileMenuOpen(false);
   };
 
@@ -84,19 +75,20 @@ const Header = () => {
         >
           {menuItems.map((item, index) => (
             <div key={index} className="nav-menu-item-wrapper">
-              <a
-                data-href={item.path}
+              <Link
+                to={item.href}
+                prefetch="intent"
                 className={`nav-menu-item ${
                   activeMenu === item.href ||
-                  (item.path !== '/' && activeMenu.startsWith(item.path))
+                  (item.href !== '/' && activeMenu.startsWith(item.href))
                     ? 'active'
                     : ''
                 } ${item.children ? 'has-children' : ''}`}
-                href={item.children ? 'javascript:void(0)' : `/#${item.href}`}
                 onClick={(e) => {
-                  e.preventDefault();
-                  if (!item.children) {
-                    handleMenuClick(item.href);
+                  if (item.children) {
+                    e.preventDefault();
+                  } else {
+                    handleMenuClick();
                   }
                 }}
               >
@@ -109,20 +101,20 @@ const Header = () => {
                 {item.children && (
                   <PiCaretDownThin className="nav-menu-down-icon" />
                 )}
-              </a>
+              </Link>
               {item.children && (
                 <div className="nav-menu-children-wrapper">
                   {item.children.map((child, childIndex) => (
-                    <a
+                    <Link
                       key={childIndex}
-                      href={`/#${child.href}`}
-                      onClick={(e) => {
-                        e.preventDefault();
-                        handleMenuClick(child.href);
+                      to={child.href}
+                      prefetch="intent"
+                      onClick={() => {
+                        handleMenuClick();
                       }}
                     >
                       {child.label}
-                    </a>
+                    </Link>
                   ))}
                 </div>
               )}
@@ -130,43 +122,40 @@ const Header = () => {
           ))}
           {/* Mobile-only Contact Us */}
           <div className="nav-menu-item-wrapper mobile-only-item">
-            <a
-              href="/#contact"
+            <Link
+              to="/contact"
               className="nav-menu-item"
-              onClick={(e) => {
-                e.preventDefault();
-                handleMenuClick('/contact');
+              onClick={() => {
+                handleMenuClick();
               }}
             >
               <span>联系我们</span>
-            </a>
+            </Link>
           </div>
         </nav>
 
         {/* Center: Logo */}
-        <a
+        <Link
           className={`header-logo-center ${activeMenu === '/' ? 'active' : ''}`}
-          href="/#/"
-          onClick={(e) => {
-            e.preventDefault();
-            handleMenuClick('/');
+          to="/"
+          onClick={() => {
+            handleMenuClick();
           }}
         >
           <img src={tinyLogo} alt="易视康 Logo" className="header-logo" />
-        </a>
+        </Link>
 
         {/* Right: Actions (Contact + Mobile Toggle) */}
         <div className="header-actions-right">
-          <a
-            href="/#contact"
+          <Link
+            to="/contact"
             className="nav-contact-link_text"
-            onClick={(e) => {
-              e.preventDefault();
-              handleMenuClick('/contact');
+            onClick={() => {
+              handleMenuClick();
             }}
           >
             联系我们
-          </a>
+          </Link>
 
           <div className="header-contact-wrapper">
             <button className="header-contact-icon" aria-label="Contact">
@@ -205,6 +194,6 @@ const Header = () => {
       </div>
     </header>
   );
-};;
+};
 
 export default Header;

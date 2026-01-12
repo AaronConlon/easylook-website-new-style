@@ -13,4 +13,7 @@ export default defineConfig({
       plugins: [codeInspectorPlugin({ bundler: 'rspack' })],
     },
   },
+  html: {
+    favicon: './public/favicon.svg',
+  },
 });

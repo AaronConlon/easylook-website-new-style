@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import {
   PiBuildingsThin,
   PiTrendUpThin,
@@ -21,7 +22,7 @@ const AboutUs = () => {
       title: '合作伙伴',
       engTitle: 'Strategic Partners',
       icon: <PiHandshakeThin />,
-      link: '/partners',
+      link: '/about/partners',
       className: 'card-partners',
     },
     {
@@ -29,7 +30,7 @@ const AboutUs = () => {
       title: '公司荣誉',
       engTitle: 'Company Honors',
       icon: <PiMedalThin />,
-      link: '/honor',
+      link: '/about/honor',
       className: 'card-honors',
     },
   ];
@@ -39,13 +40,18 @@ const AboutUs = () => {
       <div className="about-us-inner">
         <div className="about-grid">
           {cards.map((card) => (
-            <a href={card.link} key={card.id} className="grid-item">
+            <Link
+              to={card.link}
+              key={card.id}
+              className="grid-item"
+              prefetch="intent"
+            >
               <div className="about-card-content">
                 <div className="card-icon-wrapper">{card.icon}</div>
                 <h3 className="card-title">{card.title}</h3>
                 <div className="card-subtitle-text">{card.engTitle}</div>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
       </div>

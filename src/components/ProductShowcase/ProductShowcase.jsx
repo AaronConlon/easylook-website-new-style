@@ -94,7 +94,7 @@ const ProductShowcase = () => {
               <div className="product-info-top">
                 <div className="title-row">
                   <h3 className="product-title">{product.title}</h3>
-                  <span className="product-badge">{product.badge}</span>
+                  {/* <span className="product-badge">{product.badge}</span> */}
                 </div>
                 <p className="product-subtitle">{product.subtitle}</p>
                 <div className="product-btns">

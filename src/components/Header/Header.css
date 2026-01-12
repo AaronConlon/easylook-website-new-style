@@ -23,7 +23,8 @@
 .header .mobile-menu-toggle,
 .header .header-contact-icon,
 .header .nav-contact-link_text {
-  color: #0F172A;
+  color: #696969;
+  transition: color 0.3s ease;
 }
 
 .header .nav-menu-item:hover,
@@ -182,13 +183,13 @@
   color: var(--text-secondary);
   text-decoration: none;
   font-weight: var(--font-weight-regular);
-  transition: all 0.2s ease;
+  transition: color 0.3s ease;
   border-bottom: 1px solid transparent;
 }
 
 .nav-contact-link_text:hover {
-  color: var(--text-primary);
-  border-bottom-color: #000000;
+  color: #000000;
+  border-bottom-color: transparent;
 }
 
 /* Mobile Menu Toggle */
@@ -231,7 +232,7 @@
   font-size: 15px;
   font-weight: var(--font-weight-regular);
   letter-spacing: 0.3px;
-  transition: all 0.2s ease;
+  transition: color 0.3s ease;
   cursor: pointer;
   white-space: nowrap;
   position: relative;
@@ -239,7 +240,7 @@
 }
 
 .nav-menu-item:hover {
-  color: #0f172a;
+  color: #000000;
 }
 
 /* Only show border for items without children */

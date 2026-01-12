@@ -313,6 +313,14 @@
     max-width: 600px;
 }
 
+@media (max-width: 768px) {
+    .policy-banner {
+        width: 100%;
+        border-radius: 0;
+        transform: scale(1.054);
+    }
+}
+
 .policy-banner::before {
     content: '';
     position: absolute;

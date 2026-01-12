@@ -1,6 +1,6 @@
-import React from 'react';
+import { Link } from 'react-router-dom';
 import { PiPhoneThin, PiEnvelopeThin, PiMapPinThin } from 'react-icons/pi';
-import logoSvg from '../../assets/logo.svg';
+import logoSvg from '../../assets/full-logo.png';
 import gongzhonghaoImg from '../../assets/gongzhonghao.png';
 import qrCodeImg from '../../assets/qr-code.png';
 import './Footer.css';
@@ -52,7 +52,9 @@ const Footer = () => {
             <ul className="footer-links-list">
               {quickLinks.map((link, index) => (
                 <li key={index}>
-                  <a href={`/#${link.href}`}>{link.label}</a>
+                  <Link to={link.href} prefetch="intent">
+                    {link.label}
+                  </Link>
                 </li>
               ))}
             </ul>

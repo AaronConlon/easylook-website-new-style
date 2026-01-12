@@ -56,11 +56,11 @@
 }
 
 .card-title {
-    font-size: 1.8rem;
-    font-weight: 700; /* Bold */
+    font-size: 1.2rem;
+    font-weight: 500; /* Bold */
     margin: 0;
     color: #000; /* Black */
-    line-height: 1.2;
+    line-height: 1.4;
 }
 
 .card-subtitle-text {

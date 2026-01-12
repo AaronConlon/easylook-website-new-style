@@ -1,10 +1,9 @@
 import { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, EffectFade, Navigation } from 'swiper/modules';
+import { Autoplay, Navigation } from 'swiper/modules';
 import { PiCaretLeftThin, PiCaretRightThin } from 'react-icons/pi';
 import slidesData from '../../data/heroSlides';
 import 'swiper/css';
-import 'swiper/css/effect-fade';
 import './HeroCarousel.css';
 
 const HeroCarousel = () => {
@@ -14,8 +13,7 @@ const HeroCarousel = () => {
   return (
     <div className="hero-carousel">
       <Swiper
-        modules={[Autoplay, EffectFade, Navigation]}
-        effect="fade"
+        modules={[Autoplay, Navigation]}
         spaceBetween={0}
         slidesPerView={1}
         speed={1000}
