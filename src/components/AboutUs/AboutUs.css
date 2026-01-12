@@ -14,7 +14,7 @@
 /* Grid Layout */
 .about-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 columns for single row */
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for single row */
     gap: 24px;
 }
 

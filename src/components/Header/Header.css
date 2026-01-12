@@ -21,7 +21,8 @@
 /* Update text colors */
 .header .nav-menu-item,
 .header .mobile-menu-toggle,
-.header .header-contact-icon {
+.header .header-contact-icon,
+.header .nav-contact-link_text {
   color: #0F172A;
 }
 
@@ -30,9 +31,7 @@
   color: #000000;
 }
 
-.header .nav-menu-item.active {
-  border-bottom-color: #000000;
-}
+
 
 /* Submenus & Popups */
 .header .nav-menu-children-wrapper,
@@ -245,13 +244,19 @@
 
 /* Only show border for items without children */
 .nav-menu-item:not(.has-children):hover {
-  border-bottom-color: #000000;
+  border-bottom-color: transparent;
 }
 
 .nav-menu-item.active {
   color: var(--text-primary);
   font-weight: var(--font-weight-regular);
-  border-bottom-color: #000000;
+  border-bottom-color: transparent;
+}
+
+.nav-menu-home-wrapper {
+  min-width: 4em; /* Match width of 4-character menu items */
+  text-align: center;
+  display: inline-block;
 }
 
 /* Down Icon */

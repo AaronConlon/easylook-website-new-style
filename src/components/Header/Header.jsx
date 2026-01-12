@@ -6,7 +6,7 @@ import {
   PiXThin,
   PiWhatsappLogoThin,
 } from 'react-icons/pi';
-import logoSvg from '../../assets/logo.svg';
+import tinyLogo from '../../assets/tiny-logo.png';
 import qrCodeImg from '../../assets/qr-code.png';
 import gongzhonghaoImg from '../../assets/gongzhonghao.png';
 import './Header.css';
@@ -101,7 +101,11 @@ const Header = () => {
                 }}
               >
                 {item.icon && item.icon}
-                <span>{item.label}</span>
+                {item.label === '首页' ? (
+                  <div className="nav-menu-home-wrapper">{item.label}</div>
+                ) : (
+                  <span>{item.label}</span>
+                )}
                 {item.children && (
                   <PiCaretDownThin className="nav-menu-down-icon" />
                 )}
@@ -148,7 +152,7 @@ const Header = () => {
             handleMenuClick('/');
           }}
         >
-          <img src={logoSvg} alt="易视康 Logo" className="header-logo" />
+          <img src={tinyLogo} alt="易视康 Logo" className="header-logo" />
         </a>
 
         {/* Right: Actions (Contact + Mobile Toggle) */}
