@@ -6,7 +6,7 @@ import HomeIcon from '../../assets/home-icon.svg';
 const Breadcrumbs = ({ items }) => {
   return (
     <div className="max-w-[1200px] mx-auto px-4 mb-20">
-      <div className="flex items-center gap-2 text-sm text-[var(--text-secondary)] border-t border-gray-100 pt-8">
+      <div className="flex items-center gap-2 text-sm text-[var(--text-secondary)] pt-8">
         <Link
           to="/"
           className="flex items-center gap-1 hover:text-[var(--text-primary)] transition-colors"
@@ -18,7 +18,10 @@ const Breadcrumbs = ({ items }) => {
           <React.Fragment key={index}>
             <PiCaretRightThin />
             {item.path ? (
-              <Link to={item.path} className="hover:text-[var(--text-primary)] transition-colors">
+              <Link
+                to={item.path}
+                className="hover:text-[var(--text-primary)] transition-colors"
+              >
                 {item.label}
               </Link>
             ) : (
