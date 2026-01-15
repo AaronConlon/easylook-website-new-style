@@ -34,7 +34,6 @@ const Header = () => {
       path: '/about/company',
       children: [
         { label: '关于视立优', href: '/about' },
-        { label: '合作伙伴', href: '/about/partners' },
         { label: '公司荣誉', href: '/about/honor' },
       ],
     },
