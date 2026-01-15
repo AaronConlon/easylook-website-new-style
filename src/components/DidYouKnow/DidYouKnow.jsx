@@ -3,12 +3,12 @@ import useScrollAnimation from '../../hooks/useScrollAnimation';
 import { PiLightbulbThin } from 'react-icons/pi';
 import './DidYouKnow.css';
 
-const DidYouKnow = ({ theme }) => {
+const DidYouKnow = () => {
   const [ref, isVisible] = useScrollAnimation(0.1);
 
   return (
     <div
-      className={`did-you-know-container theme-${theme} scroll-animate ${isVisible ? 'in-view' : ''}`}
+      className={`did-you-know-container scroll-animate ${isVisible ? 'in-view' : ''}`}
       ref={ref}
     >
       <div className="did-you-know-inner">

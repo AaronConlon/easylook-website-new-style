@@ -14,20 +14,16 @@
 /* Grid Layout */
 .about-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns for single row */
+    grid-template-columns: repeat(2, 1fr); /* 3 columns for single row */
     gap: 24px;
 }
 
 .grid-item {
     border-radius: 20px;
-    background-color: #f5f5f5; /* Light grey background for cards */
+    background-color: var(--color-sub);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
     overflow: hidden;
-}
-
-.theme-laifen .grid-item {
-    border-radius: 20px;
 }
 
 .grid-item:hover {
@@ -44,12 +40,12 @@
     justify-content: center; /* Top to bottom */
     height: 100%;
     gap: 16px;
-    color: #000;
+    color: var(--text-primary);
 }
 
 .card-icon-wrapper {
     font-size: 2rem;
-    color: #000;
+    color: var(--text-primary);
     margin-bottom: 8px;
     display: flex;
     align-items: center;
@@ -59,7 +55,7 @@
     font-size: 1.2rem;
     font-weight: 500; /* Bold */
     margin: 0;
-    color: #000; /* Black */
+    color: var(--text-primary);
     line-height: 1.4;
 }
 

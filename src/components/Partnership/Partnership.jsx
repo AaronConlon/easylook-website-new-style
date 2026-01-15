@@ -10,7 +10,7 @@ import {
 } from 'react-icons/pi';
 import './Partnership.css';
 
-const Partnership = () => {
+const Partnership = ({ showBenefits = true }) => {
   const [ref, isVisible] = useScrollAnimation(0.1);
 
   return (
@@ -74,47 +74,48 @@ const Partnership = () => {
           />
         </div>
 
-        {/* Benefits Section */}
-        <div className="benefits-section">
-          <div className="benefits-content">
-            <h3 className="benefits-title">成为我们的合作伙伴</h3>
-            <p className="benefits-subtitle">
-              专业培训支持 · 品牌授权体系 · 完善售后服务
-            </p>
+        {showBenefits && (
+          <div className="benefits-section">
+            <div className="benefits-content">
+              <h3 className="benefits-title">成为我们的合作伙伴</h3>
+              <p className="benefits-subtitle">
+                专业培训支持 · 品牌授权体系 · 完善售后服务
+              </p>
 
-            <div className="benefits-list">
-              <div className="benefit-item">
-                <div className="benefit-icon-wrapper">1</div>
-                <div>
-                  <h4>全方位市场推广支持</h4>
-                  <p>品牌宣传、营销物料、线上线下推广</p>
+              <div className="benefits-list">
+                <div className="benefit-item">
+                  <div className="benefit-icon-wrapper">1</div>
+                  <div>
+                    <h4>全方位市场推广支持</h4>
+                    <p>品牌宣传、营销物料、线上线下推广</p>
+                  </div>
                 </div>
-              </div>
-              <div className="benefit-item">
-                <div className="benefit-icon-wrapper">2</div>
-                <div>
-                  <h4>成熟商业模式与利润空间</h4>
-                  <p>经过验证的盈利模式，丰厚回报</p>
+                <div className="benefit-item">
+                  <div className="benefit-icon-wrapper">2</div>
+                  <div>
+                    <h4>成熟商业模式与利润空间</h4>
+                    <p>经过验证的盈利模式，丰厚回报</p>
+                  </div>
                 </div>
-              </div>
-              <div className="benefit-item">
-                <div className="benefit-icon-wrapper">3</div>
-                <div>
-                  <h4>培训支持</h4>
-                  <p>一对一培训，全程运营支持</p>
+                <div className="benefit-item">
+                  <div className="benefit-icon-wrapper">3</div>
+                  <div>
+                    <h4>培训支持</h4>
+                    <p>一对一培训，全程运营支持</p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          <div className="benefits-image-wrapper">
-            <img
-              src="https://de4965e.webp.li/blog-images/2025/10/9f46fae74442e8cb7e83d891e9c3029a.png"
-              alt="合作伙伴"
-              className="benefits-image"
-            />
+            <div className="benefits-image-wrapper">
+              <img
+                src="https://de4965e.webp.li/blog-images/2025/10/9f46fae74442e8cb7e83d891e9c3029a.png"
+                alt="合作伙伴"
+                className="benefits-image"
+              />
+            </div>
           </div>
-        </div>
+        )}
 
         {/* Footer Policy Banner */}
         <div className="policy-banner">

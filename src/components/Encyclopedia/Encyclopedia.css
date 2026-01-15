@@ -64,7 +64,7 @@
     height: 100%;
     border-radius: 20px;
     background-color: #fff;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.05);
     transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s ease;
 }
 
@@ -138,7 +138,7 @@
 
 .encyclopedia-card:hover .card-title {
     text-decoration: underline;
-    text-decoration-color: rgba(0, 0, 0, 0.1);
+    text-decoration-color: rgba(0, 0, 0, 0.05);
     text-decoration-thickness: 4px;
     text-underline-offset: 4px;
 }
@@ -167,7 +167,7 @@
 }
 
 .encyclopedia-card:hover .read-more-btn {
-    color: #000;
+    color: var(--color-primary);
 }
 
 /* View More Button in Header/Footer */
@@ -178,7 +178,7 @@
 }
 
 .view-more-btn {
-    background-color: #000;
+    background-color: var(--color-primary);
     color: #fff;
     box-shadow: none;
     padding: 8px 24px;
@@ -186,7 +186,7 @@
     position: relative;
     overflow: hidden;
     z-index: 1;
-    border: 1px solid #000;
+    border: 1px solid var(--color-primary);
     display: inline-flex;
     align-items: center;
     gap: 8px;

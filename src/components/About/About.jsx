@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { PiQuotesFill, PiX, PiHouse } from 'react-icons/pi';
+import { PiQuotesFill, PiX } from 'react-icons/pi';
+import Breadcrumbs from '../Shared/Breadcrumbs';
 
 const About = () => {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
@@ -29,20 +30,23 @@ const About = () => {
   return (
     <div className="about-page bg-white w-full">
       <Helmet>
-        <title>关于视立优 - 视立优 EASYLOOK</title>
+        <title>
+          关于视立优 - 专业的视力保护解决方案提供商，守护您的视界健康
+        </title>
         <meta
           name="description"
           content="上海惟爱医疗科技有限公司是一家专注于眼科全产业链的医疗科技公司，旗下品牌视立优致力于提供高品质、专业化的视功能产品，守护您的视界健康。"
         />
       </Helmet>
 
-      {/* Header Section */}
       <div className="about-header flex flex-col items-center justify-center py-20 px-4">
-        <h1 className="text-5xl font-bold text-slate-900 mb-6">视立优</h1>
-        <p className="text-xl sm:text-2xl text-slate-600 font-normal text-center max-w-2xl mb-12">
+        <h1 className="text-5xl font-bold text-[var(--text-primary)] mb-6">
+          视立优
+        </h1>
+        <p className="text-xl sm:text-2xl text-[var(--text-secondary)] font-normal text-center max-w-2xl mb-12">
           专业的视力保护解决方案提供商，守护您的视界健康。
         </p>
-        <div className="max-w-4xl mx-auto space-y-6 text-slate-600 leading-relaxed text-justify px-4">
+        <div className="max-w-4xl mx-auto space-y-6 text-[var(--text-secondary)] leading-relaxed text-justify px-4">
           <p>
             上海惟爱医疗科技有限公司是一家专注于眼科全产业链的医疗科技公司，总部位于上海市。公司业务触及多个领域，主营眼视光产品自研、线下实体诊所、医疗软件研发和销售、医疗设备及产品供应链、会务会展承办等。
           </p>
@@ -109,12 +113,14 @@ const About = () => {
       <div className="about-grid-container max-w-[1200px] mx-auto px-4 mb-20">
         <div className="grid lg:grid-cols-2 gap-8">
           {/* Card 1 */}
-          <div className="bg-slate-50 p-16 rounded-[24px]">
+          <div className="bg-[var(--color-sub)] p-16 rounded-[24px]">
             <blockquote className="text-center relative">
               <div>
-                <h6 className="text-3xl font-bold text-black mb-6">自产自研</h6>
-                <p className="relative text-lg text-slate-700 leading-relaxed font-normal">
-                  <PiQuotesFill className="absolute top-0 right-0 transform translate-x-4 -translate-y-12 text-[120px] text-slate-200 opacity-50" />
+                <h6 className="text-3xl font-bold text-[var(--text-primary)] mb-6">
+                  自产自研
+                </h6>
+                <p className="relative text-lg text-[var(--text-secondary)] leading-relaxed font-normal">
+                  <PiQuotesFill className="absolute top-0 right-0 transform translate-x-4 -translate-y-12 text-[120px] text-[var(--text-primary)] opacity-5" />
                   <span className="relative z-10">
                     “我们致力于突破更多技术壁垒，将更多能为大众生活提高品质的研究成果与产品带给用户。”
                   </span>
@@ -124,12 +130,14 @@ const About = () => {
           </div>
 
           {/* Card 2 */}
-          <div className="bg-slate-50 p-16 rounded-[24px]">
+          <div className="bg-[var(--color-sub)] p-16 rounded-[24px]">
             <blockquote className="text-center relative">
               <div>
-                <h6 className="text-3xl font-bold text-black mb-6">专注细节</h6>
-                <p className="relative text-lg text-slate-700 leading-relaxed font-normal">
-                  <PiQuotesFill className="absolute top-0 right-0 transform translate-x-4 -translate-y-12 text-[120px] text-slate-200 opacity-50" />
+                <h6 className="text-3xl font-bold text-[var(--text-primary)] mb-6">
+                  专注细节
+                </h6>
+                <p className="relative text-lg text-[var(--text-secondary)] leading-relaxed font-normal">
+                  <PiQuotesFill className="absolute top-0 right-0 transform translate-x-4 -translate-y-12 text-[120px] text-[var(--text-primary)] opacity-5" />
                   <span className="relative z-10">
                     “让用户从产品细节上感受到生活品质的提升，这就是我们以创新重塑生活的初心。”
                   </span>
@@ -139,12 +147,14 @@ const About = () => {
           </div>
 
           {/* Card 3 */}
-          <div className="bg-slate-50 p-16 rounded-[24px]">
+          <div className="bg-[var(--color-sub)] p-16 rounded-[24px]">
             <blockquote className="text-center relative">
               <div>
-                <h6 className="text-3xl font-bold text-black mb-6">探索极致</h6>
-                <p className="relative text-lg text-slate-700 leading-relaxed font-normal">
-                  <PiQuotesFill className="absolute top-0 right-0 transform translate-x-4 -translate-y-12 text-[120px] text-slate-200 opacity-50" />
+                <h6 className="text-3xl font-bold text-[var(--text-primary)] mb-6">
+                  探索极致
+                </h6>
+                <p className="relative text-lg text-[var(--text-secondary)] leading-relaxed font-normal">
+                  <PiQuotesFill className="absolute top-0 right-0 transform translate-x-4 -translate-y-12 text-[120px] text-[var(--text-primary)] opacity-5" />
                   <span className="relative z-10">
                     “各类测试，不仅是为了安全，也是探索产品的极致。”
                   </span>
@@ -154,14 +164,14 @@ const About = () => {
           </div>
 
           {/* Card 4 */}
-          <div className="bg-slate-50 p-16 rounded-[24px]">
+          <div className="bg-[var(--color-sub)] p-16 rounded-[24px]">
             <blockquote className="text-center relative">
               <div>
-                <h6 className="text-3xl font-bold text-black mb-6">
+                <h6 className="text-3xl font-bold text-[var(--text-primary)] mb-6">
                   提供最优解
                 </h6>
-                <p className="relative text-lg text-slate-700 leading-relaxed font-normal">
-                  <PiQuotesFill className="absolute top-0 right-0 transform translate-x-4 -translate-y-12 text-[120px] text-slate-200 opacity-50" />
+                <p className="relative text-lg text-[var(--text-secondary)] leading-relaxed font-normal">
+                  <PiQuotesFill className="absolute top-0 right-0 transform translate-x-4 -translate-y-12 text-[120px] text-[var(--text-primary)] opacity-5" />
                   <span className="relative z-10">
                     “工业设计是寻找和解决问题的过程，通过创新和验证找到产品的最优解。”
                   </span>
@@ -187,7 +197,7 @@ const About = () => {
           {/* Timeline Column */}
           <div className="p-4 lg:p-0">
             <div className="mb-8">
-              <h3 className="text-xl font-bold uppercase tracking-wider text-slate-900 border-l-4 border-slate-900 pl-4">
+              <h3 className="text-xl font-bold uppercase tracking-wider text-[var(--text-primary)] border-l-4 border-slate-900 pl-4">
                 发展历程
               </h3>
             </div>
@@ -197,16 +207,16 @@ const About = () => {
                 <div className="flex items-center gap-4">
                   <div className="w-[4px] h-[4px] rounded-full bg-black shrink-0 relative z-10"></div>
                   <div className="flex items-baseline gap-3">
-                    <span className="text-xl font-bold text-slate-900 leading-none">
+                    <span className="text-xl font-bold text-[var(--text-primary)] leading-none">
                       2018 年
                     </span>
-                    <span className="text-lg font-bold text-slate-900 leading-none">
+                    <span className="text-lg font-bold text-[var(--text-primary)] leading-none">
                       公司成立
                     </span>
                   </div>
                 </div>
                 <div className="ml-0 border-l border-slate-900 pl-4 pb-12 ml-[1px] mb-2">
-                  <p className="text-base text-slate-600 leading-relaxed my-2">
+                  <p className="text-base text-[var(--text-secondary)] leading-relaxed my-2">
                     上海惟爱医疗科技有限公司正式成立，专注眼科医疗科技领域。
                   </p>
                 </div>
@@ -217,16 +227,16 @@ const About = () => {
                 <div className="flex items-center gap-4">
                   <div className="w-[4px] h-[4px] rounded-full bg-black shrink-0 relative z-10"></div>
                   <div className="flex items-baseline gap-3">
-                    <span className="text-xl font-bold text-slate-900 leading-none">
+                    <span className="text-xl font-bold text-[var(--text-primary)] leading-none">
                       2019 年
                     </span>
-                    <span className="text-lg font-bold text-slate-900 leading-none">
+                    <span className="text-lg font-bold text-[var(--text-primary)] leading-none">
                       产品研发
                     </span>
                   </div>
                 </div>
                 <div className="ml-0 border-l border-slate-900 pl-4 pb-12 ml-[1px] mb-2">
-                  <p className="text-base text-slate-600 leading-relaxed my-2">
+                  <p className="text-base text-[var(--text-secondary)] leading-relaxed my-2">
                     启动视立优品牌，开始视觉训练产品的研发工作。
                   </p>
                 </div>
@@ -237,16 +247,16 @@ const About = () => {
                 <div className="flex items-center gap-4">
                   <div className="w-[4px] h-[4px] rounded-full bg-black shrink-0 relative z-10"></div>
                   <div className="flex items-baseline gap-3">
-                    <span className="text-xl font-bold text-slate-900 leading-none">
+                    <span className="text-xl font-bold text-[var(--text-primary)] leading-none">
                       2020 年
                     </span>
-                    <span className="text-lg font-bold text-slate-900 leading-none">
+                    <span className="text-lg font-bold text-[var(--text-primary)] leading-none">
                       市场拓展
                     </span>
                   </div>
                 </div>
                 <div className="ml-0 border-l border-slate-900 pl-4 pb-12 ml-[1px] mb-2">
-                  <p className="text-base text-slate-600 leading-relaxed my-2">
+                  <p className="text-base text-[var(--text-secondary)] leading-relaxed my-2">
                     产品正式上市，建立全国销售网络和服务体系。
                   </p>
                 </div>
@@ -257,16 +267,16 @@ const About = () => {
                 <div className="flex items-center gap-4">
                   <div className="w-[4px] h-[4px] rounded-full bg-black shrink-0 relative z-10"></div>
                   <div className="flex items-baseline gap-3">
-                    <span className="text-xl font-bold text-slate-900 leading-none">
+                    <span className="text-xl font-bold text-[var(--text-primary)] leading-none">
                       2021 年
                     </span>
-                    <span className="text-lg font-bold text-slate-900 leading-none">
+                    <span className="text-lg font-bold text-[var(--text-primary)] leading-none">
                       技术突破
                     </span>
                   </div>
                 </div>
                 <div className="ml-0 border-l border-slate-900 pl-4 pb-12 ml-[1px] mb-2">
-                  <p className="text-base text-slate-600 leading-relaxed my-2">
+                  <p className="text-base text-[var(--text-secondary)] leading-relaxed my-2">
                     获得多项专利技术，产品获得医疗器械认证。
                   </p>
                 </div>
@@ -277,16 +287,16 @@ const About = () => {
                 <div className="flex items-center gap-4">
                   <div className="w-[4px] h-[4px] rounded-full bg-black shrink-0 relative z-10"></div>
                   <div className="flex items-baseline gap-3">
-                    <span className="text-xl font-bold text-slate-900 leading-none">
+                    <span className="text-xl font-bold text-[var(--text-primary)] leading-none">
                       2022 年
                     </span>
-                    <span className="text-lg font-bold text-slate-900 leading-none">
+                    <span className="text-lg font-bold text-[var(--text-primary)] leading-none">
                       规模扩张
                     </span>
                   </div>
                 </div>
                 <div className="ml-0 border-l border-slate-900 pl-4 pb-12 ml-[1px] mb-2">
-                  <p className="text-base text-slate-600 leading-relaxed my-2">
+                  <p className="text-base text-[var(--text-secondary)] leading-relaxed my-2">
                     业务覆盖全国主要城市，服务用户超过 10 万人。
                   </p>
                 </div>
@@ -297,16 +307,16 @@ const About = () => {
                 <div className="flex items-center gap-4">
                   <div className="w-[4px] h-[4px] rounded-full bg-black shrink-0 relative z-10"></div>
                   <div className="flex items-baseline gap-3">
-                    <span className="text-xl font-bold text-slate-900 leading-none">
+                    <span className="text-xl font-bold text-[var(--text-primary)] leading-none">
                       2023 年
                     </span>
-                    <span className="text-lg font-bold text-slate-900 leading-none">
+                    <span className="text-lg font-bold text-[var(--text-primary)] leading-none">
                       品牌升级
                     </span>
                   </div>
                 </div>
                 <div className="ml-0 border-l border-slate-900 pl-4 pb-12 ml-[1px] mb-2">
-                  <p className="text-base text-slate-600 leading-relaxed my-2">
+                  <p className="text-base text-[var(--text-secondary)] leading-relaxed my-2">
                     完成品牌升级，推出新一代智能化产品。
                   </p>
                 </div>
@@ -317,16 +327,16 @@ const About = () => {
                 <div className="flex items-center gap-4">
                   <div className="w-[4px] h-[4px] rounded-full bg-black shrink-0 relative z-10"></div>
                   <div className="flex items-baseline gap-3">
-                    <span className="text-xl font-bold text-slate-900 leading-none">
+                    <span className="text-xl font-bold text-[var(--text-primary)] leading-none">
                       2024 年
                     </span>
-                    <span className="text-lg font-bold text-slate-900 leading-none">
+                    <span className="text-lg font-bold text-[var(--text-primary)] leading-none">
                       国际化发展
                     </span>
                   </div>
                 </div>
                 <div className="ml-0 border-l border-transparent pl-8 pb-0">
-                  <p className="text-base text-slate-600 leading-relaxed my-2">
+                  <p className="text-base text-[var(--text-secondary)] leading-relaxed my-2">
                     启动国际化战略，产品出口多个国家和地区。
                   </p>
                 </div>
@@ -337,19 +347,7 @@ const About = () => {
       </div>
 
       {/* Breadcrumbs */}
-      <div className="max-w-[1200px] mx-auto px-4 mb-20">
-        <div className="flex items-center gap-2 text-sm text-gray-500 border-t border-gray-100 pt-8">
-          <Link
-            to="/"
-            className="flex items-center gap-1 hover:text-gray-900 transition-colors"
-          >
-            <PiHouse size={16} />
-            <span>首页</span>
-          </Link>
-          <span className="text-gray-300">/</span>
-          <span className="text-gray-900">关于视立优</span>
-        </div>
-      </div>
+      <Breadcrumbs items={[{ label: '关于视立优' }]} />
     </div>
   );
 };

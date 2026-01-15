@@ -1,14 +1,8 @@
 import './App.css';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
-import HeroCarousel from './components/HeroCarousel/HeroCarousel';
-import DidYouKnow from './components/DidYouKnow/DidYouKnow';
-import ProductShowcase from './components/ProductShowcase/ProductShowcase';
-import Encyclopedia from './components/Encyclopedia/Encyclopedia';
-// import UserStories from './components/UserStories/UserStories';
-import Partnership from './components/Partnership/Partnership';
-import AboutUs from './components/AboutUs/AboutUs';
 import BackToTop from './components/Shared/BackToTop';
+import PageLoader from './components/Shared/PageLoader';
 
 import {
   createHashRouter,
@@ -19,6 +13,9 @@ import {
 import { useEffect, lazy, Suspense } from 'react';
 
 const About = lazy(() => import('./components/About/About'));
+const NotFound = lazy(() => import('./components/NotFound/NotFound'));
+const Home = lazy(() => import('./pages/Home/Home'));
+const Cooperation = lazy(() => import('./pages/Cooperation/Cooperation'));
 
 // Layout component to wrap pages
 const Layout = () => {
@@ -32,7 +29,7 @@ const Layout = () => {
     <div className="app">
       <Header />
       <main className="main-content">
-        <Suspense fallback={<div className="loading-fallback">Loading...</div>}>
+        <Suspense fallback={<PageLoader />}>
           <Outlet />
         </Suspense>
       </main>
@@ -41,18 +38,6 @@ const Layout = () => {
     </div>
   );
 };
-
-const Home = () => (
-  <>
-    <HeroCarousel />
-    <DidYouKnow />
-    <ProductShowcase />
-    <Encyclopedia />
-    {/* <UserStories /> */}
-    <Partnership />
-    <AboutUs />
-  </>
-);
 
 const router = createHashRouter([
   {
@@ -66,6 +51,14 @@ const router = createHashRouter([
       {
         path: 'about',
         element: <About />,
+      },
+      {
+        path: 'cooperation',
+        element: <Cooperation />,
+      },
+      {
+        path: '*',
+        element: <NotFound />,
       },
     ],
   },

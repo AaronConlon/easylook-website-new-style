@@ -17,14 +17,14 @@ const AboutUs = () => {
       link: '/about',
       className: 'card-company',
     },
-    {
-      id: 3,
-      title: '合作伙伴',
-      engTitle: 'Strategic Partners',
-      icon: <PiHandshakeThin />,
-      link: '/about/partners',
-      className: 'card-partners',
-    },
+    // {
+    //   id: 3,
+    //   title: '合作伙伴',
+    //   engTitle: 'Strategic Partners',
+    //   icon: <PiHandshakeThin />,
+    //   link: '/about/partners',
+    //   className: 'card-partners',
+    // },
     {
       id: 4,
       title: '公司荣誉',

@@ -39,7 +39,7 @@
 }
 
 .did-you-know-inner:hover .dk-header-icon {
-    color: #2286FE; /* Theme color on hover */
+    color: var(--color-primary);
 }
 
 /* Grid */
@@ -52,7 +52,7 @@
 
 /* Card */
 .dk-card {
-    background-color: #f5f5f5;
+    background-color: var(--color-sub);
     padding: 30px;
     border: 1px solid transparent; /* Replaced border rule from overrides */
     border-radius: 20px; /* Laifen rounded corners */
@@ -103,7 +103,7 @@
     margin-bottom: 16px;
     z-index: 1;
     position: relative;
-    color: #0F172A;
+    color: var(--text-primary);
 }
 
 .dk-number {

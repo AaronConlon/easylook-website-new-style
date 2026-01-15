@@ -1,0 +1,95 @@
+/* PartnerScroll.css */
+
+.partner-scroll-section {
+  padding: 80px 0;
+  overflow: hidden;
+  background-color: #ffffff;
+  width: 100%;
+}
+
+.partner-scroll-header {
+  text-align: center;
+  margin-bottom: 50px;
+  padding: 0 20px;
+}
+
+.partner-scroll-header h3 {
+  font-size: 2rem;
+  font-weight: var(--font-weight-regular);
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+
+.partner-scroll-header p {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  font-weight: var(--font-weight-thin);
+}
+
+.partners-swiper-container {
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+.partners-swiper-container:last-child {
+  margin-bottom: 0;
+}
+
+/* Linear scroll effect */
+.swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+
+.partner-item {
+  background: #ffffff;
+  border: 1px solid #f0f0f0;
+  border-radius: 12px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.partner-item:hover {
+  border-color: var(--color-primary);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  transform: translateY(-4px);
+}
+
+.partner-logo {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+.partner-item:hover .partner-logo {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+/* Ensure no shadows clip */
+.swiper {
+  padding: 20px 0;
+  margin: -20px 0;
+}
+
+@media (max-width: 768px) {
+  .partner-scroll-section {
+    padding: 60px 0;
+  }
+
+  .partner-item {
+    height: 64px;
+    padding: 8px;
+  }
+
+  .partner-scroll-header h3 {
+    font-size: 1.6rem;
+  }
+}

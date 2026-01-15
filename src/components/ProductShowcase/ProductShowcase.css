@@ -22,7 +22,7 @@
 /* Card (Item Wrapper) */
 .product-card {
     border-radius: 20px;
-    background-color: #f5f5f5;
+    background-color: var(--color-sub);
     padding: 60px 0 0 0; /* Top padding for content, side padding in product-info-top */
     text-align: center;
     align-items: center;
@@ -95,10 +95,10 @@
 .product-badge {
     font-size: 0.85rem;
     padding: 4px 12px;
-    border: 1px solid #000;
+    border: 1px solid var(--color-primary);
     border-radius: 100px;
     font-weight: var(--font-weight-medium);
-    color: #000;
+    color: var(--color-primary);
 }
 
 .product-subtitle {
@@ -131,9 +131,9 @@
 }
 
 .btn-learn {
-    background: #000;
+    background: var(--color-primary);
     color: #fff;
-    border: 1px solid #000;
+    border: 1px solid var(--color-primary);
 }
 
 .btn-learn:hover .btn-icon {
@@ -142,14 +142,14 @@
 
 .btn-buy {
     background-color: transparent;
-    color: #000;
-    border: 1px solid #000;
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
 }
 
 .btn-buy:hover {
-    background-color: #000;
+    background-color: var(--color-primary);
     color: #fff;
-    border-color: #000;
+    border-color: var(--color-primary);
 }
 
 .btn-buy:hover .btn-icon {

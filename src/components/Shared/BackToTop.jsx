@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { PiArrowUp, PiArrowUpThin } from 'react-icons/pi';
 import './BackToTop.css';
 
-const BackToTop = ({ theme = 'default' }) => {
+const BackToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
 
@@ -39,15 +39,13 @@ const BackToTop = ({ theme = 'default' }) => {
     });
   };
 
-  const isLaifen = theme === 'laifen';
-
   return (
     <button
-      className={`back-to-top ${isVisible ? 'visible' : ''} ${isLaifen ? 'theme-laifen' : ''}`}
+      className={`back-to-top ${isVisible ? 'visible' : ''}`}
       onClick={scrollToTop}
       aria-label="Back to top"
     >
-      {isLaifen ? <PiArrowUp /> : <PiArrowUpThin />}
+      <PiArrowUp />
     </button>
   );
 };

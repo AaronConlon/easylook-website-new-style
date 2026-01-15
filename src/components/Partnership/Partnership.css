@@ -139,10 +139,8 @@
 }
 
 .stat-card:hover {
-    background-color: #2286FE;
-    border-color: #2286FE;
     transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(34, 134, 254, 0.2);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
 }
 
 .stat-header-row {
@@ -158,10 +156,6 @@
     align-items: baseline;
     color: #0F172A;
     transition: color 0.3s ease;
-}
-
-.stat-card:hover .stat-number-wrapper {
-    color: #ffffff;
 }
 
 .stat-number-text {
@@ -180,10 +174,6 @@
     transition: color 0.3s ease;
 }
 
-.stat-card:hover .stat-suffix {
-    color: rgba(255, 255, 255, 0.8);
-}
-
 .stat-icon-wrapper {
     width: 48px;
     height: 48px;
@@ -194,13 +184,9 @@
     flex-shrink: 0;
     transition: all 0.3s ease;
     border-radius: 16px;
-    background-color: rgba(34, 134, 254, 0.08); /* Light blue */
-    color: #2286FE;
-}
-
-.stat-card:hover .stat-icon-wrapper {
-    background-color: #ffffff;
-    color: #2286FE;
+    background-color: #fff; /* Light blue */
+    color: var(--text-primary);
+    border: 1px solid var(--text-secondary);
 }
 
 .stat-label {
@@ -210,19 +196,12 @@
     transition: color 0.3s ease;
 }
 
-.stat-card:hover .stat-label {
-    color: #ffffff;
-}
-
 .stat-desc {
     font-size: 0.95rem;
     color: #617083;
     transition: color 0.3s ease;
 }
 
-.stat-card:hover .stat-desc {
-    color: rgba(255, 255, 255, 0.8);
-}
 
 /* Benefits Section */
 .benefits-section {
@@ -265,7 +244,7 @@
     flex-shrink: 0;
     margin-top: 4px;
     border-radius: 50%;
-    background-color: #2286FE;
+    background-color: var(--text-primary);
     color: #fff;
     width: 40px;
     height: 40px;
@@ -307,7 +286,7 @@
     transition: all 0.3s ease;
     cursor: default;
     border-radius: 100px;
-    background: #2286FE;
+    background: var(--text-primary);
     border: none;
     padding: 20px 40px;
     max-width: 600px;
