@@ -85,6 +85,7 @@
 }
 
 .product-title {
+    font-family: var(--font-family-title);
     font-size: 3.5rem;
     font-weight: var(--font-weight-regular);
     color: var(--text-primary);

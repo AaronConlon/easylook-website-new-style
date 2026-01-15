@@ -18,6 +18,9 @@ const Home = lazy(() => import('./pages/Home/Home'));
 const Cooperation = lazy(() => import('./pages/Cooperation/Cooperation'));
 const Contact = lazy(() => import('./pages/Contact/Contact'));
 const Encyclopedia = lazy(() => import('./pages/Encyclopedia/Encyclopedia'));
+const VisionTrainingKit = lazy(
+  () => import('./pages/ProductDetail/VisionTrainingKit'),
+);
 
 // Layout component to wrap pages
 const Layout = () => {
@@ -65,6 +68,10 @@ const router = createHashRouter([
       {
         path: 'encyclopedia',
         element: <Encyclopedia />,
+      },
+      {
+        path: 'product-1',
+        element: <VisionTrainingKit />,
       },
       {
         path: '*',

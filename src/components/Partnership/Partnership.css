@@ -25,6 +25,7 @@
 }
 
 .partnership-header h2 {
+    font-family: var(--font-family-title);
     font-size: 2.2rem;
     font-weight: var(--font-weight-regular);
     color: var(--text-primary);
@@ -71,6 +72,7 @@
 }
 
 .hero-title {
+    font-family: var(--font-family-title);
     font-size: 3rem;
     font-weight: var(--font-weight-medium);
     margin-bottom: 20px;
@@ -159,9 +161,9 @@
 }
 
 .stat-number-text {
+    font-family: var(--font-family-title);
     font-size: 3rem;
     font-weight: 400;
-    font-family: 'Outfit', sans-serif;
     letter-spacing: -2px;
     line-height: 1;
 }
@@ -213,6 +215,7 @@
 }
 
 .benefits-title {
+    font-family: var(--font-family-title);
     font-size: 2rem;
     font-weight: var(--font-weight-regular);
     color: var(--text-primary);
@@ -252,6 +255,7 @@
 }
 
 .benefit-item h4 {
+    font-family: var(--font-family-title);
     font-size: 1.25rem;
     font-weight: 600;
     color: var(--text-secondary);

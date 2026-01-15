@@ -103,6 +103,7 @@
 
 /* Content Elements */
 .hero-slide-title {
+  font-family: var(--font-family-title);
   font-size: 72px;
   font-weight: var(--font-weight-medium);
   color: #ffffff;

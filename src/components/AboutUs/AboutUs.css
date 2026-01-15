@@ -52,6 +52,7 @@
 }
 
 .card-title {
+    font-family: var(--font-family-title);
     font-size: 1.2rem;
     font-weight: 500; /* Bold */
     margin: 0;

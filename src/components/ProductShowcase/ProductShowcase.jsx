@@ -1,6 +1,7 @@
 import React from 'react';
 import useScrollAnimation from '../../hooks/useScrollAnimation';
 import './ProductShowcase.css';
+import { Link } from 'react-router-dom';
 import { PiArrowRightThin } from 'react-icons/pi';
 
 const ProductShowcase = () => {
@@ -98,12 +99,12 @@ const ProductShowcase = () => {
                 </div>
                 <p className="product-subtitle">{product.subtitle}</p>
                 <div className="product-btns">
-                  <a href={`/product-${product.id}`} className="btn-learn">
+                  <Link to={`/product-${product.id}`} className="btn-learn">
                     进一步了解 <PiArrowRightThin className="btn-icon" />
-                  </a>
-                  <a href={`/product-${product.id}`} className="btn-buy">
+                  </Link>
+                  <Link to={`/product-${product.id}`} className="btn-buy">
                     购买
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

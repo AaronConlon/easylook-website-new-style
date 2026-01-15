@@ -66,11 +66,11 @@ const Footer = () => {
             <ul className="footer-contact-list">
               {contactInfo.map((item, index) => (
                 <li key={index} className="footer-contact-item">
-                  <span className="footer-contact-icon">{item.icon}</span>
-                  <div className="footer-contact-content">
+                  <div className="footer-contact-header">
+                    <span className="footer-contact-icon">{item.icon}</span>
                     <span className="footer-contact-label">{item.label}</span>
-                    <span className="footer-contact-value">{item.value}</span>
                   </div>
+                  <span className="footer-contact-value">{item.value}</span>
                 </li>
               ))}
             </ul>

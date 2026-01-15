@@ -50,9 +50,7 @@
 }
 
 .encyclopedia-item:hover {
-  transform: translateX(10px); /* Move right instead of up for list feel */
-  box-shadow: 20px 20px 60px rgba(0, 0, 0, 0.04);
-  border-color: var(--color-primary);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.05); /* Only shadow */
 }
 
 .item-cover {
@@ -83,6 +81,7 @@
 }
 
 .item-title {
+  font-family: var(--font-family-title);
   font-size: 1.5rem;
   font-weight: var(--font-weight-regular);
   color: var(--text-primary);
