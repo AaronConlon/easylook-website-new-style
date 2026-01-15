@@ -31,7 +31,7 @@
 .encyclopedia-header h2 {
     font-size: 2rem;
     font-weight: var(--font-weight-regular);
-    color: var(--text-primary);
+    color: var(--easylook-text-primary);
     margin-bottom: 8px;
     letter-spacing: -0.5px;
 }
@@ -167,7 +167,7 @@
 }
 
 .encyclopedia-card:hover .read-more-btn {
-    color: var(--color-primary);
+    color: var(--easylook-color-primary);
 }
 
 /* View More Button in Header/Footer */
@@ -178,7 +178,7 @@
 }
 
 .view-more-btn {
-    background-color: var(--color-primary);
+    background-color: var(--easylook-color-primary);
     color: #fff;
     box-shadow: none;
     padding: 8px 24px;
@@ -186,7 +186,7 @@
     position: relative;
     overflow: hidden;
     z-index: 1;
-    border: 1px solid var(--color-primary);
+    border: 1px solid var(--easylook-color-primary);
     display: inline-flex;
     align-items: center;
     gap: 8px;

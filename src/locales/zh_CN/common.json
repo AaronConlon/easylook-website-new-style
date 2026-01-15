@@ -1,0 +1,30 @@
+{
+  "nav": {
+    "home": "首页",
+    "product": "产品介绍",
+    "product1": "视觉训练套盒",
+    "product2": "眼视光训练器",
+    "about": "关于我们",
+    "aboutCompany": "关于视立优",
+    "aboutHonor": "公司荣誉",
+    "encyclopedia": "眼界百科",
+    "cooperation": "合作加盟",
+    "contact": "联系我们"
+  },
+  "contact": {
+    "wechatPublic": "微信公众号",
+    "miniProgram": "小程序",
+    "phone": "电话",
+    "email": "邮箱",
+    "address": "地址",
+    "addressValue": "上海市普陀区交通路4711号李子园大厦1308室"
+  },
+  "footer": {
+    "description": "专业的视力保护解决方案提供商，守护您的视界健康。",
+    "quickLinks": "快速链接",
+    "contactInfo": "联系方式",
+    "followUs": "关注我们",
+    "copyright": "© {{year}} 上海惟爱医疗科技有限公司. All rights reserved.",
+    "beian": "沪ICP备2023018740号-3"
+  }
+}

@@ -26,12 +26,12 @@
   align-items: center;
   gap: 8px;
   padding: 0 24px;
-  color: var(--text-primary);
+  color: var(--easylook-text-primary);
 }
 
 .form-title-icon {
   font-size: 1.25rem;
-  color: var(--color-primary);
+  color: var(--easylook-color-primary);
 }
 
 .form-title-text {
@@ -60,7 +60,7 @@
 
 .form-label {
   font-size: 0.9rem;
-  color: var(--text-primary);
+  color: var(--easylook-text-primary);
   font-weight: 500;
 }
 
@@ -77,7 +77,7 @@
   border: 1px solid #e5e7eb;
   border-radius: 6px;
   font-size: 0.95rem;
-  color: var(--text-primary);
+  color: var(--easylook-text-primary);
   background-color: #fff;
   transition: all 0.2s ease;
 }
@@ -86,7 +86,7 @@
 .form-select:focus,
 .form-textarea:focus {
   outline: none;
-  border-color: var(--color-primary);
+  border-color: var(--easylook-color-primary);
   box-shadow: 0 0 0 2px rgba(15, 23, 42, 0.05); /* Subtle shadow using text-primary or neutral */
 }
 

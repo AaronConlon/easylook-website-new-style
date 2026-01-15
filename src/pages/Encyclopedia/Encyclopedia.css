@@ -22,7 +22,7 @@
 .encyclopedia-header h1 {
   font-size: 3rem;
   font-weight: var(--font-weight-regular);
-  color: var(--text-primary);
+  color: var(--easylook-text-primary);
 }
 
 .encyclopedia-container {
@@ -84,7 +84,7 @@
   font-family: var(--font-family-title);
   font-size: 1.5rem;
   font-weight: var(--font-weight-regular);
-  color: var(--text-primary);
+  color: var(--easylook-text-primary);
   margin-bottom: 16px;
   line-height: 1.3;
 }

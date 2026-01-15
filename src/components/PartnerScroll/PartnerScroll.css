@@ -16,7 +16,7 @@
 .partner-scroll-header h3 {
   font-size: 2rem;
   font-weight: var(--font-weight-regular);
-  color: var(--text-primary);
+  color: var(--easylook-text-primary);
   margin-bottom: 12px;
 }
 
@@ -54,7 +54,7 @@
 }
 
 .partner-item:hover {
-  border-color: var(--color-primary);
+  border-color: var(--easylook-color-primary);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
   transform: translateY(-4px);
 }

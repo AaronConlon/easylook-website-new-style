@@ -11,34 +11,40 @@ import tinyLogo from '../../assets/tiny-logo.svg';
 import qrCodeImg from '../../assets/qr-code.png';
 import gongzhonghaoImg from '../../assets/gongzhonghao.png';
 import './Header.css';
+import { useTranslation } from 'react-i18next';
 
 const Header = () => {
   const { pathname } = useLocation();
   const [activeMenu, setActiveMenu] = useState(pathname || '/');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { t } = useTranslation('common');
 
   const menuItems = [
-    { label: '首页', href: '/', path: '/' },
+    { label: t('nav.home'), href: '/', path: '/' },
     {
-      label: '产品介绍',
+      label: t('nav.product'),
       href: '/product-1',
       path: '/product-1',
       children: [
-        { label: '视觉训练套盒', href: '/product-1' },
-        { label: '眼视光训练器', href: '/product-2' },
+        { label: t('nav.product1'), href: '/product-1' },
+        { label: t('nav.product2'), href: '/product-2' },
       ],
     },
     {
-      label: '关于我们',
+      label: t('nav.about'),
       href: '/about/company',
       path: '/about/company',
       children: [
-        { label: '关于视立优', href: '/about' },
-        { label: '公司荣誉', href: '/about/honor' },
+        { label: t('nav.aboutCompany'), href: '/about' },
+        { label: t('nav.aboutHonor'), href: '/about/honor' },
       ],
     },
-    { label: '眼界百科', href: '/encyclopedia', path: '/encyclopedia' },
-    { label: '合作加盟', href: '/cooperation', path: '/cooperation' },
+    {
+      label: t('nav.encyclopedia'),
+      href: '/encyclopedia',
+      path: '/encyclopedia',
+    },
+    { label: t('nav.cooperation'), href: '/cooperation', path: '/cooperation' },
   ];
 
   useEffect(() => {
@@ -92,7 +98,7 @@ const Header = () => {
                 }}
               >
                 {item.icon && item.icon}
-                {item.label === '首页' ? (
+                {item.label === t('nav.home') ? (
                   <div className="nav-menu-home-wrapper">{item.label}</div>
                 ) : (
                   <span>{item.label}</span>
@@ -123,12 +129,12 @@ const Header = () => {
           <div className="nav-menu-item-wrapper mobile-only-item">
             <Link
               to="/contact"
-              className="nav-menu-item"
+              className={`nav-menu-item ${activeMenu === '/contact' ? 'active' : ''}`}
               onClick={() => {
                 handleMenuClick();
               }}
             >
-              <span>联系我们</span>
+              <span>{t('nav.contact')}</span>
             </Link>
           </div>
         </nav>
@@ -148,12 +154,12 @@ const Header = () => {
         <div className="header-actions-right">
           <Link
             to="/contact"
-            className="nav-contact-link_text"
+            className={`nav-contact-link_text ${activeMenu === '/contact' ? 'active' : ''}`}
             onClick={() => {
               handleMenuClick();
             }}
           >
-            联系我们
+            {t('nav.contact')}
           </Link>
 
           <div className="header-contact-wrapper">
@@ -168,11 +174,11 @@ const Header = () => {
               <div className="contact-popup-qr">
                 <div className="qr-item">
                   <img src={qrCodeImg} alt="微信公众号" />
-                  <span>微信公众号</span>
+                  <span>{t('contact.wechatPublic')}</span>
                 </div>
                 <div className="qr-item">
                   <img src={gongzhonghaoImg} alt="小程序" />
-                  <span>小程序</span>
+                  <span>{t('contact.miniProgram')}</span>
                 </div>
               </div>
             </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 
@@ -57,11 +58,12 @@ const row1 = partnerLogos.slice(0, 10);
 const row2 = partnerLogos.slice(10, 20);
 
 const PartnerScroll = () => {
+  const { t } = useTranslation('cooperation');
   return (
     <section className="partner-scroll-section">
       <div className="partner-scroll-header">
-        <h3>合作伙伴</h3>
-        <p>同心协力，共创未来</p>
+        <h3>{t('partnerScroll.header.title')}</h3>
+        <p>{t('partnerScroll.header.subtitle')}</p>
       </div>
 
       {/* Row 1: Left to Right */}

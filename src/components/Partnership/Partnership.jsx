@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 import gsap from 'gsap';
 import useScrollAnimation from '../../hooks/useScrollAnimation';
 import {
@@ -11,6 +12,7 @@ import {
 import './Partnership.css';
 
 const Partnership = ({ showBenefits = true }) => {
+  const { t } = useTranslation('partnership');
   const [ref, isVisible] = useScrollAnimation(0.1);
 
   return (
@@ -22,30 +24,30 @@ const Partnership = ({ showBenefits = true }) => {
         <div className="partnership-header">
           <div className="title-wrapper">
             <h2>
-              {['合', '作', '加', '盟'].map((char, index) => (
-                <span
-                  key={index}
-                  className="char"
-                  style={{ animationDelay: `${index * 0.05}s` }}
-                >
-                  {char}
-                </span>
-              ))}
+              {t('header.chars')
+                .split('')
+                .map((char, index) => (
+                  <span
+                    key={index}
+                    className="char"
+                    style={{ animationDelay: `${index * 0.05}s` }}
+                  >
+                    {char}
+                  </span>
+                ))}
             </h2>
           </div>
-          <p className="subtitle">
-            千亿视力康复市场，国家政策支持，专业团队指导，共创眼健康事业新蓝海
-          </p>
+          <p className="subtitle">{t('header.subtitle')}</p>
         </div>
 
         {/* Hero Section */}
         <div className="partnership-hero">
-          <div className="hero-badge">国家科技部创新基金支持项目</div>
-          <h3 className="hero-title">1000 亿视力康复市场容量</h3>
-          <p className="hero-cta-text">下一个千万精英代理，就是你！</p>
+          <div className="hero-badge">{t('hero.badge')}</div>
+          <h3 className="hero-title">{t('hero.title')}</h3>
+          <p className="hero-cta-text">{t('hero.cta')}</p>
           <a href="tel:400-901-83138" className="phone-btn">
             <PiPhoneThin className="btn-icon" />
-            400-901-83138 (免费咨询)
+            {t('hero.phone')}
           </a>
         </div>
 
@@ -55,53 +57,51 @@ const Partnership = ({ showBenefits = true }) => {
             icon={<PiUsersThin />}
             endValue={1500}
             suffix="万"
-            label="弱视儿童市场"
-            desc="不足 1% 的治疗率"
+            label={t('stats.1.label')}
+            desc={t('stats.1.desc')}
           />
           <StatCard
             icon={<PiTrendUpThin />}
             endValue={1000}
             suffix="亿"
-            label="视力康复市场容量"
-            desc="持续增长，潜力无限"
+            label={t('stats.2.label')}
+            desc={t('stats.2.desc')}
           />
           <StatCard
             icon={<PiBankThin />}
             endValue={100}
             suffix="%"
-            label="政策支持力度"
-            desc="国家政策大力扶持"
+            label={t('stats.3.label')}
+            desc={t('stats.3.desc')}
           />
         </div>
 
         {showBenefits && (
           <div className="benefits-section">
             <div className="benefits-content">
-              <h3 className="benefits-title">成为我们的合作伙伴</h3>
-              <p className="benefits-subtitle">
-                专业培训支持 · 品牌授权体系 · 完善售后服务
-              </p>
+              <h3 className="benefits-title">{t('benefits.title')}</h3>
+              <p className="benefits-subtitle">{t('benefits.subtitle')}</p>
 
               <div className="benefits-list">
                 <div className="benefit-item">
                   <div className="benefit-icon-wrapper">1</div>
                   <div>
-                    <h4>全方位市场推广支持</h4>
-                    <p>品牌宣传、营销物料、线上线下推广</p>
+                    <h4>{t('benefits.list.1.title')}</h4>
+                    <p>{t('benefits.list.1.desc')}</p>
                   </div>
                 </div>
                 <div className="benefit-item">
                   <div className="benefit-icon-wrapper">2</div>
                   <div>
-                    <h4>成熟商业模式与利润空间</h4>
-                    <p>经过验证的盈利模式，丰厚回报</p>
+                    <h4>{t('benefits.list.2.title')}</h4>
+                    <p>{t('benefits.list.2.desc')}</p>
                   </div>
                 </div>
                 <div className="benefit-item">
                   <div className="benefit-icon-wrapper">3</div>
                   <div>
-                    <h4>培训支持</h4>
-                    <p>一对一培训，全程运营支持</p>
+                    <h4>{t('benefits.list.3.title')}</h4>
+                    <p>{t('benefits.list.3.desc')}</p>
                   </div>
                 </div>
               </div>
@@ -121,9 +121,7 @@ const Partnership = ({ showBenefits = true }) => {
         <div className="policy-banner">
           <div className="policy-content">
             <PiMegaphoneThin className="policy-icon" />
-            <span className="policy-text">
-              国家政策大力支持 — 医疗器械国产化加速
-            </span>
+            <span className="policy-text">{t('policy.text')}</span>
           </div>
         </div>
       </div>

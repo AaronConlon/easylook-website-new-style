@@ -8,17 +8,15 @@ import Encyclopedia from '../../components/Encyclopedia/Encyclopedia';
 import Partnership from '../../components/Partnership/Partnership';
 import AboutUs from '../../components/AboutUs/AboutUs';
 
+import { useTranslation } from 'react-i18next';
+
 const Home = () => {
+  const { t } = useTranslation('home');
   return (
     <>
       <Helmet>
-        <title>
-          视立优 EASYLOOK - 专业的视力保护解决方案提供商，守护您的视界健康
-        </title>
-        <meta
-          name="description"
-          content="视立优 EASYLOOK 专业的视力保护解决方案提供商，深耕于眼视光医疗行业，致力于为大众提供近视防控、行为视光、视觉康复、成人视疲劳等各类眼视光前沿性产品。"
-        />
+        <title>{t('helmet.title')}</title>
+        <meta name="description" content={t('helmet.description')} />
       </Helmet>
       <HeroCarousel />
       <DidYouKnow />

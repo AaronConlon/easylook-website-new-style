@@ -20,7 +20,7 @@
 .contact-header h1 {
   font-size: 3rem;
   font-weight: var(--font-weight-regular);
-  color: var(--text-primary);
+  color: var(--easylook-text-primary);
   margin-bottom: 20px;
 }
 
@@ -73,8 +73,8 @@
 }
 
 .address-label:hover {
-  color: var(--text-primary);
-  border-bottom-color: var(--text-primary);
+  color: var(--easylook-text-primary);
+  border-bottom-color: var(--easylook-text-primary);
 }
 
 /* Hover Card */
@@ -128,7 +128,7 @@
 
 .popup-icon {
   font-size: 1.1rem;
-  color: var(--text-primary);
+  color: var(--easylook-text-primary);
   flex-shrink: 0;
 }
 
@@ -142,7 +142,7 @@
 
 .popup-value {
   font-size: 1rem;
-  color: var(--text-primary);
+  color: var(--easylook-text-primary);
   line-height: 1.5;
   padding-left: 0;
 }

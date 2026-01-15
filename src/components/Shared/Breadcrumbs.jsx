@@ -9,7 +9,7 @@ const Breadcrumbs = ({ items }) => {
       <div className="flex items-center gap-2 text-sm text-[var(--text-secondary)] pt-8">
         <Link
           to="/"
-          className="flex items-center gap-1 hover:text-[var(--text-primary)] transition-colors"
+          className="flex items-center gap-1 hover:text-[var(--easylook-text-primary)] transition-colors"
         >
           <img src={HomeIcon} alt="Home" className="w-4 h-4" />
           <span>首页</span>
@@ -20,12 +20,14 @@ const Breadcrumbs = ({ items }) => {
             {item.path ? (
               <Link
                 to={item.path}
-                className="hover:text-[var(--text-primary)] transition-colors"
+                className="hover:text-[var(--easylook-text-primary)] transition-colors"
               >
                 {item.label}
               </Link>
             ) : (
-              <span className="text-[var(--text-primary)]">{item.label}</span>
+              <span className="text-[var(--easylook-text-primary)]">
+                {item.label}
+              </span>
             )}
           </React.Fragment>
         ))}

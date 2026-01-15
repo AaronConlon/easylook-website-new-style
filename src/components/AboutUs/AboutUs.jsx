@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import {
   PiBuildingsThin,
   PiTrendUpThin,
@@ -8,10 +9,11 @@ import {
 import './AboutUs.css';
 
 const AboutUs = () => {
+  const { t } = useTranslation('home');
   const cards = [
     {
       id: 1,
-      title: '公司介绍',
+      title: t('aboutUs.company.title'),
       engTitle: 'Company Introduction',
       icon: <PiBuildingsThin />,
       link: '/about',
@@ -27,7 +29,7 @@ const AboutUs = () => {
     // },
     {
       id: 4,
-      title: '公司荣誉',
+      title: t('aboutUs.honor.title'),
       engTitle: 'Company Honors',
       icon: <PiMedalThin />,
       link: '/about/honor',

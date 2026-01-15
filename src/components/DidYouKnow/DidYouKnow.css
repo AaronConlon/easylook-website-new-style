@@ -19,7 +19,7 @@
 .did-you-know-header h2 {
     font-family: var(--font-family-title);
     font-size: 2rem;
-    color: var(--text-primary);
+    color: var(--easylook-text-primary);
     margin: 0;
     font-weight: var(--font-weight-regular);
     display: flex;
@@ -40,7 +40,7 @@
 }
 
 .did-you-know-inner:hover .dk-header-icon {
-    color: var(--color-primary);
+    color: var(--easylook-color-primary);
 }
 
 /* Grid */
@@ -104,14 +104,14 @@
     margin-bottom: 16px;
     z-index: 1;
     position: relative;
-    color: var(--text-primary);
+    color: var(--easylook-text-primary);
 }
 
 .dk-number {
     font-family: var(--font-family-title);
     font-size: 3.5rem;
     font-weight: var(--font-weight-thin);
-    color: var(--text-primary);
+    color: var(--easylook-text-primary);
     line-height: 1;
     letter-spacing: -2px;
 }

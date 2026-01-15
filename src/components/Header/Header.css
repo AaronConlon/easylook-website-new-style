@@ -29,7 +29,7 @@
 
 .header .nav-menu-item:hover,
 .header .nav-menu-item.active {
-  color: var(--text-primary);
+  color: var(--easylook-text-primary);
 }
 
 
@@ -53,15 +53,15 @@
 }
 
 .header .nav-menu-children-wrapper a:hover {
-  color: var(--text-primary);
+  color: var(--easylook-text-primary);
 }
 
 .header .nav-menu-children-wrapper a::after {
-  color: var(--text-primary);
+  color: var(--easylook-text-primary);
 }
 
 .header .contact-popup-phone {
-  color: var(--text-primary);
+  color: var(--easylook-text-primary);
   border-bottom-color: rgba(0, 0, 0, 0.05);
 }
 
@@ -86,7 +86,7 @@
   }
 
   .header .nav-menu-item {
-    color: var(--text-primary); /* Explicit dark color */
+    color: var(--easylook-text-primary); /* Explicit dark color */
   }
 
   .header .nav-menu-item-wrapper {
@@ -94,12 +94,12 @@
   }
 
   .header .nav-menu-children-wrapper a {
-    color: var(--text-primary); /* Explicit secondary color */
+    color: var(--easylook-text-primary); /* Explicit secondary color */
     border-left-color: rgba(0, 0, 0, 0.05);
   }
 
   .header .nav-menu-children-wrapper a:hover {
-    color: var(--text-primary);
+    color: var(--easylook-text-primary);
   }
 
   .header .comp-inner {
@@ -107,7 +107,7 @@
   }
 
   .header .nav-menu-item.active {
-    color: var(--text-primary); /* Active color */
+    color: var(--easylook-text-primary); /* Active color */
   }
 
   /* Mobile-only item visibility */
@@ -187,8 +187,9 @@
   border-bottom: 1px solid transparent;
 }
 
-.nav-contact-link_text:hover {
-  color: #000000;
+.nav-contact-link_text:hover,
+.nav-contact-link_text.active {
+  color: var(--easylook-text-primary);
   border-bottom-color: transparent;
 }
 
@@ -199,12 +200,12 @@
   border: none;
   cursor: pointer;
   padding: 8px;
-  color: var(--text-primary);
+  color: var(--easylook-text-primary);
   transition: color 0.2s ease;
 }
 
 .mobile-menu-toggle:hover {
-  color: var(--color-primary-inactive);
+  color: var(--easylook-color-primary-inactive);
 }
 
 /* Navigation */
@@ -249,7 +250,7 @@
 }
 
 .nav-menu-item.active {
-  color: var(--text-primary);
+  color: var(--easylook-text-primary);
   font-weight: var(--font-weight-regular);
   border-bottom-color: transparent;
 }
@@ -322,7 +323,7 @@
   opacity: 0;
   font-size: 14px;
   font-weight: var(--font-weight-thin);
-  color: var(--text-primary);
+  color: var(--easylook-text-primary);
   transition: all 0.25s ease;
 }
 
@@ -535,7 +536,7 @@
     border-bottom: none;
     font-size: 16px;
     font-weight: 400;
-    color: var(--text-primary);
+    color: var(--easylook-text-primary);
     text-decoration: none;
   }
 
@@ -548,7 +549,7 @@
   .nav-menu-item.active {
     border-bottom: none;
     font-weight: 500;
-    color: var(--text-primary);
+    color: var(--easylook-text-primary);
   }
 
   /* Mobile Dropdown - Always Visible (Accordion Style) */

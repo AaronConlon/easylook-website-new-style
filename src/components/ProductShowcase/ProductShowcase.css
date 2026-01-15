@@ -88,7 +88,7 @@
     font-family: var(--font-family-title);
     font-size: 3.5rem;
     font-weight: var(--font-weight-regular);
-    color: var(--text-primary);
+    color: var(--easylook-text-primary);
     margin: 0;
     letter-spacing: -2px;
 }
@@ -96,10 +96,10 @@
 .product-badge {
     font-size: 0.85rem;
     padding: 4px 12px;
-    border: 1px solid var(--color-primary);
+    border: 1px solid var(--easylook-color-primary);
     border-radius: 100px;
     font-weight: var(--font-weight-medium);
-    color: var(--color-primary);
+    color: var(--easylook-color-primary);
 }
 
 .product-subtitle {
@@ -132,9 +132,9 @@
 }
 
 .btn-learn {
-    background: var(--color-primary);
+    background: var(--easylook-color-primary);
     color: #fff;
-    border: 1px solid var(--color-primary);
+    border: 1px solid var(--easylook-color-primary);
 }
 
 .btn-learn:hover .btn-icon {
@@ -143,14 +143,14 @@
 
 .btn-buy {
     background-color: transparent;
-    color: var(--color-primary);
-    border: 1px solid var(--color-primary);
+    color: var(--easylook-color-primary);
+    border: 1px solid var(--easylook-color-primary);
 }
 
 .btn-buy:hover {
-    background-color: var(--color-primary);
+    background-color: var(--easylook-color-primary);
     color: #fff;
-    border-color: var(--color-primary);
+    border-color: var(--easylook-color-primary);
 }
 
 .btn-buy:hover .btn-icon {

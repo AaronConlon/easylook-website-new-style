@@ -3,7 +3,7 @@
 .product-detail-page {
   width: 100%;
   background-color: #fff;
-  color: var(--text-primary);
+  color: var(--easylook-text-primary);
 }
 
 /* Banner Component */
@@ -101,7 +101,7 @@
   font-family: var(--font-family-title);
   font-size: 4rem;
   line-height: 1.1;
-  color: var(--text-primary);
+  color: var(--easylook-text-primary);
 }
 
 .hero-description {
@@ -121,7 +121,7 @@
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  background-color: var(--color-primary);
+  background-color: var(--easylook-color-primary);
   color: #fff;
   padding: 16px 40px;
   border-radius: 100px;
@@ -267,7 +267,7 @@
 .feature-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
-  border-color: var(--color-primary);
+  border-color: var(--easylook-color-primary);
 }
 
 .feature-icon-wrapper {
@@ -279,7 +279,7 @@
   align-items: center;
   justify-content: center;
   font-size: 1.5rem;
-  color: var(--color-primary);
+  color: var(--easylook-color-primary);
 }
 
 .feature-title {
@@ -324,13 +324,13 @@
 
 .tab-btn:hover {
   background: #fcfcfc;
-  border-color: var(--color-primary);
+  border-color: var(--easylook-color-primary);
 }
 
 .tab-btn.active {
-  background: var(--color-primary);
+  background: var(--easylook-color-primary);
   color: #fff;
-  border-color: var(--color-primary);
+  border-color: var(--easylook-color-primary);
 }
 
 .tab-title {
@@ -443,7 +443,7 @@
 }
 
 .thumbnail-btn.active .thumbnail-card {
-  border-color: var(--color-primary);
+  border-color: var(--easylook-color-primary);
 }
 
 .thumbnail-overlay {

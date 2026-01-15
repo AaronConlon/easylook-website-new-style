@@ -4,32 +4,34 @@ import logoSvg from '../../assets/full-logo.png';
 import gongzhonghaoImg from '../../assets/gongzhonghao.png';
 import qrCodeImg from '../../assets/qr-code.png';
 import './Footer.css';
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const { t } = useTranslation('common');
 
   const quickLinks = [
-    { label: '产品介绍', href: '/product-1' },
-    { label: '眼界百科', href: '/encyclopedia' },
-    { label: '合作加盟', href: '/cooperation' },
-    { label: '关于我们', href: '/about/company' },
+    { label: t('nav.product'), href: '/product-1' },
+    { label: t('nav.encyclopedia'), href: '/encyclopedia' },
+    { label: t('nav.cooperation'), href: '/cooperation' },
+    { label: t('nav.about'), href: '/about/company' },
   ];
 
   const contactInfo = [
     {
       icon: <PiPhoneThin />,
-      label: '电话',
+      label: t('contact.phone'),
       value: '400-901-83138',
     },
     {
       icon: <PiEnvelopeThin />,
-      label: '邮箱',
+      label: t('contact.email'),
       value: 'easylook.business@weiaihealthcare.com',
     },
     {
       icon: <PiMapPinThin />,
-      label: '地址',
-      value: '上海市普陀区交通路4711号李子园大厦1308室',
+      label: t('contact.address'),
+      value: t('contact.addressValue'),
     },
   ];
 
@@ -41,14 +43,12 @@ const Footer = () => {
           {/* Logo and Description */}
           <div className="footer-brand">
             <img src={logoSvg} alt="视立优 EASYLOOK" className="footer-logo" />
-            <p className="footer-description">
-              专业的视力保护解决方案提供商，守护您的视界健康。
-            </p>
+            <p className="footer-description">{t('footer.description')}</p>
           </div>
 
           {/* Quick Links */}
           <div className="footer-links-section">
-            <h3 className="footer-section-title">快速链接</h3>
+            <h3 className="footer-section-title">{t('footer.quickLinks')}</h3>
             <ul className="footer-links-list">
               {quickLinks.map((link, index) => (
                 <li key={index}>
@@ -62,7 +62,7 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div className="footer-contact">
-            <h3 className="footer-section-title">联系方式</h3>
+            <h3 className="footer-section-title">{t('footer.contactInfo')}</h3>
             <ul className="footer-contact-list">
               {contactInfo.map((item, index) => (
                 <li key={index} className="footer-contact-item">
@@ -78,7 +78,7 @@ const Footer = () => {
 
           {/* Follow Us - QR Codes */}
           <div className="footer-follow">
-            <h3 className="footer-section-title">关注我们</h3>
+            <h3 className="footer-section-title">{t('footer.followUs')}</h3>
             <div className="footer-qr-codes">
               <div className="footer-qr-item">
                 <img
@@ -86,7 +86,7 @@ const Footer = () => {
                   alt="微信公众号"
                   className="footer-qr-image"
                 />
-                <span>微信公众号</span>
+                <span>{t('contact.wechatPublic')}</span>
               </div>
               <div className="footer-qr-item">
                 <img
@@ -94,7 +94,7 @@ const Footer = () => {
                   alt="小程序"
                   className="footer-qr-image"
                 />
-                <span>小程序</span>
+                <span>{t('contact.miniProgram')}</span>
               </div>
             </div>
           </div>
@@ -103,7 +103,7 @@ const Footer = () => {
         {/* Bottom Section */}
         <div className="footer-bottom">
           <p className="footer-copyright">
-            © {currentYear} 上海惟爱医疗科技有限公司. All rights reserved.
+            {t('footer.copyright', { year: currentYear })}
           </p>
           <div className="footer-legal">
             <a
@@ -111,7 +111,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              沪ICP备2023018740号-3
+              {t('footer.beian')}
             </a>
           </div>
         </div>

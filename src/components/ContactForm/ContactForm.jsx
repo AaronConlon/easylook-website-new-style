@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { PiChatDotsThin, PiPaperPlaneTiltThin } from 'react-icons/pi';
 import CustomSelect from '../Shared/CustomSelect';
 import './ContactForm.css';
 
 const ContactForm = () => {
+  const { t } = useTranslation('contact');
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -13,11 +15,11 @@ const ContactForm = () => {
   });
 
   const categoryOptions = [
-    { label: '生产制造', value: 'manufacturing' },
-    { label: '行业采购', value: 'procurement' },
-    { label: '公共关系', value: 'pr' },
-    { label: '营销代理', value: 'marketing' },
-    { label: '媒体宣传', value: 'media' },
+    { label: t('form.options.manufacturing'), value: 'manufacturing' },
+    { label: t('form.options.procurement'), value: 'procurement' },
+    { label: t('form.options.pr'), value: 'pr' },
+    { label: t('form.options.marketing'), value: 'marketing' },
+    { label: t('form.options.media'), value: 'media' },
   ];
 
   const [showMessage, setShowMessage] = useState(false);
@@ -52,7 +54,7 @@ const ContactForm = () => {
         <div className="form-header">
           <div className="form-title-wrapper">
             <PiChatDotsThin className="form-title-icon" />
-            <span className="form-title-text">在线留言</span>
+            <span className="form-title-text">{t('form.title')}</span>
           </div>
         </div>
 
@@ -61,13 +63,14 @@ const ContactForm = () => {
             {/* Name */}
             <div className="form-group">
               <label className="form-label">
-                <span className="required-star">*</span>您的姓名
+                <span className="required-star">*</span>
+                {t('form.labels.name')}
               </label>
               <input
                 type="text"
                 name="name"
                 className="form-input"
-                placeholder="请输入姓名"
+                placeholder={t('form.placeholders.name')}
                 value={formData.name}
                 onChange={handleChange}
                 required
@@ -77,13 +80,14 @@ const ContactForm = () => {
             {/* Phone */}
             <div className="form-group">
               <label className="form-label">
-                <span className="required-star">*</span>您的电话
+                <span className="required-star">*</span>
+                {t('form.labels.phone')}
               </label>
               <input
                 type="tel"
                 name="phone"
                 className="form-input"
-                placeholder="请输入联系电话"
+                placeholder={t('form.placeholders.phone')}
                 value={formData.phone}
                 onChange={handleChange}
                 required
@@ -92,12 +96,12 @@ const ContactForm = () => {
 
             {/* Email */}
             <div className="form-group">
-              <label className="form-label">您的邮箱（可选）</label>
+              <label className="form-label">{t('form.labels.email')}</label>
               <input
                 type="email"
                 name="email"
                 className="form-input"
-                placeholder="请输入您的邮箱（可选）"
+                placeholder={t('form.placeholders.email')}
                 value={formData.email}
                 onChange={handleChange}
               />
@@ -105,23 +109,23 @@ const ContactForm = () => {
 
             {/* Category */}
             <div className="form-group">
-              <label className="form-label">诉求分类（可选）</label>
+              <label className="form-label">{t('form.labels.category')}</label>
               <CustomSelect
                 options={categoryOptions}
                 value={formData.category}
                 onChange={handleCategoryChange}
-                placeholder="请选择您的主要诉求（可选）"
+                placeholder={t('form.placeholders.category')}
               />
             </div>
           </div>
 
           {/* Details */}
           <div className="form-group">
-            <label className="form-label">详情</label>
+            <label className="form-label">{t('form.labels.details')}</label>
             <textarea
               name="details"
               className="form-textarea"
-              placeholder="请详细描述您的需求和建议，我们将第一时间联系您"
+              placeholder={t('form.placeholders.details')}
               value={formData.details}
               onChange={handleChange}
             ></textarea>
@@ -130,7 +134,7 @@ const ContactForm = () => {
           <div className="form-footer">
             <button type="submit" className="submit-btn">
               <PiPaperPlaneTiltThin className="btn-icon" />
-              <span>提交留言</span>
+              <span>{t('form.submit')}</span>
             </button>
           </div>
         </form>
@@ -139,7 +143,7 @@ const ContactForm = () => {
       {/* Development Message (Toast) */}
       {showMessage && (
         <div className="toast-msg animate-in slide-in-from-bottom-5 fade-in duration-300">
-          后端服务正在开发中，请稍后再试
+          {t('form.toast')}
         </div>
       )}
     </section>

@@ -18,7 +18,7 @@
     z-index: 9999;
     font-size: 24px;
     pointer-events: none; /* Prevent clicks when hidden */
-    color: var(--color-primary);
+    color: var(--easylook-color-primary);
     border: none;
 }
 
@@ -31,7 +31,7 @@
 
 /* Hover effect */
 .back-to-top:hover {
-    color: var(--color-primary-inactive);
+    color: var(--easylook-color-primary-inactive);
     transform: translateY(-4px);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
     border: none;

@@ -1,31 +1,31 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import useScrollAnimation from '../../hooks/useScrollAnimation';
 import './ProductShowcase.css';
 import { Link } from 'react-router-dom';
 import { PiArrowRightThin } from 'react-icons/pi';
 
 const ProductShowcase = () => {
+  const { t } = useTranslation('home');
   const [ref, isVisible] = useScrollAnimation(0.1);
 
   const products = [
     {
       id: 1,
-      title: '视觉训练套盒',
-      subtitle: '全方位视觉机能训练方案',
-      badge: '专业版',
-      description:
-        '视立优·视觉训练套盒是一款集成式一体化通用视觉训练方案，可用于屈光不正人群；弱视、斜视、斜视术后康复人群；眼保健人群；视疲劳、阅读障碍、学习困难等非斜视性双眼视功能异常人群。',
+      title: t('products.1.title'),
+      subtitle: t('products.1.subtitle'),
+      badge: t('products.1.badge'),
+      description: t('products.1.description'),
 
       bgImage:
         'https://gw-static.laifen.net/media/home/kv/wave-xs-sm-16-9.webp',
     },
     {
       id: 2,
-      title: '集合训练器',
-      subtitle: '智能视功能提升设备',
-      badge: '标准版',
-      description:
-        '视立优 - 集合训练器是一类专为视力保护与改善设计的智能硬件设备，广泛应用于近视防控、弱视训练、视功能提升等场景，尤其适合儿童和青少年用户。',
+      title: t('products.2.title'),
+      subtitle: t('products.2.subtitle'),
+      badge: t('products.2.badge'),
+      description: t('products.2.description'),
 
       bgImage:
         'https://gw-static.laifen.net/static/laifen-website-ui/8bfb6537/static/webp/swift-4-standard-40e67878.webp',
@@ -100,10 +100,11 @@ const ProductShowcase = () => {
                 <p className="product-subtitle">{product.subtitle}</p>
                 <div className="product-btns">
                   <Link to={`/product-${product.id}`} className="btn-learn">
-                    进一步了解 <PiArrowRightThin className="btn-icon" />
+                    {t('products.buttons.learn')}{' '}
+                    <PiArrowRightThin className="btn-icon" />
                   </Link>
                   <Link to={`/product-${product.id}`} className="btn-buy">
-                    购买
+                    {t('products.buttons.buy')}
                   </Link>
                 </div>
               </div>

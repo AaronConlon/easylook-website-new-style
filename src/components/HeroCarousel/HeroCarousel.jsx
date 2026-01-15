@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper/modules';
 import { PiCaretLeftThin, PiCaretRightThin } from 'react-icons/pi';
@@ -7,6 +8,7 @@ import 'swiper/css';
 import './HeroCarousel.css';
 
 const HeroCarousel = () => {
+  const { t } = useTranslation('home');
   const [swiperInstance, setSwiperInstance] = useState(null);
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -39,8 +41,12 @@ const HeroCarousel = () => {
                     slide.textPosition || 'bottom-left'
                   }`}
                 >
-                  <h1 className="hero-slide-title">{slide.title}</h1>
-                  <p className="hero-slide-subtitle">{slide.subtitle}</p>
+                  <h1 className="hero-slide-title">
+                    {t(`hero.slides.${slide.id}.title`)}
+                  </h1>
+                  <p className="hero-slide-subtitle">
+                    {t(`hero.slides.${slide.id}.subtitle`)}
+                  </p>
                 </div>
               </div>
             </div>

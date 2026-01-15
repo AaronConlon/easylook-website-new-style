@@ -2,8 +2,8 @@
 
 :root {
   /* Design Tokens */
-  --color-primary: #151515;
-  --color-primary-inactive: rgba(21, 21, 21, 0.85);
+  --easylook-color-primary: #151515;
+  --easylook-color-primary-inactive: rgba(21, 21, 21, 0.85);
   --color-sub: #f5f5f5;
 
   /* Typography - Laifen Style */
@@ -15,7 +15,7 @@
   --font-weight-medium: 600;
   --font-weight-bold: 700;
 
-  --text-primary: var(--color-primary);
+  --easylook-text-primary: var(--easylook-color-primary);
   --text-secondary: #676767;
 }
 
@@ -28,7 +28,7 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
   margin: 0;
-  color: var(--text-primary);
+  color: var(--easylook-text-primary);
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   background: #fff;
 }

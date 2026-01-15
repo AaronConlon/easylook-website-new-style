@@ -1,0 +1,46 @@
+{
+  "helmet": {
+    "title": "联系我们 - 专业的视力保护解决方案提供商，守护您的视界健康",
+    "description": "联系视立优 EASYLOOK。我们的团队随时为您提供专业的视力保护咨询和服务。地址：上海市普陀区交通路4711号李子园大厦1308室。"
+  },
+  "header": {
+    "title": "联系我们"
+  },
+  "map": {
+    "imageAlt": "公司地址",
+    "addressLabel": "公司地址: {{address}}"
+  },
+  "popup": {
+    "logoAlt": "视立优",
+    "address": "地址",
+    "phone": "电话",
+    "email": "邮箱"
+  },
+  "form": {
+    "title": "在线留言",
+    "labels": {
+      "name": "您的姓名",
+      "phone": "您的电话",
+      "email": "您的邮箱（可选）",
+      "category": "诉求分类（可选）",
+      "details": "详情"
+    },
+    "placeholders": {
+      "name": "请输入姓名",
+      "phone": "请输入联系电话",
+      "email": "请输入您的邮箱（可选）",
+      "category": "请选择您的主要诉求（可选）",
+      "details": "请详细描述您的需求和建议，我们将第一时间联系您"
+    },
+    "options": {
+      "manufacturing": "生产制造",
+      "procurement": "行业采购",
+      "pr": "公共关系",
+      "marketing": "营销代理",
+      "media": "媒体宣传"
+    },
+    "submit": "提交留言",
+    "toast": "后端服务正在开发中，请稍后再试"
+  },
+  "breadcrumbs": "联系我们"
+}
