@@ -8,7 +8,7 @@
     "dev": "rsbuild dev --open",
     "format": "prettier --write .",
     "lint": "eslint .",
-    "preview": "rsbuild preview --port 3333 --host 0.0.0.0"
+    "preview": "rsbuild preview --port 2223"
   },
   "dependencies": {
     "gsap": "^3.14.2",
