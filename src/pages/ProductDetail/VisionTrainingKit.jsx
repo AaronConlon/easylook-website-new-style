@@ -28,7 +28,7 @@ import jdQr from '../../assets/products/jd-qrcode.png';
 
 // Animation Helper
 const AnimatedTitle = ({ text, className }) => (
-  <div className={className}>
+  <h2 className={className}>
     {text.split('').map((char, i) => (
       <span
         key={i}
@@ -38,7 +38,7 @@ const AnimatedTitle = ({ text, className }) => (
         {char === ' ' ? '\u00A0' : char}
       </span>
     ))}
-  </div>
+  </h2>
 );
 
 // Mock Data

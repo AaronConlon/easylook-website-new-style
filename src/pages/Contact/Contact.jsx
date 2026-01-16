@@ -22,7 +22,7 @@ const Contact = () => {
 
       <div className="contact-container">
         <div className="contact-header">
-          <h1>{t('header.title')}</h1>
+          <h2>{t('header.title')}</h2>
         </div>
 
         <div className="contact-map-section">

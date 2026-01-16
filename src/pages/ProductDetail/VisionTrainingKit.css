@@ -116,6 +116,7 @@
 .buy-button-wrapper {
   position: relative;
   display: inline-block;
+  z-index: 1000; /* 确保父容器有足够的层级 */
 }
 
 .buy-button {
@@ -150,13 +151,13 @@
   background: #fff;
   border-radius: 20px;
   padding: 24px;
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
   margin-top: 20px;
   opacity: 0;
   visibility: hidden;
   transform: translateY(10px);
   transition: all 0.4s ease;
-  z-index: 100;
+  z-index: 99999; /* 大幅提升层级，确保在最上层 */
   border: 1px solid #f0f0f0;
 }
 
