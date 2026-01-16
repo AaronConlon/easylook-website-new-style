@@ -4,24 +4,19 @@ import { Helmet } from 'react-helmet-async';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCards, Navigation, Pagination } from 'swiper/modules';
 import {
-  PiShoppingCartSimpleThin,
-  PiPackageThin,
-  PiGraduationCapThin,
-  PiDeviceMobileThin,
-  PiCheckCircleThin,
-  PiCaretLeftThin,
-  PiCaretRightThin,
-} from 'react-icons/pi';
+  LuShoppingCart,
+  LuPackage,
+  LuGraduationCap,
+  LuSwatchBook,
+  LuCircleCheck,
+} from 'react-icons/lu';
 import useScrollAnimation from '../../hooks/useScrollAnimation';
 import Breadcrumbs from '../../components/Shared/Breadcrumbs';
-import { Plyr } from 'plyr-react';
-
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/effect-cards';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import 'plyr-react/plyr.css';
 
 import './VisionTrainingKit.css';
 
@@ -75,8 +70,6 @@ const VisionTrainingKit = () => {
         className={`detail-banner ${bannerVisible ? 'in-view' : ''}`}
         ref={bannerRef}
       >
-        <div className="banner-mask"></div>
-        <img src={kitImage} alt="视觉训练套盒" className="banner-bg" />
         <div className="banner-content">
           <AnimatedTitle text={t('banner.title')} className="banner-title" />
           <p className="banner-subtitle">{t('banner.subtitle')}</p>
@@ -90,12 +83,11 @@ const VisionTrainingKit = () => {
       >
         <div className="hero-grid">
           <div className="hero-content">
-            <h2 className="hero-title">{t('hero.title')}</h2>
             <p className="hero-description">{t('hero.description')}</p>
 
             <div className="buy-button-wrapper">
               <button className="buy-button">
-                <PiShoppingCartSimpleThin className="cart-icon" />
+                <LuShoppingCart className="cart-icon" />
                 <span>{t('hero.buy')}</span>
               </button>
 
@@ -141,13 +133,13 @@ const VisionTrainingKit = () => {
               className="hero-swiper"
             >
               <SwiperSlide className="hero-swiper-slide">
-                <img src={kitImage} alt="视觉训练套盒 1" />
+                <img src={kitImage} alt={t('images.slide1')} />
               </SwiperSlide>
               <SwiperSlide className="hero-swiper-slide">
-                <img src={kitImage} alt="视觉训练套盒 2" />
+                <img src={kitImage} alt={t('images.slide2')} />
               </SwiperSlide>
               <SwiperSlide className="hero-swiper-slide">
-                <img src={kitImage} alt="视觉训练套盒 3" />
+                <img src={kitImage} alt={t('images.slide3')} />
               </SwiperSlide>
             </Swiper>
           </div>
@@ -166,7 +158,7 @@ const VisionTrainingKit = () => {
         <div className="features-grid">
           <div className="feature-card">
             <div className="feature-icon-wrapper">
-              <PiPackageThin />
+              <LuPackage />
             </div>
             <div className="feature-content">
               <h3 className="feature-title">{t('features.list.1.title')}</h3>
@@ -177,7 +169,7 @@ const VisionTrainingKit = () => {
           </div>
           <div className="feature-card">
             <div className="feature-icon-wrapper">
-              <PiCheckCircleThin />
+              <LuCircleCheck />
             </div>
             <div className="feature-content">
               <h3 className="feature-title">{t('features.list.2.title')}</h3>
@@ -188,7 +180,7 @@ const VisionTrainingKit = () => {
           </div>
           <div className="feature-card">
             <div className="feature-icon-wrapper">
-              <PiGraduationCapThin />
+              <LuGraduationCap />
             </div>
             <div className="feature-content">
               <h3 className="feature-title">{t('features.list.3.title')}</h3>
@@ -199,7 +191,7 @@ const VisionTrainingKit = () => {
           </div>
           <div className="feature-card">
             <div className="feature-icon-wrapper">
-              <PiDeviceMobileThin />
+              <LuSwatchBook />
             </div>
             <div className="feature-content">
               <h3 className="feature-title">{t('features.list.4.title')}</h3>
@@ -243,33 +235,20 @@ const VisionTrainingKit = () => {
         <div className="player-layout">
           <div className="main-video">
             <div className="video-container">
-              <Plyr
-                source={{
-                  type: 'video',
-                  sources: [
-                    {
-                      src: currentVideo.src,
-                      type: 'video/mp4',
-                    },
-                  ],
-                  poster: currentVideo.poster,
-                }}
-                options={{
-                  controls: [
-                    'play-large',
-                    'play',
-                    'progress',
-                    'current-time',
-                    'mute',
-                    'volume',
-                    'captions',
-                    'settings',
-                    'pip',
-                    'airplay',
-                    'fullscreen',
-                  ],
-                }}
-              />
+              <div className="video-container">
+                <video
+                  key={currentVideo.src}
+                  className="native-video"
+                  controls
+                  controlsList="nodownload"
+                  disablePictureInPicture
+                  onContextMenu={(e) => e.preventDefault()}
+                  poster={currentVideo.poster}
+                >
+                  <source src={currentVideo.src} type="video/mp4" />
+                  您的浏览器不支持视频播放。
+                </video>
+              </div>
             </div>
             <div className="video-info">
               <h3 className="video-title">{currentVideo.title}</h3>
@@ -302,12 +281,7 @@ const VisionTrainingKit = () => {
       </section>
 
       {/* Breadcrumbs */}
-      <Breadcrumbs
-        items={[
-          { label: t('breadcrumbs'), href: '/' },
-          { label: t('breadcrumbs') },
-        ]}
-      />
+      <Breadcrumbs items={[{ label: t('breadcrumbs'), href: '/' }]} />
     </div>
   );
 };

@@ -30,18 +30,26 @@
 .dk-header-text {
     display: flex;
     gap: 2px;
+    transition: all 0.3s ease;
+    transform: translateX(-48px)
+}
+
+.did-you-know-inner:hover .dk-header-text  {
+    transform: translateX(0);
 }
 
 .dk-header-icon {
     font-size: 2.2rem;
-    color: #94A3B8; /* Default grey */
     flex-shrink: 0;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
+    transform: scale(0);
 }
 
 .did-you-know-inner:hover .dk-header-icon {
     color: var(--easylook-color-primary);
+    transform: scale(1);
 }
+
 
 /* Grid */
 .did-you-know-grid {
@@ -191,7 +199,16 @@
     }
 
     .dk-desc {
-        text-align: create; /* Actually center is better, user said "center" */
+        /* User requested center alignment */
         text-align: center;
+    }
+
+    /* Disable hover animations on mobile */
+    .dk-header-text {
+        transform: none;
+    }
+
+    .dk-header-icon {
+        transform: none;
     }
 }

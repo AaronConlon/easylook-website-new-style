@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { PiCaretDownThin, PiCheckThin } from 'react-icons/pi';
+import { LuChevronDown, LuCheck } from 'react-icons/lu';
 import './CustomSelect.css';
 
 const CustomSelect = ({ options, value, onChange, placeholder = 'Select an option' }) => {
@@ -28,14 +28,14 @@ const CustomSelect = ({ options, value, onChange, placeholder = 'Select an optio
 
   return (
     <div className="custom-select-container" ref={containerRef}>
-      <div 
+      <div
         className={`custom-select-trigger ${isOpen ? 'is-open' : ''} ${selectedOption ? 'item-selected' : ''}`}
         onClick={handleToggle}
       >
         <span className="custom-select-value">
           {selectedOption ? selectedOption.label : placeholder}
         </span>
-        <PiCaretDownThin className="custom-select-icon" />
+        <LuChevronDown className="custom-select-icon" />
       </div>
 
       <div className={`custom-select-dropdown ${isOpen ? 'is-open' : ''}`}>
@@ -46,7 +46,9 @@ const CustomSelect = ({ options, value, onChange, placeholder = 'Select an optio
             onClick={() => handleSelect(option.value)}
           >
             <span>{option.label}</span>
-            {value === option.value && <PiCheckThin className="option-check-icon" />}
+            {value === option.value && (
+              <LuCheck className="option-check-icon" />
+            )}
           </div>
         ))}
       </div>

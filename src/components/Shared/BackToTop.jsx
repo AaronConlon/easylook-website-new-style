@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { PiArrowUp, PiArrowUpThin } from 'react-icons/pi';
+import { LuArrowUp } from 'react-icons/lu';
 import './BackToTop.css';
 
 const BackToTop = () => {
@@ -45,7 +45,7 @@ const BackToTop = () => {
       onClick={scrollToTop}
       aria-label="Back to top"
     >
-      <PiArrowUp />
+      <LuArrowUp />
     </button>
   );
 };

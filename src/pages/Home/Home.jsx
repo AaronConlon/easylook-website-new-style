@@ -4,9 +4,9 @@ import HeroCarousel from '../../components/HeroCarousel/HeroCarousel';
 import DidYouKnow from '../../components/DidYouKnow/DidYouKnow';
 import ProductShowcase from '../../components/ProductShowcase/ProductShowcase';
 import Encyclopedia from '../../components/Encyclopedia/Encyclopedia';
-// import UserStories from '../../components/UserStories/UserStories';
 import Partnership from '../../components/Partnership/Partnership';
 import AboutUs from '../../components/AboutUs/AboutUs';
+import PartnerScroll from '../../components/PartnerScroll/PartnerScroll';
 
 import { useTranslation } from 'react-i18next';
 
@@ -22,8 +22,8 @@ const Home = () => {
       <DidYouKnow />
       <ProductShowcase />
       <Encyclopedia />
-      {/* <UserStories /> */}
       <Partnership showBenefits={false} />
+      <PartnerScroll />
       <AboutUs />
     </>
   );

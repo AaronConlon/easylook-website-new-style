@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet-async';
-import { PiMapPinThin, PiPhoneThin, PiEnvelopeThin } from 'react-icons/pi';
+import { LuMapPin, LuPhone, LuMail } from 'react-icons/lu';
 import Breadcrumbs from '../../components/Shared/Breadcrumbs';
 import ContactForm from '../../components/ContactForm/ContactForm';
 import mapImg from '../../assets/map.png';
@@ -33,7 +33,7 @@ const Contact = () => {
           <div className="flex justify-center">
             <div className="address-info-trigger">
               <div className="address-label">
-                <PiMapPinThin size={20} />
+                <LuMapPin size={20} />
                 <span>{t('map.addressLabel', { address: addressValue })}</span>
               </div>
 
@@ -47,22 +47,22 @@ const Contact = () => {
                 <div className="popup-content">
                   <div className="popup-item">
                     <div className="popup-header-row">
-                      <PiMapPinThin className="popup-icon" />
-                      <PiMapPinThin className="popup-icon" />
+                      <LuMapPin className="popup-icon" />
+                      <LuMapPin className="popup-icon" />
                       <span className="popup-label">{t('popup.address')}</span>
                     </div>
                     <span className="popup-value">{addressValue}</span>
                   </div>
                   <div className="popup-item">
                     <div className="popup-header-row">
-                      <PiPhoneThin className="popup-icon" />
+                      <LuPhone className="popup-icon" />
                       <span className="popup-label">{t('popup.phone')}</span>
                     </div>
                     <span className="popup-value">400-901-83138</span>
                   </div>
                   <div className="popup-item">
                     <div className="popup-header-row">
-                      <PiEnvelopeThin className="popup-icon" />
+                      <LuMail className="popup-icon" />
                       <span className="popup-label">{t('popup.email')}</span>
                     </div>
                     <span className="popup-value">

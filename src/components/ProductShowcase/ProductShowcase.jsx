@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import useScrollAnimation from '../../hooks/useScrollAnimation';
 import './ProductShowcase.css';
 import { Link } from 'react-router-dom';
-import { PiArrowRightThin } from 'react-icons/pi';
+import { LuArrowRight } from 'react-icons/lu';
 
 const ProductShowcase = () => {
   const { t } = useTranslation('home');
@@ -101,7 +101,7 @@ const ProductShowcase = () => {
                 <div className="product-btns">
                   <Link to={`/product-${product.id}`} className="btn-learn">
                     {t('products.buttons.learn')}{' '}
-                    <PiArrowRightThin className="btn-icon" />
+                    <LuArrowRight className="btn-icon" />
                   </Link>
                   <Link to={`/product-${product.id}`} className="btn-buy">
                     {t('products.buttons.buy')}

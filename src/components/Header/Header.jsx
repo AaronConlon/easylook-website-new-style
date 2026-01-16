@@ -1,12 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import {
-  PiPhoneThin,
-  PiCaretDownThin,
-  PiListThin,
-  PiXThin,
-  PiWhatsappLogoThin,
-} from 'react-icons/pi';
+import { LuPhone, LuChevronDown, LuMenu, LuX, LuHeadset } from 'react-icons/lu';
 import tinyLogo from '../../assets/tiny-logo.svg';
 import qrCodeImg from '../../assets/qr-code.png';
 import gongzhonghaoImg from '../../assets/gongzhonghao.png';
@@ -101,10 +95,16 @@ const Header = () => {
                 {item.label === t('nav.home') ? (
                   <div className="nav-menu-home-wrapper">{item.label}</div>
                 ) : (
-                  <span>{item.label}</span>
+                  <span
+                    style={{
+                      minWidth: item.children ? 'unset' : '80px',
+                    }}
+                  >
+                    {item.label}
+                  </span>
                 )}
                 {item.children && (
-                  <PiCaretDownThin className="nav-menu-down-icon" />
+                  <LuChevronDown className="nav-menu-down-icon" />
                 )}
               </Link>
               {item.children && (
@@ -147,7 +147,11 @@ const Header = () => {
             handleMenuClick();
           }}
         >
-          <img src={tinyLogo} alt="易视康 Logo" className="header-logo" />
+          <img
+            src={tinyLogo}
+            alt={t('footer.logoAlt')}
+            className="header-logo"
+          />
         </Link>
 
         {/* Right: Actions (Contact + Mobile Toggle) */}
@@ -164,20 +168,20 @@ const Header = () => {
 
           <div className="header-contact-wrapper">
             <button className="header-contact-icon" aria-label="Contact">
-              <PiWhatsappLogoThin size={24} />
+              <LuHeadset size={24} />
             </button>
             <div className="header-contact-popup">
               <div className="contact-popup-phone">
-                <PiPhoneThin size={18} />
+                <span>{t('contact.landline')}</span>
                 <span>400-901-83138</span>
               </div>
               <div className="contact-popup-qr">
                 <div className="qr-item">
-                  <img src={qrCodeImg} alt="微信公众号" />
+                  <img src={qrCodeImg} alt={t('contact.wechatPublic')} />
                   <span>{t('contact.wechatPublic')}</span>
                 </div>
                 <div className="qr-item">
-                  <img src={gongzhonghaoImg} alt="小程序" />
+                  <img src={gongzhonghaoImg} alt={t('contact.miniProgram')} />
                   <span>{t('contact.miniProgram')}</span>
                 </div>
               </div>
@@ -189,11 +193,7 @@ const Header = () => {
             onClick={toggleMobileMenu}
             aria-label="Toggle menu"
           >
-            {isMobileMenuOpen ? (
-              <PiXThin size={24} />
-            ) : (
-              <PiListThin size={24} />
-            )}
+            {isMobileMenuOpen ? <LuX size={24} /> : <LuMenu size={24} />}
           </button>
         </div>
       </div>

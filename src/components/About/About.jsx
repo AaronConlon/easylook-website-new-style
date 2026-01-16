@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { PiQuotesFill, PiX } from 'react-icons/pi';
+import { LuQuote, LuX } from 'react-icons/lu';
 import Breadcrumbs from '../Shared/Breadcrumbs';
 
 const About = () => {
@@ -83,7 +83,7 @@ const About = () => {
             className="absolute top-8 right-8 text-white/70 hover:text-white transition-colors p-2"
             aria-label="Close video"
           >
-            <PiX size={40} />
+            <LuX size={40} />
           </button>
 
           <div className="w-[90%] max-w-[1200px] aspect-video relative rounded-2xl overflow-hidden shadow-2xl">
@@ -108,7 +108,7 @@ const About = () => {
                   {t('cards.1.title')}
                 </h6>
                 <p className="relative text-lg text-[var(--text-secondary)] leading-relaxed font-normal">
-                  <PiQuotesFill className="absolute top-0 right-0 transform translate-x-4 -translate-y-12 text-[120px] text-[var(--easylook-text-primary)] opacity-5" />
+                  <LuQuote className="absolute top-0 right-0 transform translate-x-4 -translate-y-12 text-[120px] text-[var(--easylook-text-primary)] opacity-5" />
                   <span className="relative z-10">{t('cards.1.quote')}</span>
                 </p>
               </div>
@@ -123,7 +123,7 @@ const About = () => {
                   {t('cards.2.title')}
                 </h6>
                 <p className="relative text-lg text-[var(--text-secondary)] leading-relaxed font-normal">
-                  <PiQuotesFill className="absolute top-0 right-0 transform translate-x-4 -translate-y-12 text-[120px] text-[var(--easylook-text-primary)] opacity-5" />
+                  <LuQuote className="absolute top-0 right-0 transform translate-x-4 -translate-y-12 text-[120px] text-[var(--easylook-text-primary)] opacity-5" />
                   <span className="relative z-10">{t('cards.2.quote')}</span>
                 </p>
               </div>
@@ -138,7 +138,7 @@ const About = () => {
                   {t('cards.3.title')}
                 </h6>
                 <p className="relative text-lg text-[var(--text-secondary)] leading-relaxed font-normal">
-                  <PiQuotesFill className="absolute top-0 right-0 transform translate-x-4 -translate-y-12 text-[120px] text-[var(--easylook-text-primary)] opacity-5" />
+                  <LuQuote className="absolute top-0 right-0 transform translate-x-4 -translate-y-12 text-[120px] text-[var(--easylook-text-primary)] opacity-5" />
                   <span className="relative z-10">{t('cards.3.quote')}</span>
                 </p>
               </div>
@@ -153,7 +153,7 @@ const About = () => {
                   {t('cards.4.title')}
                 </h6>
                 <p className="relative text-lg text-[var(--text-secondary)] leading-relaxed font-normal">
-                  <PiQuotesFill className="absolute top-0 right-0 transform translate-x-4 -translate-y-12 text-[120px] text-[var(--easylook-text-primary)] opacity-5" />
+                  <LuQuote className="absolute top-0 right-0 transform translate-x-4 -translate-y-12 text-[120px] text-[var(--easylook-text-primary)] opacity-5" />
                   <span className="relative z-10">{t('cards.4.quote')}</span>
                 </p>
               </div>
@@ -189,7 +189,7 @@ const About = () => {
                       <div className="w-[4px] h-[4px] rounded-full bg-black shrink-0 relative z-10"></div>
                       <div className="flex items-baseline gap-3">
                         <span className="text-xl font-bold text-[var(--easylook-text-primary)] leading-none">
-                          {year} 年
+                          {year} {t('history.yearSuffix')}
                         </span>
                         <span className="text-lg font-bold text-[var(--easylook-text-primary)] leading-none">
                           {t(`history.timeline.${year}.title`)}

@@ -256,7 +256,7 @@
 }
 
 .nav-menu-home-wrapper {
-  min-width: 4em; /* Match width of 4-character menu items */
+  min-width: 80px; /* Match width of 4-character menu items */
   text-align: center;
   display: inline-block;
 }

@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import {
-  PiBuildingsThin,
-  PiTrendUpThin,
-  PiHandshakeThin,
-  PiMedalThin,
-} from 'react-icons/pi';
+  LuBuilding2,
+  LuTrendingUp,
+  LuHandshake,
+  LuMedal,
+} from 'react-icons/lu';
 import './AboutUs.css';
 
 const AboutUs = () => {
@@ -14,8 +14,8 @@ const AboutUs = () => {
     {
       id: 1,
       title: t('aboutUs.company.title'),
-      engTitle: 'Company Introduction',
-      icon: <PiBuildingsThin />,
+      engTitle: t('aboutUs.company.engTitle'),
+      icon: <LuBuilding2 />,
       link: '/about',
       className: 'card-company',
     },
@@ -30,8 +30,8 @@ const AboutUs = () => {
     {
       id: 4,
       title: t('aboutUs.honor.title'),
-      engTitle: 'Company Honors',
-      icon: <PiMedalThin />,
+      engTitle: t('aboutUs.honor.engTitle'),
+      icon: <LuMedal />,
       link: '/about/honor',
       className: 'card-honors',
     },

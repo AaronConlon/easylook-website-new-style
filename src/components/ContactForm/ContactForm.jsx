@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { PiChatDotsThin, PiPaperPlaneTiltThin } from 'react-icons/pi';
+import { LuMessageSquare, LuSend } from 'react-icons/lu';
 import CustomSelect from '../Shared/CustomSelect';
 import './ContactForm.css';
 
@@ -53,7 +53,7 @@ const ContactForm = () => {
       <div className="contact-container">
         <div className="form-header">
           <div className="form-title-wrapper">
-            <PiChatDotsThin className="form-title-icon" />
+            <LuMessageSquare className="form-title-icon" />
             <span className="form-title-text">{t('form.title')}</span>
           </div>
         </div>
@@ -133,7 +133,7 @@ const ContactForm = () => {
 
           <div className="form-footer">
             <button type="submit" className="submit-btn">
-              <PiPaperPlaneTiltThin className="btn-icon" />
+              <LuSend className="btn-icon" />
               <span>{t('form.submit')}</span>
             </button>
           </div>

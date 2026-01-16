@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { PiPhoneThin, PiEnvelopeThin, PiMapPinThin } from 'react-icons/pi';
+import { LuPhone, LuMail, LuMapPin } from 'react-icons/lu';
 import logoSvg from '../../assets/full-logo.png';
 import gongzhonghaoImg from '../../assets/gongzhonghao.png';
 import qrCodeImg from '../../assets/qr-code.png';
@@ -19,17 +19,17 @@ const Footer = () => {
 
   const contactInfo = [
     {
-      icon: <PiPhoneThin />,
+      icon: <LuPhone />,
       label: t('contact.phone'),
       value: '400-901-83138',
     },
     {
-      icon: <PiEnvelopeThin />,
+      icon: <LuMail />,
       label: t('contact.email'),
       value: 'easylook.business@weiaihealthcare.com',
     },
     {
-      icon: <PiMapPinThin />,
+      icon: <LuMapPin />,
       label: t('contact.address'),
       value: t('contact.addressValue'),
     },
@@ -42,7 +42,11 @@ const Footer = () => {
         <div className="footer-top">
           {/* Logo and Description */}
           <div className="footer-brand">
-            <img src={logoSvg} alt="视立优 EASYLOOK" className="footer-logo" />
+            <img
+              src={logoSvg}
+              alt={t('footer.logoAlt')}
+              className="footer-logo"
+            />
             <p className="footer-description">{t('footer.description')}</p>
           </div>
 
@@ -83,7 +87,7 @@ const Footer = () => {
               <div className="footer-qr-item">
                 <img
                   src={qrCodeImg}
-                  alt="微信公众号"
+                  alt={t('contact.wechatPublic')}
                   className="footer-qr-image"
                 />
                 <span>{t('contact.wechatPublic')}</span>
@@ -91,7 +95,7 @@ const Footer = () => {
               <div className="footer-qr-item">
                 <img
                   src={gongzhonghaoImg}
-                  alt="小程序"
+                  alt={t('contact.miniProgram')}
                   className="footer-qr-image"
                 />
                 <span>{t('contact.miniProgram')}</span>

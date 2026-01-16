@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper/modules';
-import { PiCaretLeftThin, PiCaretRightThin } from 'react-icons/pi';
+import { LuChevronLeft, LuChevronRight } from 'react-icons/lu';
 import slidesData from '../../data/heroSlides';
 import 'swiper/css';
 import './HeroCarousel.css';
@@ -61,7 +61,7 @@ const HeroCarousel = () => {
         aria-label="Previous slide"
         type="button"
       >
-        <PiCaretLeftThin size={24} />
+        <LuChevronLeft size={24} />
       </button>
       <button
         onClick={() => swiperInstance?.slideNext()}
@@ -69,7 +69,7 @@ const HeroCarousel = () => {
         aria-label="Next slide"
         type="button"
       >
-        <PiCaretRightThin size={24} />
+        <LuChevronRight size={24} />
       </button>
 
       <div className="custom-hero-pagination">

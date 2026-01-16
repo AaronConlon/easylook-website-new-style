@@ -38,9 +38,8 @@
 }
 
 .footer-description {
-  font-size: 14px;
   /* font-weight: var(--font-weight-medium); */
-  margin: 0;
+  padding: 16px 0;
   color: var(--easylook-text-primary);
   letter-spacing: 0.2px;
 }
@@ -119,7 +118,7 @@
 }
 
 .footer-contact-icon {
-  font-size: 1.1rem;
+  font-size: 0.85rem;
   display: flex;
   align-items: center;
 }
@@ -191,12 +190,11 @@
   align-items: center;
   padding: 32px 0;
   font-size: 13px;
-  color: var(--easylook-text-primary);
+  color: var(--text-secondary);
 }
 
 .footer-copyright {
   font-size: inherit;
-  font-weight: 300;
   color: inherit;
 }
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import useScrollAnimation from '../../hooks/useScrollAnimation';
-import { PiLightbulbThin } from 'react-icons/pi';
+import { LuLightbulb } from 'react-icons/lu';
 import './DidYouKnow.css';
 
 const DidYouKnow = () => {
@@ -16,7 +16,7 @@ const DidYouKnow = () => {
       <div className="did-you-know-inner">
         <div className="did-you-know-header">
           <h2>
-            <PiLightbulbThin className="dk-header-icon" />
+            <LuLightbulb className="dk-header-icon" />
             <span className="dk-header-text">
               {t('didYouKnow.header.text')
                 .split('')
@@ -42,7 +42,9 @@ const DidYouKnow = () => {
           <div className="dk-card" data-number="01">
             <div className="dk-counter">
               <span className="dk-number">7.0</span>
-              <span className="dk-unit">亿人</span>
+              <span className="dk-unit">
+                {t('didYouKnow.units.billionPeople')}
+              </span>
             </div>
             <h3 className="dk-title">{t('didYouKnow.cards.1.title')}</h3>
             <p className="dk-subtitle">{t('didYouKnow.cards.1.subtitle')}</p>
@@ -52,7 +54,9 @@ const DidYouKnow = () => {
           <div className="dk-card" data-number="02">
             <div className="dk-counter">
               <span className="dk-number">1.4</span>
-              <span className="dk-unit">亿人</span>
+              <span className="dk-unit">
+                {t('didYouKnow.units.billionPeople')}
+              </span>
             </div>
             <h3 className="dk-title">{t('didYouKnow.cards.2.title')}</h3>
             <p className="dk-subtitle">{t('didYouKnow.cards.2.subtitle')}</p>
@@ -62,7 +66,9 @@ const DidYouKnow = () => {
           <div className="dk-card" data-number="03">
             <div className="dk-counter">
               <span className="dk-number">4.9</span>
-              <span className="dk-unit">万人</span>
+              <span className="dk-unit">
+                {t('didYouKnow.units.tenThousandPeople')}
+              </span>
             </div>
             <h3 className="dk-title">{t('didYouKnow.cards.3.title')}</h3>
             <p className="dk-subtitle">{t('didYouKnow.cards.3.subtitle')}</p>

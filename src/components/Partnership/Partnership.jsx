@@ -3,12 +3,12 @@ import { useTranslation } from 'react-i18next';
 import gsap from 'gsap';
 import useScrollAnimation from '../../hooks/useScrollAnimation';
 import {
-  PiTrendUpThin,
-  PiUsersThin,
-  PiBankThin,
-  PiPhoneThin,
-  PiMegaphoneThin,
-} from 'react-icons/pi';
+  LuTrendingUp,
+  LuUsers,
+  LuLandmark,
+  LuPhone,
+  LuMegaphone,
+} from 'react-icons/lu';
 import './Partnership.css';
 
 const Partnership = ({ showBenefits = true }) => {
@@ -46,7 +46,7 @@ const Partnership = ({ showBenefits = true }) => {
           <h3 className="hero-title">{t('hero.title')}</h3>
           <p className="hero-cta-text">{t('hero.cta')}</p>
           <a href="tel:400-901-83138" className="phone-btn">
-            <PiPhoneThin className="btn-icon" />
+            <LuPhone className="btn-icon" />
             {t('hero.phone')}
           </a>
         </div>
@@ -54,21 +54,21 @@ const Partnership = ({ showBenefits = true }) => {
         {/* Market Stats Grid */}
         <div className="stats-grid">
           <StatCard
-            icon={<PiUsersThin />}
+            icon={<LuUsers />}
             endValue={1500}
-            suffix="万"
+            suffix={t('units.tenThousand')}
             label={t('stats.1.label')}
             desc={t('stats.1.desc')}
           />
           <StatCard
-            icon={<PiTrendUpThin />}
+            icon={<LuTrendingUp />}
             endValue={1000}
-            suffix="亿"
+            suffix={t('units.billion')}
             label={t('stats.2.label')}
             desc={t('stats.2.desc')}
           />
           <StatCard
-            icon={<PiBankThin />}
+            icon={<LuLandmark />}
             endValue={100}
             suffix="%"
             label={t('stats.3.label')}
@@ -110,7 +110,7 @@ const Partnership = ({ showBenefits = true }) => {
             <div className="benefits-image-wrapper">
               <img
                 src="https://de4965e.webp.li/blog-images/2025/10/9f46fae74442e8cb7e83d891e9c3029a.png"
-                alt="合作伙伴"
+                alt={t('imageAlt')}
                 className="benefits-image"
               />
             </div>
@@ -120,7 +120,7 @@ const Partnership = ({ showBenefits = true }) => {
         {/* Footer Policy Banner */}
         <div className="policy-banner">
           <div className="policy-content">
-            <PiMegaphoneThin className="policy-icon" />
+            <LuMegaphone className="policy-icon" />
             <span className="policy-text">{t('policy.text')}</span>
           </div>
         </div>

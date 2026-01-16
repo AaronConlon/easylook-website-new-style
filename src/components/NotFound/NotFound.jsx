@@ -2,7 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { PiHouseThin } from 'react-icons/pi';
+import { LuHouse } from 'react-icons/lu';
 import './NotFound.css';
 
 const NotFound = () => {
@@ -16,7 +16,7 @@ const NotFound = () => {
         <h1 className="not-found-title">{t('title')}</h1>
         <p className="not-found-desc">{t('description')}</p>
         <Link to="/" className="back-home-btn">
-          <PiHouseThin className="btn-icon" />
+          <LuHouse className="btn-icon" />
           <span>{t('backHome')}</span>
         </Link>
       </div>
