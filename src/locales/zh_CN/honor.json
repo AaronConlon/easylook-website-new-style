@@ -7,5 +7,71 @@
     "title": "荣誉资质",
     "subtitle": "专业认证 · 行业认可 · 持续创新"
   },
+  "certificates": [
+    {
+      "src": "https://easylook.oss-cn-beijing.aliyuncs.com/locales/certificates/cert-01.png",
+      "alt": "一种视觉训练救生圈卡"
+    },
+    {
+      "src": "https://easylook.oss-cn-beijing.aliyuncs.com/locales/certificates/cert-02.png",
+      "alt": "实用新型专利证书"
+    },
+    {
+      "src": "https://easylook.oss-cn-beijing.aliyuncs.com/locales/certificates/cert-03.png",
+      "alt": "一种用于视觉功能训练的产品套盒"
+    },
+    {
+      "src": "https://easylook.oss-cn-beijing.aliyuncs.com/locales/certificates/cert-04.png",
+      "alt": "一种基于视力矫正的视力检测器"
+    },
+    {
+      "src": "https://easylook.oss-cn-beijing.aliyuncs.com/locales/certificates/cert-05.png",
+      "alt": "一种视觉采集用校准用定位装置"
+    },
+    {
+      "src": "https://easylook.oss-cn-beijing.aliyuncs.com/locales/certificates/cert-06.png",
+      "alt": "VI-Chat 惟爱智能问答平台V1.0"
+    },
+    {
+      "src": "https://easylook.oss-cn-beijing.aliyuncs.com/locales/certificates/cert-07.png",
+      "alt": "惟爱AI玩眼轴估算软件V1.0"
+    },
+    {
+      "src": "https://easylook.oss-cn-beijing.aliyuncs.com/locales/certificates/cert-08.png",
+      "alt": "惟爱视觉病历管理系统V1.0"
+    },
+    {
+      "src": "https://easylook.oss-cn-beijing.aliyuncs.com/locales/certificates/cert-09.png",
+      "alt": "惟爱视觉后台用户管理系统V1.0"
+    },
+    {
+      "src": "https://easylook.oss-cn-beijing.aliyuncs.com/locales/certificates/cert-10.png",
+      "alt": "惟爱视觉客户关系管理系统V1.0"
+    },
+    {
+      "src": "https://easylook.oss-cn-beijing.aliyuncs.com/locales/certificates/cert-11.png",
+      "alt": "惟爱视觉门店管理系统V1.0"
+    },
+    {
+      "src": "https://easylook.oss-cn-beijing.aliyuncs.com/locales/certificates/cert-12.png",
+      "alt": "惟爱视觉配镜管理系统V1.0"
+    },
+    {
+      "src": "https://easylook.oss-cn-beijing.aliyuncs.com/locales/certificates/cert-13.png",
+      "alt": "惟爱视觉套餐管理系统V1.0"
+    },
+    {
+      "src": "https://easylook.oss-cn-beijing.aliyuncs.com/locales/certificates/cert-14.png",
+      "alt": "惟爱视觉微商城软件V1.0"
+    },
+    {
+      "src": "https://easylook.oss-cn-beijing.aliyuncs.com/locales/certificates/cert-15.png",
+      "alt": "惟爱视觉用户小程序V1.0"
+    },
+    {
+      "src": "https://easylook.oss-cn-beijing.aliyuncs.com/locales/certificates/cert-16.png",
+      "alt": "惟爱视觉预约管理系统V1.0"
+    }
+  ],
   "breadcrumbs": "荣誉资质"
 }
