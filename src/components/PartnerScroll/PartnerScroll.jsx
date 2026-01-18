@@ -62,8 +62,8 @@ const PartnerScroll = () => {
   return (
     <section className="partner-scroll-section">
       <div className="partner-scroll-header">
-        <h3>{t('partnerScroll.header.title')}</h3>
-        <p>{t('partnerScroll.header.subtitle')}</p>
+        <h2>{t('partnerScroll.header.title')}</h2>
+        <p className="subtitle">{t('partnerScroll.header.subtitle')}</p>
       </div>
 
       {/* Row 1: Left to Right */}
