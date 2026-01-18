@@ -32,7 +32,7 @@ const AboutUs = () => {
       title: t('aboutUs.honor.title'),
       engTitle: t('aboutUs.honor.engTitle'),
       icon: <LuMedal />,
-      link: '/about/honor',
+      link: '/honor',
       className: 'card-honors',
     },
   ];
@@ -50,7 +50,9 @@ const AboutUs = () => {
             >
               <div className="about-card-content">
                 <div className="card-icon-wrapper">{card.icon}</div>
-                <h3 className="card-title">{card.title}</h3>
+                <h5 className="mt-6 font-semibold">
+                  {card.title}
+                </h5>
                 <div className="card-subtitle-text">{card.engTitle}</div>
               </div>
             </Link>

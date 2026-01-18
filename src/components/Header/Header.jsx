@@ -30,7 +30,7 @@ const Header = () => {
       path: '/about/company',
       children: [
         { label: t('nav.aboutCompany'), href: '/about' },
-        { label: t('nav.aboutHonor'), href: '/about/honor' },
+        { label: t('nav.aboutHonor'), href: '/honor' },
       ],
     },
     {

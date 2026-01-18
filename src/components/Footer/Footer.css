@@ -75,7 +75,7 @@
 
 .footer-links-list li a {
   font-size: 13px;
-  color: var(--text-secondary);
+  color: var(--text-primary);
   text-decoration: none;
   transition: all 0.2s ease;
   font-weight: var(--font-weight-thin);

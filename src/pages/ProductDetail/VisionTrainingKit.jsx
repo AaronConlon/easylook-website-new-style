@@ -67,7 +67,7 @@ const VisionTrainingKit = () => {
 
       {/* Top Banner Section */}
       <section
-        className={`detail-banner ${bannerVisible ? 'in-view' : ''}`}
+        className={`detail-banner ${bannerVisible ? 'in-view' : ''} py-20`}
         ref={bannerRef}
       >
         <div className="banner-content">

@@ -4,7 +4,19 @@
     "description": "联系视立优 EASYLOOK。我们的团队随时为您提供专业的视力保护咨询和服务。地址：上海市普陀区交通路4711号李子园大厦1308室。"
   },
   "header": {
-    "title": "联系我们"
+    "title": "联系我们",
+    "subtitle": "CONTACT US"
+  },
+  "info": {
+    "address": {
+      "title": "地址"
+    },
+    "phone": {
+      "title": "电话"
+    },
+    "email": {
+      "title": "邮箱"
+    }
   },
   "map": {
     "imageAlt": "公司地址",

@@ -21,22 +21,8 @@ const Partnership = ({ showBenefits = true }) => {
         className={`partnership-inner scroll-animate ${isVisible ? 'in-view' : ''}`}
       >
         {/* Header */}
-        <div className="partnership-header">
-          <div className="title-wrapper">
-            <h2>
-              {t('header.chars')
-                .split('')
-                .map((char, index) => (
-                  <span
-                    key={index}
-                    className="char"
-                    style={{ animationDelay: `${index * 0.05}s` }}
-                  >
-                    {char}
-                  </span>
-                ))}
-            </h2>
-          </div>
+        <div className="partnership-header py-20">
+          <h2>{t('header.chars')}</h2>
           <p className="subtitle">{t('header.subtitle')}</p>
         </div>
 

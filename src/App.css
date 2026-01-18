@@ -9,7 +9,7 @@
 :root {
   /* Design Tokens */
   --easylook-color-primary: #151515;
-  --easylook-color-primary-inactive: rgba(21, 21, 21, 0.85);
+  --easylook-color-primary-inactive: rgba(21, 21, 21, 0.65);
   --color-sub: #f5f5f5;
 
   /* Typography - Laifen Style */

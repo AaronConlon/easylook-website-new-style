@@ -1,5 +1,14 @@
 const heroSlides = [
   {
+    id: 4,
+    image: "https://images.unsplash.com/photo-1585313736086-9a10c24f30dc?q=80&w=2942&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    title: "视觉训练套盒",
+    subtitle: "视立优·视觉训练套盒是一款集成式一体化的通用视觉训练方案。基于调节滞后引发近视学说，将专家共识与自主训练体系相结合，为近视防控提供新解决方案。",
+    buttonText: "",
+    buttonLink: "",
+    textPosition: "bottom-left"
+  },
+  {
     id: 1,
     image: "https://images.unsplash.com/photo-1758012228738-4f2b6e91ad04?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     title: "眼视光训练器",
@@ -26,15 +35,7 @@ const heroSlides = [
     buttonLink: "",
     textPosition: "bottom-right"
   },
-  {
-    id: 4,
-    image: "https://images.unsplash.com/photo-1585313736086-9a10c24f30dc?q=80&w=2942&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    title: "视觉训练套盒",
-    subtitle: "视立优·视觉训练套盒是一款集成式一体化的通用视觉训练方案。基于调节滞后引发近视学说，将专家共识与自主训练体系相结合，为近视防控提供新解决方案。",
-    buttonText: "",
-    buttonLink: "",
-    textPosition: "bottom-left"
-  }
+
 ];
 
 export default heroSlides;

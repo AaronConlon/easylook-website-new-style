@@ -21,17 +21,9 @@ const Encyclopedia = () => {
         <meta name="description" content={t('helmet.description')} />
       </Helmet>
 
-      {/* Banner */}
-      <div
-        className="encyclopedia-banner h-32 md:h-64 lg:h-96"
-        style={{
-          backgroundImage:
-            'url("https://gw-static.laifen.net/static/laifen-website-ui/8bfb6537/static/webp/support-banner-b7dfd02d.webp")',
-        }}
-      ></div>
-
-      <div className="encyclopedia-header">
+      <div className="encyclopedia-header py-20">
         <h2>{t('header.title')}</h2>
+        <p className="subtitle">{t('header.subtitle')}</p>
       </div>
 
       <div className="encyclopedia-container">

@@ -5,14 +5,11 @@ import { LuMapPin, LuPhone, LuMail } from 'react-icons/lu';
 import Breadcrumbs from '../../components/Shared/Breadcrumbs';
 import ContactForm from '../../components/ContactForm/ContactForm';
 import mapImg from '../../assets/map.png';
-import logoImg from '../../assets/full-logo.png';
 import './Contact.css';
 
 const Contact = () => {
   const { t } = useTranslation('contact');
   const { t: tCommon } = useTranslation('common');
-
-  const addressValue = tCommon('contact.addressValue');
   return (
     <div className="contact-page">
       <Helmet>
@@ -21,57 +18,51 @@ const Contact = () => {
       </Helmet>
 
       <div className="contact-container">
-        <div className="contact-header">
+        <div className="contact-header py-20">
           <h2>{t('header.title')}</h2>
+          <p className="subtitle">{t('header.subtitle')}</p>
         </div>
 
+        {/* Map Section */}
         <div className="contact-map-section">
           <div className="map-wrapper">
             <img src={mapImg} alt={t('map.imageAlt')} className="map-image" />
           </div>
+        </div>
 
-          <div className="flex justify-center">
-            <div className="address-info-trigger">
-              <div className="address-label">
-                <LuMapPin size={20} />
-                <span>{t('map.addressLabel', { address: addressValue })}</span>
+        {/* Contact Info Cards - 3 columns */}
+        <div className="contact-info-grid">
+          {/* Address Card */}
+          <div className="contact-info-card">
+            <div className="contact-info-header">
+              <div className="contact-info-icon">
+                <LuMapPin />
               </div>
-
-              {/* Popup Card */}
-              <div className="address-popup-card">
-                <img
-                  src={logoImg}
-                  alt={t('popup.logoAlt')}
-                  className="popup-logo mx-auto"
-                />
-                <div className="popup-content">
-                  <div className="popup-item">
-                    <div className="popup-header-row">
-                      <LuMapPin className="popup-icon" />
-                      <LuMapPin className="popup-icon" />
-                      <span className="popup-label">{t('popup.address')}</span>
-                    </div>
-                    <span className="popup-value">{addressValue}</span>
-                  </div>
-                  <div className="popup-item">
-                    <div className="popup-header-row">
-                      <LuPhone className="popup-icon" />
-                      <span className="popup-label">{t('popup.phone')}</span>
-                    </div>
-                    <span className="popup-value">400-901-83138</span>
-                  </div>
-                  <div className="popup-item">
-                    <div className="popup-header-row">
-                      <LuMail className="popup-icon" />
-                      <span className="popup-label">{t('popup.email')}</span>
-                    </div>
-                    <span className="popup-value">
-                      easylook.business@weiaihealthcare.com
-                    </span>
-                  </div>
-                </div>
-              </div>
+              <h4 className="contact-info-title">{t('info.address.title')}</h4>
             </div>
+            <p className="contact-info-content">{tCommon('contact.addressValue')}</p>
+          </div>
+
+          {/* Phone Card */}
+          <div className="contact-info-card">
+            <div className="contact-info-header">
+              <div className="contact-info-icon">
+                <LuPhone />
+              </div>
+              <h4 className="contact-info-title">{t('info.phone.title')}</h4>
+            </div>
+            <p className="contact-info-content">{tCommon('contact.phoneValue')}</p>
+          </div>
+
+          {/* Email Card */}
+          <div className="contact-info-card">
+            <div className="contact-info-header">
+              <div className="contact-info-icon">
+                <LuMail />
+              </div>
+              <h4 className="contact-info-title">{t('info.email.title')}</h4>
+            </div>
+            <p className="contact-info-content">{tCommon('contact.emailValue')}</p>
           </div>
         </div>
       </div>

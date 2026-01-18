@@ -44,9 +44,9 @@
 }
 
 .card-icon-wrapper {
-    font-size: 2rem;
+    font-size: 2.25rem;
     color: var(--easylook-text-primary);
-    margin-bottom: 8px;
+    /* margin-bottom: 4px; */
     display: flex;
     align-items: center;
 }

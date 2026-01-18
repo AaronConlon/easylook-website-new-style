@@ -18,6 +18,7 @@ const Home = lazy(() => import('./pages/Home/Home'));
 const Cooperation = lazy(() => import('./pages/Cooperation/Cooperation'));
 const Contact = lazy(() => import('./pages/Contact/Contact'));
 const Encyclopedia = lazy(() => import('./pages/Encyclopedia/Encyclopedia'));
+const Honor = lazy(() => import('./pages/Honor/Honor'));
 const VisionTrainingKit = lazy(
   () => import('./pages/ProductDetail/VisionTrainingKit'),
 );
@@ -68,6 +69,10 @@ const router = createHashRouter([
       {
         path: 'encyclopedia',
         element: <Encyclopedia />,
+      },
+      {
+        path: 'honor',
+        element: <Honor />,
       },
       {
         path: 'product-1',

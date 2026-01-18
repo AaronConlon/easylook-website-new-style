@@ -37,16 +37,17 @@ const About = () => {
       </Helmet>
 
       <div className="about-header flex flex-col items-center justify-center py-20 px-4">
-        <h1 className="text-5xl font-bold text-[var(--easylook-text-primary)] mb-6">
-          {t('header.title')}
-        </h1>
-        <p className="text-xl sm:text-2xl text-[var(--text-secondary)] font-normal text-center max-w-2xl mb-12">
+        <div className="pt-20 pb-6">
+          <h2 className="font-bold text-[var(--easylook-text-primary)]">
+            {t('header.title')}
+          </h2>
+        </div>
+
+        <p className="text-xl sm:text-2xl text-[var(--text-primary)] font-normal text-center max-w-2xl mb-12">
           {t('header.subtitle')}
         </p>
-        <div className="max-w-4xl mx-auto space-y-6 text-[var(--text-secondary)] leading-relaxed text-justify px-4">
-          <p>{t('header.desc1')}</p>
-          <p>{t('header.desc2')}</p>
-          <p>{t('header.desc3')}</p>
+        <div className="max-w-4xl mx-auto text-[var(--text-primary)] leading-relaxed text-center px-4">
+          <p>{t('header.desc')}</p>
         </div>
       </div>
 
@@ -104,9 +105,9 @@ const About = () => {
           <div className="bg-[var(--color-sub)] p-16 rounded-[24px]">
             <blockquote className="text-center relative">
               <div>
-                <h6 className="text-3xl font-bold text-[var(--easylook-text-primary)] mb-6">
+                <h5 className="font-semibold text-[var(--easylook-text-primary)] mb-6">
                   {t('cards.1.title')}
-                </h6>
+                </h5>
                 <p className="relative text-lg text-[var(--text-secondary)] leading-relaxed font-normal">
                   <LuQuote className="absolute top-0 right-0 transform translate-x-4 -translate-y-12 text-[120px] text-[var(--easylook-text-primary)] opacity-5" />
                   <span className="relative z-10">{t('cards.1.quote')}</span>
@@ -119,9 +120,9 @@ const About = () => {
           <div className="bg-[var(--color-sub)] p-16 rounded-[24px]">
             <blockquote className="text-center relative">
               <div>
-                <h6 className="text-3xl font-bold text-[var(--easylook-text-primary)] mb-6">
+                <h5 className="font-semibold text-[var(--easylook-text-primary)] mb-6">
                   {t('cards.2.title')}
-                </h6>
+                </h5>
                 <p className="relative text-lg text-[var(--text-secondary)] leading-relaxed font-normal">
                   <LuQuote className="absolute top-0 right-0 transform translate-x-4 -translate-y-12 text-[120px] text-[var(--easylook-text-primary)] opacity-5" />
                   <span className="relative z-10">{t('cards.2.quote')}</span>
@@ -134,9 +135,9 @@ const About = () => {
           <div className="bg-[var(--color-sub)] p-16 rounded-[24px]">
             <blockquote className="text-center relative">
               <div>
-                <h6 className="text-3xl font-bold text-[var(--easylook-text-primary)] mb-6">
+                <h5 className="font-semibold text-[var(--easylook-text-primary)] mb-6">
                   {t('cards.3.title')}
-                </h6>
+                </h5>
                 <p className="relative text-lg text-[var(--text-secondary)] leading-relaxed font-normal">
                   <LuQuote className="absolute top-0 right-0 transform translate-x-4 -translate-y-12 text-[120px] text-[var(--easylook-text-primary)] opacity-5" />
                   <span className="relative z-10">{t('cards.3.quote')}</span>
@@ -149,9 +150,9 @@ const About = () => {
           <div className="bg-[var(--color-sub)] p-16 rounded-[24px]">
             <blockquote className="text-center relative">
               <div>
-                <h6 className="text-3xl font-bold text-[var(--easylook-text-primary)] mb-6">
+                <h5 className="font-semibold text-[var(--easylook-text-primary)] mb-6">
                   {t('cards.4.title')}
-                </h6>
+                </h5>
                 <p className="relative text-lg text-[var(--text-secondary)] leading-relaxed font-normal">
                   <LuQuote className="absolute top-0 right-0 transform translate-x-4 -translate-y-12 text-[120px] text-[var(--easylook-text-primary)] opacity-5" />
                   <span className="relative z-10">{t('cards.4.quote')}</span>
@@ -177,7 +178,7 @@ const About = () => {
           {/* Timeline Column */}
           <div className="p-4 lg:p-0">
             <div className="mb-8">
-              <h3 className="text-xl font-bold uppercase tracking-wider text-[var(--easylook-text-primary)] border-l-4 border-slate-900 pl-4">
+              <h3 className="font-semibold text-[var(--easylook-text-primary)]">
                 {t('history.title')}
               </h3>
             </div>

@@ -3,6 +3,7 @@
 .partnership-container {
     width: 100%;
     padding: 100px 10px;
+    padding-top: 0;
     background-color: #ffffff;
 }
 
@@ -10,6 +11,7 @@
 @media (min-width: 768px) {
     .partnership-container {
         padding: 100px 20px;
+        padding-top: 0;
     }
 }
 
@@ -21,27 +23,13 @@
 /* Header */
 .partnership-header {
     text-align: center;
-    margin-bottom: 60px;
-}
-
-.partnership-header h2 {
-    font-family: var(--font-family-title);
-    font-size: 2.2rem;
-    font-weight: var(--font-weight-regular);
-    color: var(--easylook-text-primary);
-    margin-bottom: 16px;
-    letter-spacing: 2px;
-}
-
-.partnership-header .char {
-    display: inline-block;
-    animation: fadeInUp 0.5s forwards;
 }
 
 .partnership-header .subtitle {
     font-size: 1.1rem;
     color: var(--text-secondary);
     font-weight: var(--font-weight-thin);
+    margin-top: 16px;
 }
 
 /* Hero Section */
