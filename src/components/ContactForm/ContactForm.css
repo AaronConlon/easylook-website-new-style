@@ -30,13 +30,13 @@
 }
 
 .form-title-icon {
-  font-size: 1.25rem;
+  font-size: 1.6rem;
   color: var(--easylook-color-primary);
 }
 
 .form-title-text {
   font-family: var(--font-family-title);
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   font-weight: 500;
 }
 
@@ -110,7 +110,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background-color: #0056d2; /* Vibrant blue like in image */
+  background-color: var(--easylook-color-primary); /* Vibrant blue like in image */
   color: #fff;
   padding: 12px 28px;
   border-radius: 6px;
@@ -121,11 +121,7 @@
   transition: all 0.2s ease;
 }
 
-.submit-btn:hover {
-  background-color: #0046b0;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(0, 86, 210, 0.2);
-}
+
 
 .submit-btn:active {
   transform: translateY(0);

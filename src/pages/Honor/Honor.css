@@ -86,8 +86,8 @@
 /* Grid Section */
 .honor-grid-section {
   width: 100%;
-  background-color: #f9f9f9;
-  padding: 60px 0;
+  /* background-color: #f9f9f9; */
+  padding: 0 0 60px 0;
 }
 
 .honor-grid-container {
@@ -99,22 +99,49 @@
   gap: 24px;
 }
 
-/* Certificate Grid Item */
+/* Certificate Grid Item - Photo Frame */
 .certificate-grid-item {
   position: relative;
   width: 100%;
   aspect-ratio: 1 / 1.414; /* A4 paper ratio */
-  background-color: #fff;
-  border-radius: 12px;
-  overflow: hidden;
+  background-color: var(--easylook-color-secondary);
+  border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
+  padding: 12px;
+  box-sizing: border-box;
 }
 
 .certificate-grid-item:hover {
-  transform: translateY(-4px);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Inner container for image and overlay */
+.certificate-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* Gradient overlay effect - inside the inner container */
+.certificate-inner::before {
+  content: '';
+  background: linear-gradient(#0000, #1b52ac66, #333334e6);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1;
+}
+
+.certificate-grid-item:hover .certificate-inner::before {
+  transform: translateY(100%);
 }
 
 .certificate-grid-image {
@@ -122,6 +149,24 @@
   height: 100%;
   display: block;
   object-fit: cover;
+}
+
+/* Certificate title text */
+.certificate-title {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 500;
+  z-index: 2;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.certificate-grid-item:hover .certificate-title {
+  opacity: 0;
 }
 
 /* Modal */

@@ -50,7 +50,7 @@ const Honor = () => {
       </div>
 
       {/* 轮播展示 */}
-      <div className="honor-carousel-section">
+      {/* <div className="honor-carousel-section">
         <div className="honor-carousel-wrapper">
           <Swiper
             ref={swiperRef}
@@ -83,23 +83,26 @@ const Honor = () => {
             ))}
           </Swiper>
         </div>
-      </div>
+      </div> */}
 
       {/* Grid 展示所有证书 */}
       <div className="honor-grid-section">
         <div className="honor-grid-container">
           {allCertificates.map((cert, index) => (
-            <div 
+            <div
               key={index}
               className="certificate-grid-item"
               onClick={() => openModal(cert.src, cert.alt)}
             >
-              <img
-                src={cert.src}
-                alt={cert.alt}
-                className="certificate-grid-image"
-                loading="lazy"
-              />
+              <div className="certificate-inner">
+                <img
+                  src={cert.src}
+                  alt={cert.alt}
+                  className="certificate-grid-image"
+                  loading="lazy"
+                />
+                <span className="certificate-title">{cert.alt}</span>
+              </div>
             </div>
           ))}
         </div>
@@ -113,8 +116,8 @@ const Honor = () => {
             <PiX />
           </button>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <img 
-              src={modalImage?.src} 
+            <img
+              src={modalImage?.src}
               alt={modalImage?.alt}
               className="modal-image"
             />

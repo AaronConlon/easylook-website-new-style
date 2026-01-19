@@ -10,6 +10,7 @@ import {
   LuMegaphone,
 } from 'react-icons/lu';
 import './Partnership.css';
+import { Link } from 'react-router-dom';
 
 const Partnership = ({ showBenefits = true }) => {
   const { t } = useTranslation('partnership');
@@ -105,10 +106,10 @@ const Partnership = ({ showBenefits = true }) => {
 
         {/* Footer Policy Banner */}
         <div className="policy-banner">
-          <div className="policy-content">
+          <Link to="/contact" className="policy-content">
             <LuMegaphone className="policy-icon" />
             <span className="policy-text">{t('policy.text')}</span>
-          </div>
+          </Link>
         </div>
       </div>
     </section>
